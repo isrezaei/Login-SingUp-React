@@ -1,5 +1,7 @@
+import LoginLogic from "./LoginLogic/LoginLogic";
+
 function App() {
-  return null
+  return <LoginLogic/>
 }
 
 export default App;

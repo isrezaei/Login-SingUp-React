@@ -7,16 +7,16 @@ export const CaseLoadin = {
 
 
 export const initState = {
-    login : true,
+    login : false,
     user : null,
     error : null,
     logout : null,
 }
 
 
-export const Reducer = (Data) => {
+export const Reducer = (State , Data) => {
 
-    switch (Data.type) {
+    switch (Data.Type) {
 
         case CaseLoadin.LoginWait :
             return {
@@ -29,7 +29,7 @@ export const Reducer = (Data) => {
         case CaseLoadin.LoginSuccess :
             return {
                 login : true,
-                user : Data.user,
+                user : Data.User,
                 error : null,
                 logout: null
             }
