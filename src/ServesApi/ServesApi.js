@@ -1,16 +1,48 @@
-const Wait = Time => new Promise(resolve => setTimeout(resolve , Time))
+// const Wait = Time => new Promise(resolve  =>  setTimeout(resolve , Time))
+//
+// export const Server = (username , password) =>
+// {
+//     return Wait(2000).then(()=> {
+//         if (username === 'admin' & password === 'admin')
+//         {
+//             return {
+//                 id : 1,
+//                 username,
+//                 email : 'hello@test.com'
+//             }
+//         }
+//
+//             return {
+//                 Error : 'username or password is wrong'
+//             }
+//     })
+// }
+
 
 export const Server = (username , password) =>
 {
-    return Wait(2000).then(()=> {
-        if (username === 'hello' & password === 123)
+    return new Promise((resolve, reject) => {
+
+        if (username === 'admin' && password === 'admin')
         {
+            setTimeout(resolve , 2000)
+        }
+
+        return(
+            setTimeout(reject , 2000)
+        )
+    })
+
+        .then(()=> {
             return {
                 id : 1,
                 username,
                 email : 'hello@test.com'
             }
-        }
-        throw new Error('Server Have Bug')
-    })
+        })
+        .catch(()=> {
+           return {
+                Error : 'Password or Username is wrong'
+            }
+        })
 }
