@@ -1,4 +1,4 @@
 export default function About()
 {
-    return null
+    return <h1>About Page</h1>
 }

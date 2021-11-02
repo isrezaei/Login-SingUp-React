@@ -1,9 +1,9 @@
 import {Switch, Route} from "react-router-dom";
-import Home from "../PublicPage/Home";
-import About from "../PublicPage/About";
-import Support from "../PublicPage/Support";
-import UserPanel from "../PrivatePage/UserPanel";
-import LoginPage from "../LoginPage/LoginPage";
+import Home from "../../PublicPage/Home";
+import About from "../../PublicPage/About";
+import Support from "../../PublicPage/Support";
+import UserPanel from "../../PrivatePage/UserPanel";
+import LoginPage from "../../LoginPage/LoginPage";
 
 
 export const Router = () =>

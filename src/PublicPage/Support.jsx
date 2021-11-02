@@ -1,4 +1,4 @@
 export default function Support()
 {
-    return null
+    return <h1>Support Page</h1>
 }

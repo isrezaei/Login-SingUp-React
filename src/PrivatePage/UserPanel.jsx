@@ -18,6 +18,8 @@ export default function UserPanel ()
        Dispatch({
            Type : CaseLoadin.LogOut
        })
+
+        localStorage.clear('User-Email')
     }
 
 

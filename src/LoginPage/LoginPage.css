@@ -1,0 +1,36 @@
+.LoginPanel {
+  width: 25rem;
+  height: 45rem;
+  background-color: #b5f580;
+  box-sizing: border-box;
+  float: right;
+  padding: 2rem 2rem;
+}
+.LoginPanel h1 {
+  margin: 0.5rem 0;
+}
+.LoginPanel p {
+  margin: 0.5rem 0;
+}
+.LoginPanel form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoginPanel form input {
+  width: 100%;
+  height: 2rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.LoginPanel form button {
+  width: 100%;
+  height: 2.5rem;
+}
+
+/*# sourceMappingURL=LoginPage.css.map */

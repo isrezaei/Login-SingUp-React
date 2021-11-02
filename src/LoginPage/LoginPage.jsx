@@ -3,8 +3,7 @@ import {DispatchValue, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
 import {Server} from "../ServesApi/ServesApi";
 import {useHistory , useLocation} from "react-router-dom";
-import {cleanup} from "@testing-library/react";
-
+import './LoginPage.css'
 
 export default function LoginPage ()
 {
@@ -38,6 +37,8 @@ export default function LoginPage ()
                             Type : CaseLoadin.LoginSuccess,
                             User : Response.username
                         })
+
+                        localStorage.setItem('User-Email' , Response.email)
                     }
 
                     if (Response.Error)
@@ -51,39 +52,52 @@ export default function LoginPage ()
             )
     }
 
+
+
     useLayoutEffect(()=>{
+
+        const loacal = localStorage.getItem('User-Email')
+
+        if (loacal)
+        {
+            Dispatch({Type : CaseLoadin.LoginSuccess})
+        }
+
 
         if (login)
         {
             return history.replace(from)
         }
 
-        return function cleanup(){
-            return login
-        }
 
     } , [login])
 
 
 
 
-    //==================================================================================
+
     const LoadingComponent = <h1> Loading ... </h1>
 
     const LoginComponent = (
-        <>
-            <h1>Login Page</h1>
 
+
+        <div className='LoginPanel'>
+            <h1>Login To Facebook</h1>
+            <p>if you want Access to this page first you must login</p>
             <form>
                 <input type="text" placeholder='Name : admin' value={UserName} onChange={event => SetUserName(event.target.value)} />
                 <input type="text" placeholder='Password : admin' value={Password} onChange={event => SetPassword(event.target.value)} />
-            </form>
+                <p>
+                    By creating your facebook account, you agree to our Terms, Data
+                    Policy and Cookie Policy, You may receive SMS notifications from us
+                    and can opt out at any
+                </p>
 
-            <button onClick={EnterToPanel}>Login</button>
+                <button onClick={EnterToPanel}>Login</button>
+            </form>
             <p>{Error}</p>
-        </>
+        </div>
     )
-    //==================================================================================
 
 
     return (

@@ -1,0 +1,86 @@
+$AppBody-Width : 100% ;
+$AppBody-Color : #42a5f5;
+
+
+$Header-Width : 80% ;
+$Header-Height : 20rem ;
+$Header-Color : #42a5f5;
+$Header-Routing-FontSize : 15px;
+$Header-Sentence-FontSize : 16px;
+$Header-Logo-FontSize : 45px;
+
+$Links-Width : 100%;
+$Links-Height : 8rem ;
+
+
+$LoginPanel-Width : 25rem;
+$LoginPanel-Height : 45rem;
+$LoginPanel-Color : #b5f580;
+$LoginPanel-Input-Width : 100%;
+$LoginPanel-Input-Hight : 2rem;
+$LoginPanel-Button-Width : 100% ;
+$LoginPanel-Button-Hight : 2.5rem
+;
+
+
+
+
+$Footer-Logo-Type : '18px';
+$Footer-Routing-Link : '13px';
+
+
+//Mixin For Margin and Padding
+@mixin flex($justify-content : center , $align-items : center , $flex-direction : row)
+{
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin margin-padding-one-property($T-R-B-L , $marginORpadding : true)
+{
+  @if($marginORpadding)
+  {
+    margin: $T-R-B-L;
+  }
+  @else
+  {
+    padding: $T-R-B-L;
+  }
+}
+@mixin margin-padding-Two-property($TB , $LR , $marginORpadding : true)
+{
+  @if($marginORpadding)
+  {
+    margin: $TB $LR;
+  }
+  @else
+  {
+    padding: $TB $LR;
+  }
+}
+@mixin margin-padding-Four-property($T , $R , $B , $L , $marginORpadding : true)
+{
+  @if($marginORpadding)
+  {
+    margin: $T $R $B $L;
+  }
+  @else
+  {
+    padding: $T $R $B $L;
+  }
+}
+
+//Mixin For Border-Radius
+@mixin border-one-property($T-R-B-L)
+{
+ border-radius: $T-R-B-L;
+}
+@mixin border-Two-property($TB , $LR)
+{
+  border-radius: $TB , $LR;
+}
+@mixin border-Four-property($T , $R , $B , $L)
+{
+  border-radius: $T $R $B $L ;
+}

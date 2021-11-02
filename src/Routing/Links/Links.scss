@@ -1,0 +1,44 @@
+@import "../../_VariableStyle/VariableStyle";
+
+
+.Links
+{
+  width: $Links-Width;
+  height: $Links-Height;
+
+
+  @include flex();
+
+
+  .LogoDiv
+  {
+    width: 10%;
+
+
+
+  }
+
+  .Logo
+  {
+    font-size: $Header-Logo-FontSize ;
+    color: aliceblue;
+  }
+
+
+  ul
+  {
+    width: 90%;
+    display: flex;
+    list-style: none;
+    li
+    {
+      @include margin-padding-Two-property(0 , 2rem);
+      .LinkTag
+      {
+        font-size: 18px;
+        color: aliceblue;
+        text-decoration: none;
+      }
+    }
+  }
+}
