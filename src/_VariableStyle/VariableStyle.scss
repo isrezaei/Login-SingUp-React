@@ -13,13 +13,16 @@ $Links-Width : 100%;
 $Links-Height : 8rem ;
 
 
-$LoginPanel-Width : 25rem;
-$LoginPanel-Height : 45rem;
-$LoginPanel-Color : #b5f580;
+$LoginPanel-Width : 27rem;
+$LoginPanel-Height : 40rem;
+$LoginPanel-Color : #ffff;
 $LoginPanel-Input-Width : 100%;
-$LoginPanel-Input-Hight : 2rem;
+$LoginPanel-Input-Hight : 2.5rem;
+$LoginPanel-Input-color :  #eceff1;
 $LoginPanel-Button-Width : 100% ;
-$LoginPanel-Button-Hight : 2.5rem
+$LoginPanel-Button-Hight : 2.5rem;
+$LoginPanel-Button-color : #03a9f4;
+$LoginPanel-Button-fontSize : 17px
 ;
 
 
@@ -74,7 +77,7 @@ $Footer-Routing-Link : '13px';
 //Mixin For Border-Radius
 @mixin border-one-property($T-R-B-L)
 {
- border-radius: $T-R-B-L;
+  border-radius: $T-R-B-L;
 }
 @mixin border-Two-property($TB , $LR)
 {

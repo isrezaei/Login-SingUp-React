@@ -5,11 +5,13 @@ import {Server} from "../ServesApi/ServesApi";
 import {useHistory , useLocation} from "react-router-dom";
 import './LoginPage.css'
 
+
 export default function LoginPage ()
 {
     const [UserName , SetUserName] = useState('')
     const [Password , SetPassword] = useState('')
     const [Error , SetError] = useState()
+    const [Loading , SetLoading] = useState(false)
 
     const Dispatch = DispatchValue()
     const {login , wait}  = StateValue()
@@ -82,20 +84,31 @@ export default function LoginPage ()
 
 
         <div className='LoginPanel'>
-            <h1>Login To Facebook</h1>
-            <p>if you want Access to this page first you must login</p>
+            <p className='Title'>Login To Facebook</p>
+            <p className='Alert'>if you want Access to this page first you must login</p>
+
             <form>
                 <input type="text" placeholder='Name : admin' value={UserName} onChange={event => SetUserName(event.target.value)} />
                 <input type="text" placeholder='Password : admin' value={Password} onChange={event => SetPassword(event.target.value)} />
-                <p>
-                    By creating your facebook account, you agree to our Terms, Data
-                    Policy and Cookie Policy, You may receive SMS notifications from us
+
+                <p className='WrongAlert'>{Error}</p>
+                <p className='Summary'>
+                    By creating your facebook account, you agree to our <span style={{color : "#03a9f4" }}>Terms, Data
+                    Policy</span> and <span style={{color : "#03a9f4"}}>Cookie Policy</span>, You may receive SMS notifications from us
                     and can opt out at any
                 </p>
 
-                <button onClick={EnterToPanel}>Login</button>
+                <button className='LoginButton' onClick={EnterToPanel}>Login</button>
+
+                <p className='ForgotPassword'>Forgot password ?</p>
+
+                <hr style={{width:'100%' , margin : '1rem' , backgroundColor : '#00a0fd'}}/>
+
+                <button className='CreateButton'> Create new account</button>
+
+
             </form>
-            <p>{Error}</p>
+
         </div>
     )
 
