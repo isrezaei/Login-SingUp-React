@@ -56,7 +56,7 @@ export default function SiginPage()
             <form>
 
                 <div className='NameInfo'>
-                    <input type="text" placeholder='First name'/>
+                    <input type="text" placeholder='First name' />
                     <input type="text" placeholder='Last name'  />
                 </div>
 
