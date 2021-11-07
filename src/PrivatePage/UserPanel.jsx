@@ -3,6 +3,7 @@ import {Redirect} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {DispatchValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
+import {useEffect} from "react";
 
 export default function UserPanel ()
 {
@@ -12,6 +13,7 @@ export default function UserPanel ()
     const location = useLocation()
 
     const Dispatch = DispatchValue()
+
 
     const LogOut = () =>
     {
@@ -35,6 +37,9 @@ export default function UserPanel ()
 
 
 
+    console.log(login)
+
+
     const PanelComponent = (
         <>
             <h1>Welcome To panel</h1>
@@ -44,7 +49,7 @@ export default function UserPanel ()
 
     return (
         <>
-            {login ?  PanelComponent : RedirectComponent}
+            {login ? PanelComponent : RedirectComponent}
         </>
 
     )

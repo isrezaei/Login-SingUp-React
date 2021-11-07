@@ -2,10 +2,10 @@
   width: 27rem;
   height: 40rem;
   background-color: #ffff;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   float: right;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 2rem 2rem;
 }
 .LoginPanel .Title {
@@ -15,11 +15,11 @@
 }
 .LoginPanel .Alert {
   margin: 1rem 0;
-  color: #5b5b5b;
-  font-weight: lighter;
+  color: rgba(91, 91, 91, 0.55);
+  font-weight: bold;
 }
 .LoginPanel .Summary {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   font-size: 13px;
   font-weight: bold;
   color: #939393;

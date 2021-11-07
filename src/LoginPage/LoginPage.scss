@@ -6,11 +6,11 @@
   width: $LoginPanel-Width;
   height: $LoginPanel-Height;
   background-color: $LoginPanel-Color;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.30);;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.20);;
   box-sizing: border-box;
   float: right;
 
-  @include border-one-property(15px);
+  @include border-one-property(10px);
   @include margin-padding-Two-property(2rem , 2rem , false);
 
   .Title
@@ -26,13 +26,13 @@
   .Alert
   {
     @include margin-padding-Two-property(1rem , 0);
-    color: #5b5b5b;
-    font-weight: lighter;
+    color: rgba(91, 91, 91, 0.55);
+    font-weight: bold;
   }
 
   .Summary
   {
-    @include margin-padding-Two-property(1.5rem , 0);;
+    @include margin-padding-Two-property(1rem , 0);;
     font:
     {
       size: 13px;

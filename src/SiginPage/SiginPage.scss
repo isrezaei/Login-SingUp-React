@@ -1,0 +1,186 @@
+@import "../_VariableStyle/VariableStyle";
+
+
+.SiginPanel
+{
+  width: $Sigin-Width;
+  height: $Sigin-Height;
+  background-color: $Sigin-Color;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.20);;
+  box-sizing: border-box;
+
+
+  @include border-one-property(10px);
+  @include margin-padding-Two-property(2rem , 2rem , false);
+
+  .Title
+  {
+    @include margin-padding-Two-property(.5rem , 0);
+
+    font: {
+      size: 30px;
+      weight: bold;
+    };
+  }
+
+  .Alert
+  {
+    @include margin-padding-Two-property(1rem , 0);
+    color: rgba(91, 91, 91, 0.55);
+    font-weight: bold;
+  }
+
+  input[type = text]
+  {
+    width: $Sigin-Input-Width;
+    height: $Sigin-Input-Hight;
+    background-color: $Sigin-Input-color;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+    @include border-one-property(5px);
+    @include margin-padding-one-property(.5rem , false);
+    @include margin-padding-Two-property(.5rem , 0)
+  }
+
+
+  form
+  {
+    @include flex(center , center , column);
+
+    .NameInfo
+    {
+      width: 100%;
+      @include flex(space-between , center , row);
+
+      input
+      {
+        width: 49%;
+      }
+    }
+
+    .BrithdayInfo
+    {
+      width: 100%;
+
+      .Birthday
+      {
+
+        font-size: 13px;
+        font-weight: bold;
+        color: #b7b7b7;
+        @include margin-padding-Two-property( .5rem , 0)
+      }
+
+      .Options
+      {
+        @include flex(space-between , center , row);
+
+        select
+        {
+          width: 30%;
+          height: 2rem;
+          border: 1px solid #b7b7b7;
+          box-sizing: border-box;
+
+
+          @include margin-padding-one-property(5px , false);
+          @include border-one-property(5px);
+
+          option
+          {
+            font-size: 18px;
+
+
+          }
+
+        }
+      }
+
+    }
+
+
+    .GenderInfo
+    {
+      width: 100%;
+
+      .Gender
+      {
+        font-size: 13px;
+        font-weight: bold;
+        color: #b7b7b7;
+        @include margin-padding-Two-property( .5rem , 0)
+
+      }
+
+      .RadioInput
+      {
+        width: 100%;
+        @include flex(space-between, center , row);
+
+
+        section
+        {
+          width: 30%;
+          height: 2rem;
+
+          border: 1px solid #b7b7b7;
+
+          @include flex();
+          @include flex(space-around, center , row);
+          @include border-one-property(5px);
+
+          input[type = radio]
+          {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+
+    .Summary
+    {
+      @include margin-padding-Two-property(1rem , 0);;
+      font:
+      {
+        size: 13px;
+        weight: bold;
+      };
+      color: #939393;
+      line-height: 1.2rem;
+    }
+
+
+
+    .LoginButton
+    {
+      width: $LoginPanel-Button-Width;
+      height: $LoginPanel-Button-Hight;
+      background-color: #79a940;
+
+      font: {
+        size: $LoginPanel-Button-fontSize;
+      };
+      color: white;
+      outline: none;
+      border: none;
+
+      @include margin-padding-Two-property(.5rem , 0);
+      @include border-one-property(5px)
+    }
+
+
+
+    .ForgotPassword
+    {
+      @include margin-padding-Two-property(1rem , 0);;
+      font:
+      {
+        size: 13px;
+      };
+    }
+
+  }
+}

@@ -1530,6 +1530,48 @@
     "estree-walker" "^1.0.1"
     "picomatch" "^2.2.2"
 
+"@sentry/hub@6.14.1":
+  "integrity" "sha512-IqANj5qKG1N+nqBsuYIwAZsXDMmO/Sc4H2zZ2MP7QvRyp0ptpJmu1oTE0r0fohIcGgIWbnIphJjw990Lp507eA=="
+  "resolved" "https://registry.npmjs.org/@sentry/hub/-/hub-6.14.1.tgz"
+  "version" "6.14.1"
+  dependencies:
+    "@sentry/types" "6.14.1"
+    "@sentry/utils" "6.14.1"
+    "tslib" "^1.9.3"
+
+"@sentry/minimal@6.14.1":
+  "integrity" "sha512-rxS0YUggCSuA7EzS1ai5jU8XArk4FBHZ02gmSoSSLtwFXmeQIa9XBKY0OEFmG2LMQYNOpvcGsezDO51EB6/X9w=="
+  "resolved" "https://registry.npmjs.org/@sentry/minimal/-/minimal-6.14.1.tgz"
+  "version" "6.14.1"
+  dependencies:
+    "@sentry/hub" "6.14.1"
+    "@sentry/types" "6.14.1"
+    "tslib" "^1.9.3"
+
+"@sentry/tracing@^6.14.1":
+  "integrity" "sha512-Bv/+S5Wn9OPxP7sA9VYMV1wpmXWptFVIMFoG4BuyV4aFYdIAMxSNE/ktqXwmqn+nkBic04nP9rF6lMJBLIvIaA=="
+  "resolved" "https://registry.npmjs.org/@sentry/tracing/-/tracing-6.14.1.tgz"
+  "version" "6.14.1"
+  dependencies:
+    "@sentry/hub" "6.14.1"
+    "@sentry/minimal" "6.14.1"
+    "@sentry/types" "6.14.1"
+    "@sentry/utils" "6.14.1"
+    "tslib" "^1.9.3"
+
+"@sentry/types@6.14.1":
+  "integrity" "sha512-RIk3ZwQKZnASrYWfV5i4wbzVveHz8xLFAS2ySIMqh+hICKnB0N4/r8a1Of/84j7pj+iAbf5vPS85639eIf+9qg=="
+  "resolved" "https://registry.npmjs.org/@sentry/types/-/types-6.14.1.tgz"
+  "version" "6.14.1"
+
+"@sentry/utils@6.14.1":
+  "integrity" "sha512-GVvf0z18L4DN0a6vIBdHSlrK/Dj8QFhuiiJ8NtccSoY8xiKXQNz9FKN5d52NUNqm59aopAxcVAcs57yQSdxrZQ=="
+  "resolved" "https://registry.npmjs.org/@sentry/utils/-/utils-6.14.1.tgz"
+  "version" "6.14.1"
+  dependencies:
+    "@sentry/types" "6.14.1"
+    "tslib" "^1.9.3"
+
 "@sinonjs/commons@^1.7.0":
   "integrity" "sha512-sruwd86RJHdsVf/AtBoijDmUqJp3B6hF/DGC23C+JaegnDHaZyewCjoVGTdg3J0uz3Zs7NnIT05OBOmML72lQw=="
   "resolved" "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.2.tgz"
@@ -11033,6 +11075,11 @@
   "version" "1.14.1"
 
 "tslib@^1.9.0":
+  "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
+  "version" "1.14.1"
+
+"tslib@^1.9.3":
   "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
