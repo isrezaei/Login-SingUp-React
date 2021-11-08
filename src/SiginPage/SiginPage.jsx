@@ -86,7 +86,7 @@ export default function SiginPage()
                 if (Response.firstname)
                 {
                     Dispatch({Type : CaseLoadin.LoginSuccess})
-                    return replace('/UserPanel')
+                    return replace('/Login')
                 }
 
                 alert('False')

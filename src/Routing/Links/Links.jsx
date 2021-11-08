@@ -27,7 +27,7 @@ export const Links = () =>
                 </li>
 
                 <li>
-                    <Link className='LinkTag' to='/UserPanel'>User Panel</Link>
+                    <Link className='LinkTag' to='/Login'>Login</Link>
                 </li>
             </ul>
         </div>

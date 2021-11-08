@@ -11,7 +11,7 @@ export default function UserPanel ()
 
     const location = useLocation()
 
-    const {State , BlueHeader} = StateValue()
+    const {State} = StateValue()
     const {Dispatch} = ChangeStateValue()
 
 

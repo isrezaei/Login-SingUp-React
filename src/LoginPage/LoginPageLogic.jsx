@@ -57,21 +57,24 @@ export default function LoginPageLogic () {
 
 
     useLayoutEffect(()=>{
+        //
+        // const local = localStorage.getItem('User-Email')
+        //
+        // if(history.action === 'POP')
+        // {
+        //     return history.replace('/MainPanel')
+        // }
+        //
+        // if (local)
+        // {
+        //     Dispatch({Type : CaseLoadin.LoginSuccess})
+        // }
+        //
+        // if (State.login)
+        // {
+        //     return history.replace('/MainPanel')
+        // }
 
-        const local = localStorage.getItem('User-Email')
-
-        if(history.action === 'POP')
-        {
-            return history.replace('/UserPanel')
-        }
-        if (local)
-        {
-            Dispatch({Type : CaseLoadin.LoginSuccess})
-        }
-        if (State.login)
-        {
-            return history.replace('/UserPanel')
-        }
     } , [State.login])
 
 
