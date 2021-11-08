@@ -1,10 +1,8 @@
 @import "../_VariableStyle/VariableStyle";
 
-.LoginLogic
+.Panel-Login-SignIn
 {
   width: $Header-Width;
   height: $Header-Height;
-
-
   @include margin-padding-one-property(auto)
 }

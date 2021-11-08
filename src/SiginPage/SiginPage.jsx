@@ -1,48 +1,99 @@
+import ServerSignin from "../ServesApi/ServerSignin";
+import {useHistory} from "react-router-dom";
+import {ChangeStateValue , StateValue} from "../Context/Context";
+import {CaseLoadin} from "../StateLogin/StateLogin";
 import './SiginPage.css'
+
+
+
+const Months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+];
+
+const Days = () =>
+{
+    let Number = []
+    for (let i = 1 ; i <= 31 ; i++)
+    {
+        Number.push(i)
+    }
+
+    return Number
+}
+
+const Years = () =>
+{
+    let Number = []
+    for (let i = 1901 ; i <= 2022 ; i++)
+    {
+        Number.push(i)
+    }
+
+    return Number.reverse()
+}
 
 export default function SiginPage()
 {
 
+    const {
+        FirstName ,
+        LastName ,
+        PhoneEmail,
+        Password ,
+        Gender
+    } = StateValue()
 
-    const Months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-    ];
+    const {
+        SetFirstName,
+        SetLastName,
+        SetPhoneEmail,
+        SetPassword,
+        SetDay,
+        SetMonth,
+        SetYear,
+        SetGender
+    } = ChangeStateValue()
 
-    const Days = () =>
-    {
-        let Number = []
-        for (let i = 1 ; i <= 31 ; i++)
-        {
-            Number.push(i)
-        }
 
-        return Number
+    const SelectedOption = {
+        Male : 'Male' === Gender ,
+        female : 'Female' === Gender,
+        custom : 'Custom' === Gender
     }
+    const {Male , Female , Custom} = SelectedOption
 
-    const Years = () =>
+    const {replace} = useHistory()
+    const {Dispatch} = ChangeStateValue()
+
+
+    const SubmitInfo = (e) =>
     {
-        let Number = []
-        for (let i = 1901 ; i <= 2022 ; i++)
-        {
-            Number.push(i)
-        }
+        e.preventDefault()
 
-        return Number
+        ServerSignin(FirstName , LastName , PhoneEmail , Password)
+            .then(Response => {
+                if (Response.firstname)
+                {
+                    Dispatch({Type : CaseLoadin.LoginSuccess})
+                    return replace('/UserPanel')
+                }
+
+                alert('False')
+            })
+
+
     }
-
-
-
 
 
 
@@ -56,13 +107,13 @@ export default function SiginPage()
             <form>
 
                 <div className='NameInfo'>
-                    <input type="text" placeholder='First name' />
-                    <input type="text" placeholder='Last name'  />
+                    <input type="text" placeholder='First name' onChange={(e)=> SetFirstName(e.target.value)}/>
+                    <input type="text" placeholder='Last name'  onChange={(e)=> SetLastName(e.target.value)} />
                 </div>
 
-                <input type='text' placeholder='Mobile number or email'/>
+                <input type='text' placeholder='Mobile number or email' onChange={(e)=> SetPhoneEmail(e.target.value)}/>
 
-                <input type='text' placeholder='New Password'/>
+                <input type='text' placeholder='New Password' onChange={(e)=> SetPassword(e.target.value)}/>
 
                 <div className='BrithdayInfo'>
 
@@ -71,23 +122,16 @@ export default function SiginPage()
                     </div>
 
                     <div className='Options'>
-                        <select>
+
+                        <select onChange={(e)=> SetDay(e.target.value)}>
                             {
                                 Days().map((value , index)=> {
-                                        return <option key={index}>{value}</option>
+                                        return <option key={index} >{value}</option>
                                     }
                                 )
                             }
                         </select>
-                        <select>
-                            {
-                                Years().map((value, index) => {
-                                        return <option key={index}>{value}</option>
-                                    }
-                                )
-                            }
-                        </select>
-                        <select>
+                        <select  onChange={(e)=> SetMonth( e.target.value)}>
                             {
                                 Months.map((value, index) => {
                                         return <option key={index}>{value}</option>
@@ -95,6 +139,15 @@ export default function SiginPage()
                                 )
                             }
                         </select>
+                        <select  onChange={(e)=> SetYear(e.target.value)}>
+                            {
+                                Years().map((value, index) => {
+                                        return <option key={index}>{value}</option>
+                                    }
+                                )
+                            }
+                        </select>
+
                     </div>
                 </div>
 
@@ -109,19 +162,19 @@ export default function SiginPage()
                     <div className='RadioInput'>
                         <section>
                             <p>Female</p>
-                            <input type="radio"/>
+                            <input checked={Female} type="radio" onChange={()=> SetGender('Female')}/>
                         </section>
 
 
                         <section>
                             <p>Male</p>
-                            <input type="radio"/>
+                            <input checked={Male} type="radio" onChange={()=> SetGender('Male')}/>
                         </section>
 
 
                         <section>
                             <p>Custom</p>
-                            <input type="radio"/>
+                            <input checked={Custom} type="radio" onChange={()=> SetGender('Custom')}/>
                         </section>
                     </div>
 
@@ -133,11 +186,7 @@ export default function SiginPage()
                     Policy</span>  You may receive SMS Notifications from us and can opt out any time.
                 </p>
 
-                <button className='LoginButton'>Sign in</button>
-
-
-
-
+                <button className='LoginButton' onClick={SubmitInfo}>Sign in</button>
 
 
             </form>

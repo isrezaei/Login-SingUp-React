@@ -16,8 +16,8 @@ export const Router = () =>
             <Route exact path='/' component={Home}/>
             <Route path='/About' component={About}/>
             <Route path='/Support' component={Support}/>
-            <Route path='/UserPanel' component={UserPanel}/>
             <Route path='/Login' component={LoginPageLogic}/>
+            <Route path='/UserPanel' component={UserPanel}/>
             <Route path='/Sigin' component={SiginPage}/>
         </Switch>
     )

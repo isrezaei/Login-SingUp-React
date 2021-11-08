@@ -2,7 +2,7 @@ export const CaseLoadin = {
     LoginWait : 'LoginWait',
     LoginSuccess : 'LoginSuccess',
     LoginError : 'LoginErro',
-    LogOut : 'LogOut'
+    LogOut : 'LogOut' ,
 }
 
 

@@ -1,5 +1,5 @@
 import {useLayoutEffect, useState} from "react";
-import {DispatchValue, StateValue} from "../Context/Context";
+import {ChangeStateValue, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
 import {Server} from "../ServesApi/ServesApi";
 import {useHistory} from "react-router-dom";
@@ -12,9 +12,12 @@ export default function LoginPageLogic () {
     const [Password, SetPassword] = useState('')
     const [Error, SetError] = useState()
     const [Loading, SetLoading] = useState(false)
-    const {login} = StateValue()
-    const Dispatch = DispatchValue()
+    const {State} = StateValue()
+    const {Dispatch} = ChangeStateValue()
     const history = useHistory()
+
+
+
 
 
     function EnterToPanel (e)
@@ -65,11 +68,11 @@ export default function LoginPageLogic () {
         {
             Dispatch({Type : CaseLoadin.LoginSuccess})
         }
-        if (login)
+        if (State.login)
         {
             return history.replace('/UserPanel')
         }
-    } , [login])
+    } , [State.login])
 
 
 
