@@ -1,9 +1,8 @@
 @import "../_VariableStyle/VariableStyle";
 
-
 .AppBody
 {
   width: $AppBody-Width;
-  height: 20rem;
-  background-color: #42a5f5;
+  height: $AppBody-Height;
+  background-color: $AppBody-Color;
 }
