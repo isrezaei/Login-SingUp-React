@@ -1,4 +1,4 @@
-@import "../_VariableStyle/VariableStyle";
+@import "../../_VariableStyle/VariableStyle";
 
 
 .SiginPanel
@@ -154,7 +154,7 @@
 
 
 
-    .LoginButton
+    .SiginButton
     {
       width: $LoginPanel-Button-Width;
       height: $LoginPanel-Button-Hight;

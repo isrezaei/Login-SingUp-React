@@ -2,20 +2,23 @@ import {useLayoutEffect, useState} from "react";
 import {ChangeStateValue, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
 import {Server} from "../ServesApi/ServesApi";
-import {useHistory} from "react-router-dom";
 import LoginPageHtml from "./LoginPageHtml";
 import './LoginPage.css'
 
 
 export default function LoginPageLogic () {
-    const [UserName, SetUserName] = useState('')
-    const [Password, SetPassword] = useState('')
+
+
+
+
+    const {UserName , OldPassword} = StateValue()
+    const {SetUserName ,SetOldPassword} = ChangeStateValue()
+
+
     const [Error, SetError] = useState()
     const [Loading, SetLoading] = useState(false)
-    const {State} = StateValue()
-    const {Dispatch} = ChangeStateValue()
-    const history = useHistory()
 
+    const {Dispatch} = ChangeStateValue()
 
 
 
@@ -28,7 +31,7 @@ export default function LoginPageLogic () {
         })
         SetLoading(true)
 
-        Server(UserName , Password)
+        Server(UserName , OldPassword)
             .then(Response =>
                 {
                     if (Response.username)
@@ -56,26 +59,26 @@ export default function LoginPageLogic () {
 
 
 
-    useLayoutEffect(()=>{
-        //
-        // const local = localStorage.getItem('User-Email')
-        //
-        // if(history.action === 'POP')
-        // {
-        //     return history.replace('/MainPanel')
-        // }
-        //
-        // if (local)
-        // {
-        //     Dispatch({Type : CaseLoadin.LoginSuccess})
-        // }
-        //
-        // if (State.login)
-        // {
-        //     return history.replace('/MainPanel')
-        // }
-
-    } , [State.login])
+    // useLayoutEffect(()=>{
+    //
+    //     const local = localStorage.getItem('User-Email')
+    //
+    //     if(history.action === 'POP')
+    //     {
+    //         return history.replace('/MainPanel')
+    //     }
+    //
+    //     if (local)
+    //     {
+    //         Dispatch({Type : CaseLoadin.LoginSuccess})
+    //     }
+    //
+    //     if (State.login)
+    //     {
+    //         return history.replace('/MainPanel')
+    //     }
+    //
+    // } , [State.login])
 
 
 
@@ -83,9 +86,9 @@ export default function LoginPageLogic () {
         <>
             <LoginPageHtml
                 UserName={UserName}
-                Password={Password}
+                OldPassword={OldPassword}
                 SetUserName={SetUserName}
-                SetPassword={SetPassword}
+                SetOldPassword={SetOldPassword}
                 Error={Error}
                 Loading={Loading}
                 EnterToPanel={EnterToPanel}

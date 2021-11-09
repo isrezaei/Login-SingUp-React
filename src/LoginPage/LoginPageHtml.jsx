@@ -1,7 +1,7 @@
 import LoadingSpinner from "../LodingSpinner/LoadingSpinner";
 import {useHistory} from "react-router-dom";
 
-export default function LoginPageHtml ({UserName , Password , SetUserName , SetPassword , EnterToPanel , Loading ,Error})
+export default function LoginPageHtml ({UserName , OldPassword , SetUserName , SetOldPassword , EnterToPanel , Loading ,Error})
 {
 
     const Spinner = Loading && <LoadingSpinner/>
@@ -21,7 +21,7 @@ export default function LoginPageHtml ({UserName , Password , SetUserName , SetP
 
             <form>
                 <input type="text" placeholder='Name is admin' value={UserName} onChange={event => SetUserName(event.target.value)} />
-                <input type="text" placeholder='Password is admin' value={Password} onChange={event => SetPassword(event.target.value)} />
+                <input type="text" placeholder='Password is admin' value={OldPassword} onChange={event => SetOldPassword(event.target.value)} />
 
                 <>{Spinner}</>
                 <>{WrongAlert}</>

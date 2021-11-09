@@ -5,7 +5,6 @@ export const CaseLoadin = {
     LogOut : 'LogOut' ,
 }
 
-
 export const initState = {
     login : false,
     user : null,
@@ -13,7 +12,6 @@ export const initState = {
     logout : null,
     wait : false
 }
-
 
 export const Reducer = (State , Data) => {
 

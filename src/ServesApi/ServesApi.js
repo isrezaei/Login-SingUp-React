@@ -1,11 +1,8 @@
-
-
-
-export const Server = (username , password) =>
+export const Server = (username , OldPassword) =>
 {
     return new Promise((resolve, reject) => {
 
-        if (username === 'admin' && password === 'admin')
+        if (username === 'admin' && OldPassword === 'admin')
         {
             setTimeout(resolve , 2000)
         }

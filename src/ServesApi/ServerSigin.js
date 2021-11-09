@@ -1,4 +1,4 @@
-export default function ServerSignin (FirstName , LastName , PhoneAndEmail , NewPassword)
+export default function ServerSigin (FirstName , LastName , PhoneAndEmail , NewPassword)
 {
 
     const EmailValid = /[a-z0-9]\@+[a-z]+\.+[a-z]/
@@ -17,9 +17,9 @@ export default function ServerSignin (FirstName , LastName , PhoneAndEmail , New
         {
             setTimeout(()=>{
                 resolve({
-                    firstname : FirstName,
-                    lastname : LastName,
-                    email_phone : PhoneAndEmail
+                    FirstName : FirstName,
+                    LastName : LastName,
+                    PhoneAndEmail : PhoneAndEmail
                 })
             } , 2000)
         }
