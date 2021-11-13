@@ -10,6 +10,7 @@ import SiginSummary from "./SiginSummary";
 import SiginButton from "./SiginButton";
 import './SiginStyle/SiginPage.css'
 
+
 export default function SiginPageLogic()
 {
     const {replace} = useHistory()
@@ -34,6 +35,7 @@ export default function SiginPageLogic()
         SetGender
     } = ChangeStateValue()
 
+
     const SubmitInfo = (e) =>
     {
         e.preventDefault()
@@ -44,6 +46,7 @@ export default function SiginPageLogic()
         <div className='SiginPanel'>
             <SiginTitle/>
             <form>
+
                 <SiginInputs
                     SetFirstName = {SetFirstName}
                     SetLastName = {SetLastName}
@@ -64,6 +67,7 @@ export default function SiginPageLogic()
                     SetGender={SetGender}
                     Gender={Gender}
                 />
+
 
                 <SiginSummary/>
 

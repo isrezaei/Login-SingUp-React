@@ -35,9 +35,9 @@ export default function AuthProvider({children})
     const [LastName , SetLastName] = useState()
     const [PhoneEmail , SetPhoneEmail] = useState()
     const [NewPassword , SetNewPassword] = useState()
-    const [Day , SetDay] = useState('1')
-    const [Month , SetMonth] = useState('January')
-    const [Year , SetYear] = useState('2022')
+    const [Day , SetDay] = useState()
+    const [Month , SetMonth] = useState()
+    const [Year , SetYear] = useState()
     const [Gender , SetGender] = useState()
 
     return (
