@@ -1,6 +1,8 @@
 import {useRef , useLayoutEffect  , useEffect, useState} from "react";
-import SinginRefs from "./SinginRefs";
+import SinginError from "./SinginError";
 
+import {EmailValid , PhoneValid , PasswordValid} from "./SiginRegexInputs";
+import {StateValue} from "../Context/Context";
 
 export default function SiginInputs({SetFirstName , SetLastName , SetPhoneEmail , SetNewPassword})
 {
@@ -10,7 +12,21 @@ export default function SiginInputs({SetFirstName , SetLastName , SetPhoneEmail 
     const InputPhoneEmail = useRef()
     const InputNewPassword = useRef()
 
+    const {
+        FirstName ,
+        LastName ,
+        PhoneEmail,
+        NewPassword ,
+        Day ,
+        Month ,
+        Year ,
+        Gender
+    } = StateValue()
+
+
     const [AllInputRefs , SetAllInputRefs] = useState('')
+    const [BooleanBlurEmailPhone , SetBooleanBlurEmailPhone] = useState(false)
+    const [BooleanBlurPassword , SetBooleanBlurPassword] = useState(false)
 
 
     useEffect(()=> {
@@ -25,10 +41,42 @@ export default function SiginInputs({SetFirstName , SetLastName , SetPhoneEmail 
     } , [])
 
 
+    const HandelUnBlurEmailInput = (e) =>
+    {
+        SetPhoneEmail(e.target.value)
+
+        if (!EmailValid.test(e.target.value) || !PhoneValid.test(e.target.value))
+        {
+            SetBooleanBlurEmailPhone(true)
+        }
+
+        if (EmailValid.test(e.target.value) || PhoneValid.test(e.target.value))
+        {
+            SetBooleanBlurEmailPhone(false)
+        }
+
+    }
+
+    const HandelBlurPassword = (e) =>
+    {
+        SetNewPassword(e.target.value)
+
+        if (!PasswordValid.test(NewPassword))
+        {
+            SetBooleanBlurPassword(true)
+        }
+        if (PasswordValid.test(NewPassword))
+        {
+            SetBooleanBlurPassword(false)
+        }
+    }
+
+
     return (
 
         <>
             <div className='NameInfo'>
+
                 <input  ref={InputName} type="text" placeholder='First name'
                         onBlur={(e)=> SetFirstName(e.target.value)}
                         onFocus={(e)=> SetFirstName('.')}
@@ -42,27 +90,32 @@ export default function SiginInputs({SetFirstName , SetLastName , SetPhoneEmail 
 
 
             <input ref={InputPhoneEmail} type='text' placeholder='Mobile number or email'
-                   onBlur={(e)=> SetPhoneEmail(e.target.value)}
+                   onBlur={HandelUnBlurEmailInput}
                    onFocus={(e)=> SetPhoneEmail('.')}
                    onChange={(e)=> SetPhoneEmail(e.target.value)}/>
 
+            {BooleanBlurEmailPhone && <p style={{fontSize : '12px'}}>You're need a Right Informations</p> }
+
 
             <input ref={InputNewPassword} type='text' placeholder='New Password'
-                   onBlur={(e)=> SetNewPassword(e.target.value)}
+                   onBlur={HandelBlurPassword}
                    onFocus={(e)=> SetNewPassword('.')}
                    onChange={(e)=> SetNewPassword(e.target.value)}/>
+
+            {BooleanBlurPassword && <p style={{fontSize : '12px'}}>You Need true Password</p>}
 
 
             {
                 AllInputRefs &&
 
-            <SinginRefs
-                InputName={AllInputRefs.InputName}
-                InputLastName={AllInputRefs.InputLastName}
-                InputPhoneEmail={AllInputRefs.InputPhoneEmail}
-                InputNewPassword={AllInputRefs.InputNewPassword}
-            />
-
+                <SinginError
+                    InputName={AllInputRefs.InputName}
+                    InputLastName={AllInputRefs.InputLastName}
+                    InputPhoneEmail={AllInputRefs.InputPhoneEmail}
+                    InputNewPassword={AllInputRefs.InputNewPassword}
+                    BooleanBlurEmailPhone={BooleanBlurEmailPhone}
+                    BooleanBlurPassword={BooleanBlurPassword}
+                />
             }
 
         </>

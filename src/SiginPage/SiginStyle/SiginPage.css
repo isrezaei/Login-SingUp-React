@@ -64,6 +64,7 @@
   height: 2rem;
   border: 1px solid #b7b7b7;
   box-sizing: border-box;
+  outline: none;
   padding: 5px;
   border-radius: 5px;
 }

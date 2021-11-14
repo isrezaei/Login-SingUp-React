@@ -22,3 +22,8 @@ body
 {
     font-family: 'Inter', sans-serif;
 }
+
+:disabled
+{
+    opacity: .6;
+}

@@ -11,6 +11,7 @@ import SiginButton from "./SiginButton";
 import './SiginStyle/SiginPage.css'
 
 
+
 export default function SiginPageLogic()
 {
     const {replace} = useHistory()
@@ -20,6 +21,9 @@ export default function SiginPageLogic()
         LastName ,
         PhoneEmail,
         NewPassword ,
+        Day ,
+        Month ,
+        Year ,
         Gender
     } = StateValue()
 
@@ -47,33 +51,35 @@ export default function SiginPageLogic()
             <SiginTitle/>
             <form>
 
-                <SiginInputs
-                    SetFirstName = {SetFirstName}
-                    SetLastName = {SetLastName}
-                    SetPhoneEmail = {SetPhoneEmail}
-                    SetNewPassword = {SetNewPassword}
-                />
+                    <SiginInputs
+                        SetFirstName = {SetFirstName}
+                        SetLastName = {SetLastName}
+                        SetPhoneEmail = {SetPhoneEmail}
+                        SetNewPassword = {SetNewPassword}
+                    />
 
-                <SiginSelectBirthday
-                    SetDay={SetDay}
-                    Days={Days}
-                    SetMonth={SetMonth}
-                    Months={Months}
-                    SetYear={SetYear}
-                    Years={Years}
-                />
+                    <SiginSelectBirthday
+                        SetDay={SetDay}
+                        Days={Days}
+                        SetMonth={SetMonth}
+                        Months={Months}
+                        SetYear={SetYear}
+                        Years={Years}
+                    />
 
-                <SiginSelectGender
-                    SetGender={SetGender}
-                    Gender={Gender}
-                />
+                    <SiginSelectGender
+                        SetGender={SetGender}
+                        Gender={Gender}
+                    />
 
 
-                <SiginSummary/>
+                    <SiginSummary/>
 
-                <SiginButton
-                    SubmitInfo={SubmitInfo}
-                />
+                    <SiginButton
+                        SubmitInfo={SubmitInfo}
+                    />
+
+
             </form>
         </div>
     )

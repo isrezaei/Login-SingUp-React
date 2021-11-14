@@ -83,6 +83,7 @@
           height: 2rem;
           border: 1px solid #b7b7b7;
           box-sizing: border-box;
+          outline: none;
 
 
           @include margin-padding-one-property(5px , false);
@@ -91,7 +92,6 @@
           option
           {
             font-size: 18px;
-
 
           }
 
