@@ -1,22 +1,19 @@
-import {useRef, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
+import {GlobalRef} from "../../../../Context/Context";
 import BirthdayError from "../../../ErrorForSignIn/BirthdayError";
-import {StateValue} from "../../../../Context/Context";
 import DayOptions from "./2-DayOptions";
 import MonthOptions from "./3-MonthOptions";
 import YearsOptions from "./4-YearsOptions";
+import {SignInRegexCondition} from "../../../SignInRegex&Condition/1-SignInRegex&Condition";
 
 export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months , SetYear , Years})
 {
-
-    const DayRef = useRef()
-    const MonthRef = useRef()
-    const YearRef = useRef()
-    const { Year } = StateValue()
-
-    const ForbiddenAge = ['2016' , '2017' , '2018' , '2019' , '2020' , '2021' , '2022']
-
     const [AllInputRefs , SetAllInputRefs] = useState('')
     const [BooleanOptionYears , SetBooleanOptionYears] = useState(false)
+
+    const {DayRef , MonthRef , YearRef} = GlobalRef()
+    const {OldValidations} = SignInRegexCondition()
+
 
 
     useEffect(()=> {
@@ -27,10 +24,9 @@ export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months 
             YearRef : YearRef.current
         })
 
-        ForbiddenAge.includes(Year) ? SetBooleanOptionYears(true) : SetBooleanOptionYears(false)
+    } , [])
 
-    } , [Year])
-
+    const HandelForbiddenAge = () => OldValidations ? SetBooleanOptionYears(false) : SetBooleanOptionYears(true)
 
     return (
         <div className='BrithdayInfo'>
@@ -54,7 +50,8 @@ export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months 
                 <YearsOptions
                     YearRef={YearRef}
                     SetYear={SetYear}
-                    Years={Years}/>
+                    Years={Years}
+                    HandelForbiddenAge={HandelForbiddenAge}/>
 
             </div>
 

@@ -1,12 +1,15 @@
-import {useContext, createContext, useReducer, useState} from "react";
+import {useContext, createContext, useReducer, useState , useRef} from "react";
 import {initState , Reducer} from "../StateLogin/StateLogin";
-
+import {SignInInputRef , SignInBirthdayRefs} from "./GlobalRefs";
 
 const UseState = createContext('')
 const UseChangeState = createContext('')
+const UseGlobalRef = createContext('')
 
 
-//Consumer Component
+
+
+
 export function StateValue ()
 {
     return useContext(UseState)
@@ -17,20 +20,30 @@ export function ChangeStateValue ()
     return useContext(UseChangeState)
 }
 
+export function GlobalRef()
+{
+    return useContext(UseGlobalRef)
+}
 
-//Provider Component
+
+
 export default function AuthProvider({children})
 {
-    //Switch State Condition of Login , Log Out , Sign in
+
+
+    const {DayRef , MonthRef , YearRef} = SignInBirthdayRefs()
+    const {InputName , InputLastName , InputPhoneEmail , InputNewPassword} = SignInInputRef()
+
+
     const [State , Dispatch] = useReducer(Reducer , initState)
 
 
-    //Login State
+
     const [UserName, SetUserName] = useState('')
     const [OldPassword, SetOldPassword] = useState('')
 
 
-    //Sign in Stats
+
     const [FirstName , SetFirstName] = useState()
     const [LastName , SetLastName] = useState()
     const [PhoneEmail , SetPhoneEmail] = useState()
@@ -42,25 +55,36 @@ export default function AuthProvider({children})
 
 
     return (
-        <UseState.Provider
-            value={
-                {
-                    State ,
-                    FirstName ,
-                    LastName ,
-                    PhoneEmail,
-                    NewPassword ,
-                    Day ,
-                    Month ,
-                    Year ,
-                    Gender,
-                    UserName,
-                    OldPassword
-                }
+        <UseGlobalRef.Provider value={
+            {
+                DayRef ,
+                MonthRef ,
+                YearRef,
+                InputName ,
+                InputLastName ,
+                InputPhoneEmail ,
+                InputNewPassword
             }
-        >
-            <UseChangeState.Provider
+        }>
+            <UseState.Provider
                 value={
+                    {
+                        State ,
+                        FirstName ,
+                        LastName ,
+                        PhoneEmail,
+                        NewPassword ,
+                        Day ,
+                        Month ,
+                        Year ,
+                        Gender,
+                        UserName,
+                        OldPassword
+                    }
+                }
+            >
+                <UseChangeState.Provider
+                    value={
                         {
                             Dispatch,
                             SetFirstName,
@@ -75,9 +99,12 @@ export default function AuthProvider({children})
                             SetOldPassword
                         }
                     }
-            >
-                {children}
-            </UseChangeState.Provider>
-        </UseState.Provider>
+                >
+                    {children}
+
+                </UseChangeState.Provider>
+            </UseState.Provider>
+        </UseGlobalRef.Provider>
+
     )
 }
