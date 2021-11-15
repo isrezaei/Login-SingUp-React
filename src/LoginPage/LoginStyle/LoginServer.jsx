@@ -1,4 +1,4 @@
-import {Server} from "../../ServesApi/ServesApi";
+import {Server} from "../../ServesApi/ServesLogin";
 import {CaseLoadin} from "../../StateLogin/StateLogin";
 
 export default function LoginServer (UserName , OldPassword , Dispatch , SetLoading , SetError)

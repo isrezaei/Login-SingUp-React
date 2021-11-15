@@ -1,8 +1,8 @@
 import {useEffect} from "react";
-import {StateValue} from "../Context/Context";
+import {StateValue} from "../../Context/Context";
 
 
-export default function SinginError ({InputName , InputLastName , InputPhoneEmail , InputNewPassword , BooleanBlurEmailPhone , BooleanBlurPassword })
+export default function InputsError ({InputName , InputLastName , InputPhoneEmail , InputNewPassword , BooleanBlurEmailPhone , BooleanBlurPassword })
 {
 
     const {

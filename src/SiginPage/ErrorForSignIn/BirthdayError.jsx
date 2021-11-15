@@ -4,7 +4,6 @@ export default function BirthdayError ({DayRef , MonthRef , YearRef , BooleanOpt
 {
     useEffect(()=> {
 
-
         if (BooleanOptionYears)
         {
             DayRef.style.border = '2px solid #ffa4a2'

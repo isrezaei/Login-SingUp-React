@@ -1,11 +1,12 @@
 import {useState , useEffect} from "react";
-import {StateValue} from "../Context/Context";
-import {EmailValid , PasswordValid , PhoneValid} from "./SiginRegexInputs";
+import {StateValue} from "../../../Context/Context";
+import {EmailValid , PasswordValid , PhoneValid} from "../../SingInRegex/SiginRegexInputs";
 
 export default function SiginButton ({SubmitInfo})
 {
 
     const ForbiddenAge = ['2016' , '2017' , '2018' , '2019' , '2020' , '2021' , '2022']
+
     const [BooleanForButton , SetBooleanForButton] = useState(true)
 
     const {
@@ -20,7 +21,6 @@ export default function SiginButton ({SubmitInfo})
     } = StateValue()
 
 
-    console.log(Year)
 
     const Email = EmailValid.test(PhoneEmail) || PhoneValid.test(PhoneEmail)
     const Password = PasswordValid.test(NewPassword)
@@ -40,10 +40,8 @@ export default function SiginButton ({SubmitInfo})
         Years &&
         Gender ? SetBooleanForButton(false) : SetBooleanForButton(true)
 
-        return function cleanup ()
-        {
-            SetBooleanForButton(true)
-        }
+        return SetBooleanForButton(true)
+
 
     } , [FirstName , LastName , Email , Password , Day , Month , Years , Gender])
 

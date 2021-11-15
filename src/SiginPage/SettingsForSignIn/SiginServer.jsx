@@ -1,5 +1,5 @@
-import ServerSigin from "../ServesApi/ServerSigin";
-import {CaseLoadin} from "../StateLogin/StateLogin";
+import ServerSigin from "../../ServesApi/ServerSigin";
+import {CaseLoadin} from "../../StateLogin/StateLogin";
 
 export default function SiginServer (FirstName , LastName , PhoneEmail , NewPassword , Dispatch , replace)
 {
