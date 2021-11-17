@@ -2,9 +2,6 @@ import {useEffect} from "react";
 
 export default function BirthdayError ({DayRef , MonthRef , YearRef , BooleanOptionYears})
 {
-
-
-
     useEffect(()=> {
 
         if (BooleanOptionYears)

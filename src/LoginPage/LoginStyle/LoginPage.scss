@@ -1,5 +1,13 @@
 @import "../../_VariableStyle/VariableStyle";
 
+.LoginPage
+{
+  width: 100%;
+
+  @include flex(space-between , flex-start ,row)
+}
+
+
 .LoginPanel
 {
   width: $LoginPanel-Width;
@@ -7,9 +15,8 @@
   background-color: $LoginPanel-Color;
   box-shadow: $LoginPanel-BoxShdow;
   box-sizing: border-box;
-  float: right;
 
-  @include border-one-property(10px);
+  @include border-one-property(5px);
   @include margin-padding-Two-property(2rem , 2rem , false);
 
   .Title

@@ -6,10 +6,6 @@ const UseState = createContext('')
 const UseChangeState = createContext('')
 const UseGlobalRef = createContext('')
 
-
-
-
-
 export function StateValue ()
 {
     return useContext(UseState)
@@ -25,8 +21,6 @@ export function GlobalRef()
     return useContext(UseGlobalRef)
 }
 
-
-
 export default function AuthProvider({children})
 {
 
@@ -34,16 +28,10 @@ export default function AuthProvider({children})
     const {DayRef , MonthRef , YearRef} = SignInBirthdayRefs()
     const {InputName , InputLastName , InputPhoneEmail , InputNewPassword} = SignInInputRef()
 
-
     const [State , Dispatch] = useReducer(Reducer , initState)
-
-
 
     const [UserName, SetUserName] = useState('')
     const [OldPassword, SetOldPassword] = useState('')
-
-
-
     const [FirstName , SetFirstName] = useState()
     const [LastName , SetLastName] = useState()
     const [PhoneEmail , SetPhoneEmail] = useState()

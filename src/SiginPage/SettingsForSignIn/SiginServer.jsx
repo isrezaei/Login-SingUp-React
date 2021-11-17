@@ -11,8 +11,6 @@ export default function SiginServer (FirstName , LastName , PhoneEmail , NewPass
                     Dispatch({Type : CaseLoadin.LoginSuccess})
                     return replace('/Login')
                 }
-
-                alert('False')
             })
     )
 }

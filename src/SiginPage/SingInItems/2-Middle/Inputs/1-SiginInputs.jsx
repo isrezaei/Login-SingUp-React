@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {EmailValid , PhoneValid , PasswordValid} from "../../../SingInRegex/SiginRegexInputs";
+import Conditions from "../../../SignInRegex&Condition/2-Conditions";
 import InputsError from "../../../ErrorForSignIn/InputsError";
 import NameAndLastNameInput from "./2-NameAndLastNameInput";
 import EmailAndPasswordInputs from "./3-EmailAndPasswordInputs";
@@ -14,6 +14,7 @@ export default function SiginInputs({SetFirstName , SetLastName , SetPhoneEmail 
         InputPhoneEmail ,
         InputNewPassword} = GlobalRef()
 
+    const {EmailValidation , PasswordValidation } = Conditions()
 
     const [AllInputRefs , SetAllInputRefs] = useState('')
     const [BooleanBlurEmailPhone , SetBooleanBlurEmailPhone] = useState(false)
@@ -35,13 +36,13 @@ export default function SiginInputs({SetFirstName , SetLastName , SetPhoneEmail 
     const onBlurEmail= (e) =>
     {
         SetPhoneEmail(e.target.value)
-        EmailValid.test(e.target.value) || PhoneValid.test(e.target.value) ? SetBooleanBlurEmailPhone(false) : SetBooleanBlurEmailPhone(true)
+        EmailValidation ? SetBooleanBlurEmailPhone(false) : SetBooleanBlurEmailPhone(true)
     }
 
     const onBlurPassword = (e) =>
     {
         SetNewPassword(e.target.value)
-        PasswordValid.test(e.target.value) ? SetBooleanBlurPassword(false) : SetBooleanBlurPassword(true)
+        PasswordValidation ? SetBooleanBlurPassword(false) : SetBooleanBlurPassword(true)
     }
 
 

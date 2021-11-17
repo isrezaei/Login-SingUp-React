@@ -1,8 +1,8 @@
 export default function ServerSigin (FirstName , LastName , PhoneAndEmail , NewPassword)
 {
 
-    const EmailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    const PhoneValid = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
+    const EmailValid = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/
+    const PhoneValid = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s/0-9]*$/g
     const PasswordValid = /(?=.*[0-9])+(?=.*[a-z])/
 
     const Name = FirstName !== ''

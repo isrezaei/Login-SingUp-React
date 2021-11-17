@@ -1,6 +1,7 @@
 import {useHistory} from "react-router-dom";
 import {ChangeStateValue , StateValue} from "../Context/Context";
 import {Months , Days , Years} from "./SettingsForSignIn/BulidOptionsForBirthdayInputs";
+import {CaseLoadin} from "../StateLogin/StateLogin";
 import SiginServer from "./SettingsForSignIn/SiginServer";
 import SiginTitle from "./SingInItems/1-Header/SiginTitle";
 import SiginInputs from "./SingInItems/2-Middle/Inputs/1-SiginInputs";
@@ -8,8 +9,9 @@ import SiginSelectBirthday from "./SingInItems/2-Middle/Options/1-SiginSelectBri
 import SiginSelectGender from "./SingInItems/2-Middle/Radio/SiginSelectGender";
 import SiginSummary from "./SingInItems/3-Footer/SiginSummary";
 import SiginButton from "./SingInItems/3-Footer/SiginButton";
+import LoadingSpinner from "../LodingSpinner/LoadingSpinner";
 import './SiginStyle/SiginPage.css'
-
+import {useState} from "react";
 
 
 export default function SiginPageLogic()
@@ -36,11 +38,17 @@ export default function SiginPageLogic()
         SetGender
     } = ChangeStateValue()
 
+    const [Loading , SetLoading] = useState(false)
 
     const SubmitInfo = (e) =>
     {
         e.preventDefault()
-        SiginServer(FirstName , LastName , PhoneEmail , NewPassword , Dispatch ,replace)
+        SiginServer(FirstName , LastName , PhoneEmail , NewPassword , Dispatch , replace)
+
+        Dispatch({
+            Type : CaseLoadin.LoginWait
+        })
+        SetLoading(true)
     }
 
     return (
@@ -53,6 +61,8 @@ export default function SiginPageLogic()
                     SetPhoneEmail = {SetPhoneEmail}
                     SetNewPassword = {SetNewPassword}
                 />
+
+                {Loading &&  <LoadingSpinner/>}
 
                 <SiginSelectBirthday
                     SetDay={SetDay}
@@ -73,6 +83,7 @@ export default function SiginPageLogic()
                 <SiginButton
                     SubmitInfo={SubmitInfo}
                 />
+
             </form>
         </div>
     )

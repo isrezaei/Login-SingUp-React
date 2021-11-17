@@ -4,7 +4,7 @@ import BirthdayError from "../../../ErrorForSignIn/BirthdayError";
 import DayOptions from "./2-DayOptions";
 import MonthOptions from "./3-MonthOptions";
 import YearsOptions from "./4-YearsOptions";
-import {SignInRegexCondition} from "../../../SignInRegex&Condition/1-SignInRegex&Condition";
+import Conditions from "../../../SignInRegex&Condition/2-Conditions";
 
 export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months , SetYear , Years})
 {
@@ -12,7 +12,7 @@ export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months 
     const [BooleanOptionYears , SetBooleanOptionYears] = useState(false)
 
     const {DayRef , MonthRef , YearRef} = GlobalRef()
-    const {OldValidations} = SignInRegexCondition()
+    const {OldValidations} = Conditions()
 
 
 

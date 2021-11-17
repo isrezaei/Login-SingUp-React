@@ -4,6 +4,7 @@ import {CaseLoadin} from "../StateLogin/StateLogin";
 import LoginPageHtml from "./LoginPageHtml";
 import LoginServer from "./LoginStyle/LoginServer";
 import './LoginStyle/LoginPage.css'
+import LoginPageElement from "./LoginPageElements/LoginPageElement";
 
 export default function LoginPageLogic () {
 
@@ -25,7 +26,11 @@ export default function LoginPageLogic () {
 
 
     return (
-        <>
+
+        <div className={'LoginPage'}>
+
+            <LoginPageElement/>
+
             <LoginPageHtml
                 UserName={UserName}
                 OldPassword={OldPassword}
@@ -35,7 +40,9 @@ export default function LoginPageLogic () {
                 Loading={Loading}
                 EnterToPanel={EnterToPanel}
             />
-        </>
+
+
+        </div>
     )
 }
 

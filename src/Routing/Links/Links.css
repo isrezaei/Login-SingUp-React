@@ -1,13 +1,13 @@
 .Links {
   width: 100%;
-  height: 8rem;
+  height: 5.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .Links .LogoDiv {
-  width: 10%;
+  width: 5%;
 }
 .Links .Logo {
   font-size: 45px;

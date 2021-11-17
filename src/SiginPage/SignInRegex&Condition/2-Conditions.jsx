@@ -1,5 +1,5 @@
 import {StateValue} from "../../Context/Context";
-import Regex from "./2-Regex";
+import Regex from "./1-Regex";
 
 const ForbiddenAge = ['2016' , '2017' , '2018' , '2019' , '2020' , '2021' , '2022' , undefined]
 export default function Conditions ()

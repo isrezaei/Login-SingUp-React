@@ -1,7 +1,6 @@
 import {useEffect} from "react";
 import {StateValue} from "../../Context/Context";
 
-
 export default function InputsError ({InputName , InputLastName , InputPhoneEmail , InputNewPassword , BooleanBlurEmailPhone , BooleanBlurPassword })
 {
 
