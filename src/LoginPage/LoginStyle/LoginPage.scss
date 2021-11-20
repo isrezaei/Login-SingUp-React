@@ -30,7 +30,9 @@
 .LoginPage
 {
   width: 80%;
+  height: 30rem;
   margin: auto;
+
   @include flex(space-between , flex-start ,row)
 }
 

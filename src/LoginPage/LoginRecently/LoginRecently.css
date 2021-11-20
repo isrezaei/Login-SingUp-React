@@ -1,0 +1,59 @@
+.UpperText {
+  width: 38.5%;
+  position: relative;
+  left: 11%;
+  color: #4b4b4b;
+}
+
+.LoginRecently::-webkit-scrollbar {
+  display: none;
+}
+
+.LoginRecently {
+  width: 38.5%;
+  height: 15rem;
+  position: relative;
+  left: 10%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.LoginRecently .Card {
+  width: 10rem;
+  height: 14rem;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 0px 6px -3px #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 1rem;
+}
+.LoginRecently .Card .Avatar {
+  width: 120px;
+  height: 120px;
+  background-color: #98e8de;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+}
+.LoginRecently .Card .Name {
+  color: #4b4b4b;
+  font-weight: bold;
+  margin: 0.5rem 0 0 0;
+}
+.LoginRecently .Card .Activity {
+  color: #707070;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0.3rem 0 0 0;
+}
+
+/*# sourceMappingURL=LoginRecently.css.map */

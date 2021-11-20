@@ -3,8 +3,9 @@ import {ChangeStateValue, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
 import LoginPageHtml from "./LoginPageHtml";
 import LoginServer from "./LoginStyle/LoginServer";
-import './LoginStyle/LoginPage.css'
 import LoginPageElement from "./LoginPageElements/LoginPageElement";
+import './LoginStyle/LoginPage.css'
+import LoginRecently from "./LoginRecently/LoginRecently";
 
 export default function LoginPageLogic () {
 
@@ -44,9 +45,11 @@ export default function LoginPageLogic () {
                 />
 
 
+
             </div>
 
-            <h1>Login Recently</h1>
+            <LoginRecently/>
+
         </div>
     )
 }
