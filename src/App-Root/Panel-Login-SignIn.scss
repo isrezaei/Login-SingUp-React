@@ -2,9 +2,7 @@
 
 .Panel-Login-SignIn
 {
-  width: $Panel-Login-SignIn-Width;
-  height: $Panel-Login-SignIn-Height;
-
-
+  width: 100%;
+  background-color: #e7eefd;
   @include margin-padding-one-property(auto)
 }

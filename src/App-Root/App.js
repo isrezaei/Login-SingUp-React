@@ -3,7 +3,9 @@ import {Links} from "../Routing/Links/Links";
 import {StateValue} from "../Context/Context";
 import MainPanel from "../MainPanel/MainPanel";
 import './Panel-Login-SignIn.css'
-import './App.css'
+
+
+import Footer from "../Footer/Footer";
 
 export default function App() {
     const {State} = StateValue()
@@ -11,12 +13,22 @@ export default function App() {
 
 
     const AppBody = (
-        <div  className='AppBody'>
+
+
+
+
             <div className='Panel-Login-SignIn'>
                 <Links/>
+
                 <Router/>
+
+                <Footer/>
             </div>
-        </div>
+
+
+
+
+
     )
 
     return State.login || Local? <MainPanel/> : AppBody

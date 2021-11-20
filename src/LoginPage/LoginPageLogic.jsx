@@ -27,21 +27,26 @@ export default function LoginPageLogic () {
 
     return (
 
-        <div className={'LoginPage'}>
+        <div className={'ParentLoginPage'}>
 
-            <LoginPageElement/>
+            <div className={'LoginPage'}>
 
-            <LoginPageHtml
-                UserName={UserName}
-                OldPassword={OldPassword}
-                SetUserName={SetUserName}
-                SetOldPassword={SetOldPassword}
-                Error={Error}
-                Loading={Loading}
-                EnterToPanel={EnterToPanel}
-            />
+                <LoginPageElement/>
+
+                <LoginPageHtml
+                    UserName={UserName}
+                    OldPassword={OldPassword}
+                    SetUserName={SetUserName}
+                    SetOldPassword={SetOldPassword}
+                    Error={Error}
+                    Loading={Loading}
+                    EnterToPanel={EnterToPanel}
+                />
 
 
+            </div>
+
+            <h1>Login Recently</h1>
         </div>
     )
 }

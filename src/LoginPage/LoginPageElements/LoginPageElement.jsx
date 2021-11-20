@@ -1,5 +1,5 @@
 import TypeWriter from "./TypeWriter";
-import IMGPeopleHeader from "../../Images/7403.png"
+import IMGPeopleHeader from "../../Images/LoginPic.png"
 
 import './PageElements.css'
 

@@ -1,4 +1,4 @@
-import LoadingSpinner from "../LodingSpinner/LoadingSpinner";
+import LoadingSpinner from "../Spinner/LoadingSpinner";
 import LoginTitle from "./LoginTitle";
 import LoginInputs from "./LoginInputs";
 import LoginSummary from "./LoginSummary";

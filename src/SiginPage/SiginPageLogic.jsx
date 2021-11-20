@@ -9,7 +9,7 @@ import SiginSelectBirthday from "./SingInItems/2-Middle/Options/1-SiginSelectBri
 import SiginSelectGender from "./SingInItems/2-Middle/Radio/SiginSelectGender";
 import SiginSummary from "./SingInItems/3-Footer/SiginSummary";
 import SiginButton from "./SingInItems/3-Footer/SiginButton";
-import LoadingSpinner from "../LodingSpinner/LoadingSpinner";
+import LoadingSpinner from "../Spinner/LoadingSpinner";
 import './SiginStyle/SiginPage.css'
 import {useState} from "react";
 

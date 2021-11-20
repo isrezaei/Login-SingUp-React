@@ -5,7 +5,8 @@
 {
   width: $Links-Width;
   height: $Links-Height;
-
+  position: absolute;
+  z-index: 1000;
 
   @include flex();
 

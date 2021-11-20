@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Panel-Login-SignIn.scss","../_VariableStyle/VariableStyle.scss"],"names":[],"mappings":"AAEA;EAEE,OCC0B;EDA1B,QCC2B;EAoEzB,QDlEmC","file":"Panel-Login-SignIn.css"}
+{"version":3,"sourceRoot":"","sources":["Panel-Login-SignIn.scss","../_VariableStyle/VariableStyle.scss"],"names":[],"mappings":"AAEA;EAEE;EACA;ECqEE,QDpEmC","file":"Panel-Login-SignIn.css"}

@@ -2,30 +2,29 @@
 
 .TypewriterANDPeopleImage
 {
-  width: 68rem;
+  width: 67%;
   @include flex(space-between , center ,row);
 
 
 
   .Typewrite
   {
-    width: 25rem;
-    color: #ffffff;
+    width: 30rem;
+    color: #fcfcfc;
+
     font: {
-      size: 35px;
+      size: 45px;
       weight: bold;
     };
 
-    text-shadow: 2px 3px 4px #3F3636;
+    @include margin-padding-Four-property(0 , 0 , 5rem , 0);
+
   }
 
   .PeopleImage
   {
-    width: 700px;
+    width: 500px;
     position: relative;
-    left: 2.5rem;
-    bottom: 1.2rem;
-
 
   }
 

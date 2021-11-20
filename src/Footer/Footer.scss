@@ -1,0 +1,41 @@
+@import "../_VariableStyle/VariableStyle";
+
+.Footer
+{
+  width: 80%;
+  height: 5rem;
+  border-top: 1px solid #cbcaca;
+
+  @include margin-padding-Four-property(25rem , auto , 0 , auto);
+  @include flex(space-around , center ,row);
+
+  .Brand
+  {
+    font-weight: bold;
+    flex: 1;
+  }
+
+  .Topics
+  {
+    flex: 7;
+    list-style: none;
+    @include flex(flex-start , center , row);
+    li
+    {
+      @include margin-padding-Two-property(0 , 1rem);
+    }
+  }
+
+
+  .DownloadServes
+  {
+    @include flex();
+
+
+
+    img
+    {
+         width: 300px;
+    }
+  }
+}
