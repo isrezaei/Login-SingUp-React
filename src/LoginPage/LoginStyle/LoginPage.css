@@ -87,6 +87,7 @@
 .LoginPanel form .CreateButton {
   width: 90%;
   background-color: #79a940;
+  cursor: pointer;
   margin: 0rem 0;
 }
 .LoginPanel form .ForgotPassword {

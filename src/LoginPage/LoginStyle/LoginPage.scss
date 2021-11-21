@@ -119,6 +119,7 @@
     {
       width: $LoginPanel-CreatButton-Width;
       background-color: $LoginPanel-CreatButton-Color;
+      cursor: pointer;
 
       @extend .LoginButton ;
       @include margin-padding-Two-property( 0rem , 0)

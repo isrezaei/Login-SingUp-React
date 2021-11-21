@@ -14,7 +14,7 @@ export default function MainPanel ()
             Type : CaseLoadin.LogOut
         })
 
-        localStorage.clear('User-Email')
+        localStorage.removeItem('User-Email')
 
     }
 

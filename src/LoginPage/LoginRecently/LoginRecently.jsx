@@ -1,7 +1,35 @@
+import {useEffect , useState} from "react";
+import RecentlyTime from "./RecentlyTime";
 import './LoginRecently.css'
 
 export default function LoginRecently ()
 {
+
+    const [Recently , SetRecenty] = useState({
+        LocalUser : ['']
+    })
+
+    useEffect(()=>{
+
+        const Local = JSON.parse(localStorage.getItem('New-User'))
+        Local && SetRecenty({
+            LocalUser : Local
+        })
+
+    } , [])
+
+
+   const ShowRecently = Recently.LocalUser.map((value, index)=>{
+        return (
+            <div key={index}  className={'Card'}>
+                <img className={'Avatar'} />
+                <p className={'Name'}>{value.FirstName} {value.LastName}</p>
+                <p className={'Activity'}><RecentlyTime/></p>
+            </div>
+        )
+    })
+
+
     return (
         <>
 
@@ -9,38 +37,7 @@ export default function LoginRecently ()
 
             <div className={'LoginRecently'}>
 
-
-
-                <div className={'Card'}>
-                    <img className={'Avatar'} />
-                    <p className={'Name'}>Person Name</p>
-                    <p className={'Activity'}>Active 2 Days age</p>
-                </div>
-
-                <div className={'Card'}>
-                    <img className={'Avatar'} />
-                    <p className={'Name'}>Person Name</p>
-                    <p className={'Activity'}>Active 2 Days age</p>
-                </div>
-
-                <div className={'Card'}>
-                    <img className={'Avatar'} />
-                    <p className={'Name'}>Person Name</p>
-                    <p className={'Activity'}>Active 2 Days age</p>
-                </div>
-
-                <div className={'Card'}>
-                    <img className={'Avatar'} />
-                    <p className={'Name'}>Person Name</p>
-                    <p className={'Activity'}>Active 2 Days age</p>
-                </div>
-
-                <div className={'Card'}>
-                    <img className={'Avatar'} />
-                    <p className={'Name'}>Person Name</p>
-                    <p className={'Activity'}>Active 2 Days age</p>
-                </div>
-
+                {ShowRecently}
 
             </div>
 
