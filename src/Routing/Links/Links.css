@@ -1,8 +1,11 @@
 .Links {
-  width: 100%;
+  width: 85%;
   height: 5.5rem;
   position: absolute;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,7 +16,7 @@
 }
 .Links .Logo {
   font-size: 45px;
-  color: aliceblue;
+  color: #414141;
 }
 .Links ul {
   width: 90%;
@@ -25,7 +28,8 @@
 }
 .Links ul li .LinkTag {
   font-size: 18px;
-  color: aliceblue;
+  font-weight: bold;
+  color: #4b4b4b;
   text-decoration: none;
 }
 

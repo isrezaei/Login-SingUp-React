@@ -3,26 +3,27 @@
 
 .Links
 {
-  width: $Links-Width;
+  width: 85%;
   height: $Links-Height;
   position: absolute;
+  left: 0;
+  right: 0;
   z-index: 1000;
 
+
+  @include margin-padding-one-property(auto);
   @include flex();
 
 
   .LogoDiv
   {
     width: 5%;
-
-
-
   }
 
   .Logo
   {
     font-size: $Header-Logo-FontSize ;
-    color: aliceblue;
+    color: #414141;
   }
 
 
@@ -36,8 +37,12 @@
       @include margin-padding-Two-property(0 , 2rem);
       .LinkTag
       {
-        font-size: 18px;
-        color: aliceblue;
+
+        font: {
+          size: 18px;
+          weight: bold;
+        };
+        color: #4b4b4b;
         text-decoration: none;
       }
     }
