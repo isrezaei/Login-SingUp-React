@@ -12,7 +12,6 @@ export const Links = () =>
                 <BsFacebook className='Logo'/>
             </div>
 
-
             <ul>
                 <li>
                     <Link className='LinkTag' to='/'>Home</Link>

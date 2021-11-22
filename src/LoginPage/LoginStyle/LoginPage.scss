@@ -5,48 +5,44 @@
 {
   width: 100%;
   height: 25rem;
-  background: linear-gradient(to right, #58aeef, #4fc3f7 , #42a5f5 , #3668ff);
-  animation: gradient 10s ease infinite;
-  background-size: 400% 400%;
+  background : url("image_processing20210909-10272-1cgwkuz.gif") no-repeat center center;
+  background-size: cover;
   margin: auto;
   padding-top: 5%;
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+
+  &:after
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 31rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    z-index: 0;
   }
-
 }
-
-
 
 .LoginPage
 {
   width: 80%;
   height: 30rem;
   margin: auto;
-
   @include flex(space-between , flex-start ,row)
 }
-
 
 .LoginPanel
 {
   width: $LoginPanel-Width;
   height: $LoginPanel-Height;
   background-color: $LoginPanel-Color;
-
+  z-index: 1000;
   box-sizing: border-box;
-
-
-
   @include margin-padding-Two-property(2rem , 2rem , false);
 
   .Title

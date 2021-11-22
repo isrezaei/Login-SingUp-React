@@ -9,8 +9,9 @@
 
   .Typewrite
   {
+    z-index: 1000;
     width: 30rem;
-    color: #fcfcfc;
+    color: #757575;
 
     font: {
       size: 45px;
@@ -23,6 +24,7 @@
 
   .PeopleImage
   {
+    z-index: 1000;
     width: 500px;
     position: relative;
 

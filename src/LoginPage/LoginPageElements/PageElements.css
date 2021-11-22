@@ -6,13 +6,15 @@
   align-items: center;
 }
 .TypewriterANDPeopleImage .Typewrite {
+  z-index: 1000;
   width: 30rem;
-  color: #fcfcfc;
+  color: #757575;
   font-size: 45px;
   font-weight: bold;
   margin: 0 0 5rem 0;
 }
 .TypewriterANDPeopleImage .PeopleImage {
+  z-index: 1000;
   width: 500px;
   position: relative;
 }
