@@ -2,7 +2,7 @@
 
 .Footer
 {
-  width: 80%;
+  width: 100%;
 
   border-top: 1px solid #cbcaca;
   position: relative;
@@ -10,8 +10,9 @@
   box-sizing: border-box;
 
 
+
   @include margin-padding-one-property(.5rem , false);
-  @include margin-padding-Four-property(2.5rem , auto , 0 , auto);
+  //@include margin-padding-Four-property(2.5rem , auto , 0 , auto);
   @include flex(space-around , center ,row);
 
   .Brand

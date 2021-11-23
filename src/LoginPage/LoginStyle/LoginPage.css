@@ -1,12 +1,28 @@
 .ParentLoginPage {
   width: 100%;
-  height: 25rem;
+  height: 100vh;
+  background-color: #e7eefd;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.ParentLoginPage .RecentlyFooter {
+  width: 80%;
+}
+
+.LoginPage {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   background: url("image_processing20210909-10272-1cgwkuz.gif") no-repeat center center;
   background-size: cover;
-  margin: auto;
-  padding-top: 5%;
 }
-.ParentLoginPage:after {
+.LoginPage:after {
   content: "";
   position: absolute;
   top: 0;
@@ -14,21 +30,19 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 31rem;
+  height: 30rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(13.5px);
   z-index: 0;
 }
-
-.LoginPage {
+.LoginPage .FormsTypeWriteImage {
   width: 80%;
-  height: 30rem;
-  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding: 3rem 0 0 0;
 }
 
 .LoginPanel {

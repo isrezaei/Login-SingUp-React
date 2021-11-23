@@ -4,8 +4,10 @@
 {
   width: 38.5%;
   position: relative;
-  left: 11%;
+
   color: #707070;
+
+
 }
 .LoginRecently::-webkit-scrollbar
 {
@@ -17,7 +19,7 @@ display: none;
   width: 34.8%;
   height: 15rem;
   position: relative;
-  left: 10%;
+
   overflow: {
     x : scroll;
     y: hidden;

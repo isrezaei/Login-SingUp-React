@@ -8,7 +8,7 @@ import LoginBorder from "./LoginBorder";
 import LoginGoToSiginButton from "./LoginGoToSiginButton";
 import {useHistory} from "react-router-dom";
 
-export default function LoginPageHtml ({UserName , OldPassword , SetUserName , SetOldPassword , EnterToPanel , Loading ,Error})
+export default function LoginForms ({UserName , OldPassword , SetUserName , SetOldPassword , EnterToPanel , Loading ,Error})
 {
     const {replace} = useHistory()
 

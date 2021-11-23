@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {ChangeStateValue, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
-import LoginPageHtml from "./LoginPageHtml";
+import LoginForms from "./LoginForms";
 import LoginServer from "./LoginStyle/LoginServer";
 import LoginPageElement from "./LoginPageElements/LoginPageElement";
 import './LoginStyle/LoginPage.css'
@@ -33,26 +33,31 @@ export default function LoginPageLogic () {
 
             <div className={'LoginPage'}>
 
-                <LoginPageElement/>
+                <div className={'FormsTypeWriteImage'}>
 
-                <LoginPageHtml
-                    UserName={UserName}
-                    OldPassword={OldPassword}
-                    SetUserName={SetUserName}
-                    SetOldPassword={SetOldPassword}
-                    Error={Error}
-                    Loading={Loading}
-                    EnterToPanel={EnterToPanel}
-                />
+                    <LoginPageElement/>
 
+                    <LoginForms
+                        UserName={UserName}
+                        OldPassword={OldPassword}
+                        SetUserName={SetUserName}
+                        SetOldPassword={SetOldPassword}
+                        Error={Error}
+                        Loading={Loading}
+                        EnterToPanel={EnterToPanel}
+                    />
+
+                </div>
 
 
             </div>
 
-            <LoginRecently/>
 
+            <div className={'RecentlyFooter'}>
+                <LoginRecently/>
+                <Footer/>
+            </div>
 
-            <Footer/>
 
         </div>
     )
