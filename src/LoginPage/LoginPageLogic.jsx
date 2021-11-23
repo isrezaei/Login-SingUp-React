@@ -6,6 +6,7 @@ import LoginServer from "./LoginStyle/LoginServer";
 import LoginPageElement from "./LoginPageElements/LoginPageElement";
 import './LoginStyle/LoginPage.css'
 import LoginRecently from "./LoginRecently/LoginRecently";
+import Footer from "../Footer/Footer";
 
 export default function LoginPageLogic () {
 
@@ -49,6 +50,9 @@ export default function LoginPageLogic () {
             </div>
 
             <LoginRecently/>
+
+
+            <Footer/>
 
         </div>
     )

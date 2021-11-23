@@ -34,7 +34,7 @@ display: none;
     height : 15rem;
     box-sizing: border-box;
 
-    @include margin-padding-Two-property(0 , .5rem);
+    @include margin-padding-Two-property(0 , .3rem);
     @include flex(flex-start , center, column);
     @include border-one-property(10px);
 

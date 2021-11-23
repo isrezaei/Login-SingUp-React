@@ -1,8 +1,14 @@
 @import "../_VariableStyle/VariableStyle";
 
+
+body
+{
+  background-color: #e7eefd;
+}
+
 .Panel-Login-SignIn
 {
   width: 100%;
-  background-color: #e7eefd;
+  height: 90vh;
   @include margin-padding-one-property(auto)
 }

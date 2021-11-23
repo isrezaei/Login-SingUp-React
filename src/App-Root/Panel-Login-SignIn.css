@@ -1,6 +1,10 @@
+body {
+  background-color: #e7eefd;
+}
+
 .Panel-Login-SignIn {
   width: 100%;
-  background-color: #e7eefd;
+  height: 90vh;
   margin: auto;
 }
 

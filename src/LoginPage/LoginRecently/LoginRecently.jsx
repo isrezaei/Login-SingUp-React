@@ -16,7 +16,6 @@ export default function LoginRecently ()
 
     useEffect(()=>{
 
-
         const Local = JSON.parse(localStorage.getItem('New-User'))
 
         SetRerander(false)
@@ -24,7 +23,6 @@ export default function LoginRecently ()
         Local && SetRecenty({
             LocalUser : Local
         })
-
 
     } , [Rerander])
 

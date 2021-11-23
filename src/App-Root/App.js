@@ -14,20 +14,10 @@ export default function App() {
 
     const AppBody = (
 
-
-
-
-            <div className='Panel-Login-SignIn'>
-                <Links/>
-
-                <Router/>
-
-                <Footer/>
-            </div>
-
-
-
-
+        <div className='Panel-Login-SignIn'>
+            <Links/>
+            <Router/>
+        </div>
 
     )
 
