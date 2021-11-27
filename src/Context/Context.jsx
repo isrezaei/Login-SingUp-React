@@ -1,4 +1,4 @@
-import {useContext, createContext, useReducer, useState , useRef} from "react";
+import {useContext, createContext, useReducer, useState } from "react";
 import {initState , Reducer} from "../StateLogin/StateLogin";
 import {SignInInputRef , SignInBirthdayRefs} from "./GlobalRefs";
 
@@ -42,6 +42,7 @@ export default function AuthProvider({children})
     const [Gender , SetGender] = useState()
 
 
+
     return (
         <UseGlobalRef.Provider value={
             {
@@ -51,7 +52,7 @@ export default function AuthProvider({children})
                 InputName ,
                 InputLastName ,
                 InputPhoneEmail ,
-                InputNewPassword
+                InputNewPassword,
             }
         }>
             <UseState.Provider
@@ -62,12 +63,12 @@ export default function AuthProvider({children})
                         LastName ,
                         PhoneEmail,
                         NewPassword ,
+                        OldPassword,
                         Day ,
                         Month ,
                         Year ,
                         Gender,
                         UserName,
-                        OldPassword
                     }
                 }
             >

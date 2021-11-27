@@ -54,7 +54,7 @@ export default function SiginPageLogic()
 
         localStorage.getItem('New-User') === null ? NewUser = [] : NewUser = JSON.parse(localStorage.getItem('New-User'))
 
-        return NewUser.push({FirstName , LastName}) , localStorage.setItem('New-User' , JSON.stringify(NewUser))
+        return NewUser.push({FirstName , LastName , NewPassword}) , localStorage.setItem('New-User' , JSON.stringify(NewUser))
     }
 
     return (

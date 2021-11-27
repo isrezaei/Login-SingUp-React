@@ -1,12 +1,14 @@
-import {Server} from "../../ServesApi/ServesLogin";
-import {CaseLoadin} from "../../StateLogin/StateLogin";
+import {Server} from "../ServesApi/ServesLogin";
+import {CaseLoadin} from "../StateLogin/StateLogin";
 
-export default function LoginServer (UserName , OldPassword , Dispatch , SetLoading , SetError)
+
+export default function LoginServer (AllRecentlyNameFamily , UserName , OldPassword , AllRecentlyPassword , Dispatch , SetLoading , SetError)
 {
-    return Server(UserName , OldPassword)
+
+    return Server(UserName , OldPassword , AllRecentlyNameFamily , AllRecentlyPassword)
         .then(Response =>
             {
-                if (Response.username)
+                if (Response.Access)
                 {
                     Dispatch({
                         Type : CaseLoadin.LoginSuccess,

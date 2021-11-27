@@ -17,7 +17,7 @@ export default function BirthdayError ({DayRef , MonthRef , YearRef , BooleanOpt
             YearRef.style.border = ''
         }
 
-    } , [BooleanOptionYears])
+    } , [BooleanOptionYears , DayRef , MonthRef , YearRef])
 
     return null
 }

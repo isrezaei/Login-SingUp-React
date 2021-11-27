@@ -1,8 +1,15 @@
-export const Server = (username , OldPassword) =>
+export const Server = (username , OldPassword , AllRecentlyNameFamily , AllRecentlyPassword) =>
 {
+
+    const UserName = AllRecentlyNameFamily.includes(username)
+    const Password = AllRecentlyPassword.includes(OldPassword)
+
+    console.log(UserName)
+    console.log(Password)
+
     return new Promise((resolve, reject) => {
 
-        if (username === 'admin' && OldPassword === 'admin')
+        if (UserName && Password)
         {
             setTimeout(resolve , 2000)
         }
@@ -14,9 +21,7 @@ export const Server = (username , OldPassword) =>
 
         .then(()=> {
             return {
-                id : 1,
-                username,
-                email : 'hello@test.com'
+                Access : 'Pane is Access'
             }
         })
         .catch(()=> {

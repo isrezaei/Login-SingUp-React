@@ -19,4 +19,3 @@ export function SignInBirthdayRefs ()
 
     return {DayRef, MonthRef, YearRef}
 }
-

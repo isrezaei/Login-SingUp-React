@@ -5,8 +5,6 @@ import MainPanel from "../MainPanel/MainPanel";
 import './Panel-Login-SignIn.css'
 
 
-import Footer from "../Footer/Footer";
-
 export default function App() {
     const {State} = StateValue()
     const Local = localStorage.getItem('User-Email')

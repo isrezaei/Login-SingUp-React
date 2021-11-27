@@ -1,7 +1,17 @@
 .RecentlyLoginText {
   width: 38.5%;
+  height: 1rem;
   position: relative;
   color: #707070;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.RecentlyLoginText .RecentlySpinner {
+  width: 30px;
+  margin-left: 0.5rem;
 }
 
 .LoginRecently::-webkit-scrollbar, .LoginRecentlyForOnePerson::-webkit-scrollbar {

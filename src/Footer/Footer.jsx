@@ -22,7 +22,7 @@ export default function Footer ()
 
 
             <div className={'DownloadServes'}>
-                <img src={Apps}/>
+                <img src={Apps} alt={''}/>
             </div>
 
         </footer>

@@ -1,12 +1,12 @@
 import {useState} from "react";
-import {ChangeStateValue, StateValue} from "../Context/Context";
+import {ChangeStateValue, GlobalRef, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
 import LoginForms from "./LoginForms";
-import LoginServer from "./LoginStyle/LoginServer";
+import LoginServer from "./LoginServer";
 import LoginPageElement from "./LoginPageElements/LoginPageElement";
-import './LoginStyle/LoginPage.css'
 import LoginRecently from "./LoginRecently/LoginRecently";
 import Footer from "../Footer/Footer";
+import './LoginStyle/LoginPage.css'
 
 export default function LoginPageLogic () {
 
@@ -14,6 +14,10 @@ export default function LoginPageLogic () {
     const [Loading, SetLoading] = useState(false)
     const {UserName , OldPassword} = StateValue()
     const {SetUserName , SetOldPassword , Dispatch } = ChangeStateValue()
+    let AllRecentlyPassword = []
+    let AllRecentlyNameFamily= []
+
+
 
     function EnterToPanel (e)
     {
@@ -21,9 +25,20 @@ export default function LoginPageLogic () {
         Dispatch({
             Type : CaseLoadin.LoginWait
         })
+
         SetLoading(true)
 
-        LoginServer(UserName , OldPassword , Dispatch , SetLoading , SetError)
+
+        const RecentNameAndPassword = JSON.parse(localStorage.getItem('New-User'))
+
+
+        RecentNameAndPassword.map(value => {
+            AllRecentlyPassword.push(value.NewPassword)
+            AllRecentlyNameFamily.push(`${value.FirstName} ${value.LastName}`)
+        })
+
+
+        LoginServer(AllRecentlyNameFamily , UserName , OldPassword , AllRecentlyPassword , Dispatch , SetLoading , SetError)
     }
 
 
@@ -46,10 +61,7 @@ export default function LoginPageLogic () {
                         Loading={Loading}
                         EnterToPanel={EnterToPanel}
                     />
-
                 </div>
-
-
             </div>
 
 

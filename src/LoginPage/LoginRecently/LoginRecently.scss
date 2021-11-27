@@ -3,9 +3,19 @@
 .RecentlyLoginText
 {
   width: 38.5%;
+  height: 1rem;
   position: relative;
-
   color: #707070;
+
+  @include margin-padding-Two-property(2rem , 0);
+  @include flex(flex-start , center , row);
+
+
+  .RecentlySpinner
+  {
+    width: 30px;
+    margin-left: .5rem;
+  }
 
 
 }
@@ -131,3 +141,4 @@ display: none;
     @include margin-padding-Four-property(0rem , 0 ,0 ,0)
   }
 }
+
