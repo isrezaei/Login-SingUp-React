@@ -1,4 +1,4 @@
-import {useEffect , useState} from "react";
+import {useEffect , useState , useRef} from "react";
 import {ChangeStateValue, GlobalRef , StateValue} from "../../Context/Context";
 import PleaseSigin from '../../Images/PleaseSigin.gif'
 import {CaseLoadin} from "../../StateLogin/StateLogin";
@@ -10,7 +10,6 @@ import './LoginRecently.css'
 export default function LoginRecently ()
 {
 
-    const {RefsRecently} = GlobalRef()
 
     const [Recently , SetRecenty] = useState({
         LocalUser : []
@@ -22,7 +21,12 @@ export default function LoginRecently ()
 
     const {Dispatch} = ChangeStateValue()
 
+    const RecentlyRef = useRef()
 
+
+    const [MouseDownBoolean , SetMouseDownBoolean] = useState()
+    const [MouseDownPosition , SetMouseDownPosition] = useState()
+    const [RecentlyScrollLeft , SetRecentlyScrollLeft] = useState()
 
     const RecentlyInfo = (RecentlyName) => {
 
@@ -47,6 +51,35 @@ export default function LoginRecently ()
     } , [Rerander])
 
 
+    const MouseDown = (e) => {
+
+        SetMouseDownBoolean(true)
+        SetMouseDownPosition( e.pageX - RecentlyRef.current.offsetLeft)
+        SetRecentlyScrollLeft(RecentlyRef.current.scrollLeft)
+
+    }
+
+    const MouseUpAdnMouseLeave = () => {
+      SetMouseDownBoolean(false)
+    }
+
+
+
+
+
+    const MouseMove = (e) => {
+        e.preventDefault()
+
+        if (!MouseDownBoolean)return
+
+
+        const MouseMovePositon = e.pageX - RecentlyRef.current.offsetLeft
+        const SpeedMove = MouseMovePositon - MouseDownPosition
+
+
+        RecentlyRef.current.scrollLeft = RecentlyScrollLeft - SpeedMove
+
+    }
 
 
 
@@ -64,9 +97,9 @@ export default function LoginRecently ()
     const ShowRecently = Recently.LocalUser.map((value, index)=>{
 
         return (
-            <div key={index}  className={'Card'}>
-                <img onClick={()=> RecentlyInfo(value.FirstName)} className={'Avatar'} alt={''}/>
-                <p className={'Name'}>{value.FirstName} {value.LastName}</p>
+            <div key={index} className={'Card'}>
+                <img className={'Avatar'} alt={''}/>
+                <p onClick={()=> RecentlyInfo(value.FirstName)} className={'Name'}>{value.FirstName} {value.LastName}</p>
                 <p onClick={()=>{return ( RemoveLocal(value.FirstName) , SetRerander(true))}} className={'RemoveRecently'}>Remove User</p>
             </div>
         )
@@ -79,7 +112,7 @@ export default function LoginRecently ()
         <>
             {!RecentlyLength && <h3 className={'RecentlyLoginText'}>Recently Login {Loading && <img alt={''} className={'RecentlySpinner'} src={RecentlyLoader}/>}</h3>}
 
-            <div className={Recently.LocalUser.length <= 1 ?  'LoginRecentlyForOnePerson' : 'LoginRecently'  }>
+            <div ref={RecentlyRef} onMouseDown={MouseDown} onMouseUp={MouseUpAdnMouseLeave} onMouseMove={MouseMove} onMouseLeave={MouseUpAdnMouseLeave}  className={Recently.LocalUser.length <= 1 ?  'LoginRecentlyForOnePerson' : 'LoginRecently'  }>
 
                 {!RecentlyLength  ? ShowRecently :
                     <div className={'WellcomeMessage'}>

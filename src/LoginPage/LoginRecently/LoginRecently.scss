@@ -26,7 +26,7 @@ display: none;
 
 .LoginRecently
 {
-  width: 34.8%;
+  width: 41.5%;
   height: 15rem;
   position: relative;
 
@@ -48,7 +48,7 @@ display: none;
 
     @include margin-padding-Two-property(0 , .3rem);
     @include flex(flex-start , center, column);
-    @include border-one-property(10px);
+
 
     .Avatar
     {
@@ -62,12 +62,16 @@ display: none;
 
     .Name
     {
-      width: 100%;
-
+      width: 60%;
+      height: 1rem;
       color: #4b4b4b;
       font: {
         weight: bold;
       };
+
+
+      overflow: hidden;
+      text-overflow: ellipsis;
       text-align: center;
       @include margin-padding-Four-property( .5rem , 0 , 0 , 0)
     }

@@ -19,7 +19,7 @@
 }
 
 .LoginRecently, .LoginRecentlyForOnePerson {
-  width: 34.8%;
+  width: 41.5%;
   height: 15rem;
   position: relative;
   overflow-x: scroll;
@@ -39,7 +39,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 10px;
 }
 .LoginRecently .Card .Avatar, .LoginRecentlyForOnePerson .Card .Avatar {
   width: 150px;
@@ -50,9 +49,12 @@
   border-radius: 100%;
 }
 .LoginRecently .Card .Name, .LoginRecentlyForOnePerson .Card .Name {
-  width: 100%;
+  width: 60%;
+  height: 1rem;
   color: #4b4b4b;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-align: center;
   margin: 0.5rem 0 0 0;
 }
