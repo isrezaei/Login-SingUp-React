@@ -72,16 +72,14 @@ display: none;
 
     .Name
     {
-      width: 60%;
-      height: 1rem;
+      width: 100%;
+
       color: #4b4b4b;
       font: {
         weight: bold;
       };
 
       cursor: pointer;
-      overflow: hidden;
-      text-overflow: ellipsis;
       text-align: center;
       transition: .3s;
       @include margin-padding-Four-property( .5rem , 0 , 0 , 0);

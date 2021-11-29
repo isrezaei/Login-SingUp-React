@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect, useLayoutEffect} from "react";
 import {ChangeStateValue, GlobalRef, StateValue} from "../Context/Context";
 import {CaseLoadin} from "../StateLogin/StateLogin";
 import LoginForms from "./LoginForms";
@@ -16,6 +16,22 @@ export default function LoginPageLogic () {
     const {SetUserName , SetOldPassword , Dispatch } = ChangeStateValue()
     let AllRecentlyPassword = []
     let AllRecentlyNameFamily= []
+
+    const {
+        FirstName ,
+        LastName ,
+        NewPassword ,
+
+    } = StateValue()
+
+    useEffect(()=>{
+
+        let NewUser ;
+
+        localStorage.getItem('New-User') === null ? localStorage.setItem('New-User' , JSON.stringify([])) : JSON.parse(localStorage.getItem('New-User'))
+
+
+    } , [Loading])
 
 
 

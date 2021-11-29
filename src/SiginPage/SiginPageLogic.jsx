@@ -11,7 +11,7 @@ import SiginSummary from "./SingInItems/3-Footer/SiginSummary";
 import SiginButton from "./SingInItems/3-Footer/SiginButton";
 import LoadingSpinner from "../Spinner/LoadingSpinner";
 import './SiginStyle/SiginPage.css'
-import {useState} from "react";
+import {useEffect, useLayoutEffect, useState} from "react";
 
 
 export default function SiginPageLogic()
@@ -39,6 +39,8 @@ export default function SiginPageLogic()
     } = ChangeStateValue()
 
     const [Loading , SetLoading] = useState(false)
+
+
 
     const SubmitInfo = (e) =>
     {
