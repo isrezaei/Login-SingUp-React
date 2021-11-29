@@ -8,7 +8,7 @@ export default function LoginPageElement ()
     return (
         <div className={'TypewriterANDPeopleImage'}>
             <p className={'Typewrite'}> <TypeWriter/> </p>
-            <img className={'PeopleImage'} src={IMGPeopleHeader} alt={'IMGPeopleHeader'}/>
+            <img draggable={false} className={'PeopleImage'} src={IMGPeopleHeader} alt={'IMGPeopleHeader'}/>
         </div>
     )
 }

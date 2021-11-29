@@ -27,6 +27,7 @@ export default function LoginRecently ()
     const [MouseDownBoolean , SetMouseDownBoolean] = useState()
     const [MouseDownPosition , SetMouseDownPosition] = useState()
     const [RecentlyScrollLeft , SetRecentlyScrollLeft] = useState()
+    const [DragCursor , SetDragCursor] = useState(false)
 
     const RecentlyInfo = (RecentlyName) => {
 
@@ -56,26 +57,24 @@ export default function LoginRecently ()
         SetMouseDownBoolean(true)
         SetMouseDownPosition( e.pageX - RecentlyRef.current.offsetLeft)
         SetRecentlyScrollLeft(RecentlyRef.current.scrollLeft)
+        SetDragCursor(true)
 
     }
 
     const MouseUpAdnMouseLeave = () => {
       SetMouseDownBoolean(false)
+        SetDragCursor(false)
     }
 
 
-
-
-
     const MouseMove = (e) => {
-        e.preventDefault()
 
         if (!MouseDownBoolean)return
 
+        SetDragCursor(true)
 
         const MouseMovePositon = e.pageX - RecentlyRef.current.offsetLeft
         const SpeedMove = MouseMovePositon - MouseDownPosition
-
 
         RecentlyRef.current.scrollLeft = RecentlyScrollLeft - SpeedMove
 
@@ -112,11 +111,13 @@ export default function LoginRecently ()
         <>
             {!RecentlyLength && <h3 className={'RecentlyLoginText'}>Recently Login {Loading && <img alt={''} className={'RecentlySpinner'} src={RecentlyLoader}/>}</h3>}
 
-            <div ref={RecentlyRef} onMouseDown={MouseDown} onMouseUp={MouseUpAdnMouseLeave} onMouseMove={MouseMove} onMouseLeave={MouseUpAdnMouseLeave}  className={Recently.LocalUser.length <= 1 ?  'LoginRecentlyForOnePerson' : 'LoginRecently'  }>
+            <div ref={RecentlyRef} onMouseDown={MouseDown} onMouseUp={MouseUpAdnMouseLeave} onMouseMove={MouseMove} onMouseLeave={MouseUpAdnMouseLeave}
+                 className={ Recently.LocalUser.length <= 1 ?  'LoginRecentlyForOnePerson' : 'LoginRecently' }
+                id={DragCursor && 'DragCursor'}>
 
                 {!RecentlyLength  ? ShowRecently :
                     <div className={'WellcomeMessage'}>
-                        <img alt={''} className={'UserLogo'} src={PleaseSigin}/>
+                        <img draggable={false} alt={''} className={'UserLogo'} src={PleaseSigin}/>
                         <h4 className={'WellcomeText'}>Hello my dear friend Please login or create an account </h4>
                     </div>
                 }

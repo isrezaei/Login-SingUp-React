@@ -24,21 +24,31 @@
 display: none;
 }
 
+#DragCursor
+{
+  cursor: grabbing;
+  transform: scale(1.1);
+  transition: .2s;
+
+}
+
 .LoginRecently
 {
   width: 41.5%;
   height: 15rem;
   position: relative;
+  cursor: grab;
+  transition: .2s;
 
   overflow: {
     x : scroll;
     y: hidden;
   };
 
-
-
   @include margin-padding-Four-property(1.5rem , 0 , 0 , 0);
   @include flex(flex-start , center , row);
+
+
 
   .Card
   {
@@ -69,11 +79,18 @@ display: none;
         weight: bold;
       };
 
-
+      cursor: pointer;
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
-      @include margin-padding-Four-property( .5rem , 0 , 0 , 0)
+      transition: .3s;
+      @include margin-padding-Four-property( .5rem , 0 , 0 , 0);
+
+      &:hover
+      {
+        transition: .3s;
+        color: #245dd0;
+      }
     }
 
     .RemoveRecently
@@ -84,7 +101,14 @@ display: none;
         weight: bold;
       };
       cursor: pointer;
-      @include margin-padding-Four-property( .5rem , 0 , 0 , 0)
+      transition: .3s;
+      @include margin-padding-Four-property( .5rem , 0 , 0 , 0);
+
+      &:hover
+      {
+        transition: .3s;
+        color: #ff3737;
+      }
     }
   }
 }

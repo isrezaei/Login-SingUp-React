@@ -18,10 +18,18 @@
   display: none;
 }
 
+#DragCursor {
+  cursor: grabbing;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
 .LoginRecently, .LoginRecentlyForOnePerson {
   width: 41.5%;
   height: 15rem;
   position: relative;
+  cursor: grab;
+  transition: 0.2s;
   overflow-x: scroll;
   overflow-y: hidden;
   margin: 1.5rem 0 0 0;
@@ -53,17 +61,28 @@
   height: 1rem;
   color: #4b4b4b;
   font-weight: bold;
+  cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+  transition: 0.3s;
   margin: 0.5rem 0 0 0;
+}
+.LoginRecently .Card .Name:hover, .LoginRecentlyForOnePerson .Card .Name:hover {
+  transition: 0.3s;
+  color: #245dd0;
 }
 .LoginRecently .Card .RemoveRecently, .LoginRecentlyForOnePerson .Card .RemoveRecently {
   color: #707070;
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
   margin: 0.5rem 0 0 0;
+}
+.LoginRecently .Card .RemoveRecently:hover, .LoginRecentlyForOnePerson .Card .RemoveRecently:hover {
+  transition: 0.3s;
+  color: #ff3737;
 }
 
 .LoginRecentlyForOnePerson {

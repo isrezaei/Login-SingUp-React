@@ -1,5 +1,9 @@
 body {
   background-color: #e7eefd;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .Panel-Login-SignIn {
