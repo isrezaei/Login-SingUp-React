@@ -5,10 +5,10 @@
   justify-content: space-between;
   align-items: center;
 }
-.TypewriterANDPeopleImage .Typewrite {
+.TypewriterANDPeopleImage .Typewrite, .TypewriterANDPeopleImage .DarkTypewrite {
   z-index: 1000;
   width: 30rem;
-  color: #757575;
+  color: #484848;
   font-size: 45px;
   font-weight: bold;
   margin: 0 0 5rem 0;
@@ -17,6 +17,9 @@
   z-index: 1000;
   width: 500px;
   position: relative;
+}
+.TypewriterANDPeopleImage .DarkTypewrite {
+  color: #cccaca;
 }
 
 /*# sourceMappingURL=PageElements.css.map */

@@ -11,7 +11,7 @@ export const Links = () =>
 
 
     return (
-        <div className='Links'>
+        <div className={DarkMood ? 'DarkLinks' : 'Links'}>
 
 
             <div className='LogoDiv'>

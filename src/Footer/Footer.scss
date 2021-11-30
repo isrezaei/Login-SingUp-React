@@ -3,13 +3,9 @@
 .Footer
 {
   width: 100%;
-
   border-top: 1px solid #cbcaca;
   position: relative;
-
   box-sizing: border-box;
-
-
 
   @include margin-padding-one-property(.5rem , false);
   //@include margin-padding-Four-property(2.5rem , auto , 0 , auto);
@@ -37,11 +33,16 @@
   {
     @include flex();
 
-
-
     img
     {
       width: 300px;
     }
   }
+}
+
+.DarkFooter
+{
+  @extend .Footer;
+  border-top: 1px solid #2a2a2a;
+  color: #b2b2b2;
 }

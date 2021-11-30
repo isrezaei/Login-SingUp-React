@@ -1,11 +1,14 @@
-
 import Apps from '../Images/Apps.png'
 import './Footer.css'
+import {StateValue} from "../Context/Context";
 
 export default function Footer ()
 {
+
+    const {DarkMood} = StateValue()
+
     return (
-        <footer className={'Footer'}>
+        <footer className={DarkMood ? 'DarkFooter' : 'Footer'}>
 
             <div className={'Brand'}>
                 Facebook 2022

@@ -98,5 +98,50 @@
 .DarkLoginForm
 {
   @extend .LoginForm;
-  background-color: #181818;
+  background-color: #262525;
+
+
+  .Title
+  {
+    @include margin-padding-Two-property(.5rem , 0);
+    color: #eceff1;
+
+    font: {
+      size: $LoginPanel-FontSizeTitel;
+      weight: bold;
+    };
+  }
+
+  .Alert
+  {
+    @include margin-padding-Two-property(1rem , 0);
+    color: #b6b6b6;;
+    font-weight: normal;
+
+  }
+
+  .Summary
+  {
+    @include margin-padding-Two-property(1rem , 0);
+    font:
+    {
+      size: $LoginPanel-Summary-FontSize;
+      weight: normal;
+    }
+    color: #eceff1;
+    line-height: $LoginPanel-Summary-LineHight;
+  }
+
+  form {
+    @include flex(center, center, column);
+
+    input {
+      background-color: #0e0e0e;
+    }
+
+    .ForgotPassword
+    {
+      color: #eceff1;
+    }
+  }
 }

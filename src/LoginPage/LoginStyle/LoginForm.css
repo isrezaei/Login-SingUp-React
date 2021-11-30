@@ -66,7 +66,37 @@
 }
 
 .DarkLoginForm {
-  background-color: #181818;
+  background-color: #262525;
+}
+.DarkLoginForm .Title {
+  margin: 0.5rem 0;
+  color: #eceff1;
+  font-size: 30px;
+  font-weight: bold;
+}
+.DarkLoginForm .Alert {
+  margin: 1rem 0;
+  color: #b6b6b6;
+  font-weight: normal;
+}
+.DarkLoginForm .Summary {
+  margin: 1rem 0;
+  font-size: 13px;
+  font-weight: normal;
+  color: #eceff1;
+  line-height: 1.2rem;
+}
+.DarkLoginForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.DarkLoginForm form input {
+  background-color: #0e0e0e;
+}
+.DarkLoginForm form .ForgotPassword {
+  color: #eceff1;
 }
 
 /*# sourceMappingURL=LoginForm.css.map */

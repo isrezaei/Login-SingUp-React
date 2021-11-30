@@ -8,7 +8,6 @@
   position: absolute;
   left: 0;
   right: 0;
-
   z-index: 1000;
 
 
@@ -48,4 +47,28 @@
       }
     }
   }
+}
+
+.DarkLinks
+{
+  @extend .Links;
+
+  .Logo
+{
+  font-size: $Header-Logo-FontSize ;
+  color: #b2b2b2;
+}
+
+  ul
+  {
+
+    li
+    {
+      .LinkTag
+      {
+        color: #b2b2b2;
+      }
+    }
+  }
+
 }

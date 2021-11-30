@@ -1,4 +1,4 @@
-.Links {
+.Links, .DarkLinks {
   width: 85%;
   height: 7rem;
   position: absolute;
@@ -11,26 +11,34 @@
   justify-content: center;
   align-items: center;
 }
-.Links .LogoDiv {
+.Links .LogoDiv, .DarkLinks .LogoDiv {
   width: 5%;
 }
-.Links .Logo {
+.Links .Logo, .DarkLinks .Logo {
   font-size: 45px;
   color: #414141;
 }
-.Links ul {
+.Links ul, .DarkLinks ul {
   width: 90%;
   display: flex;
   list-style: none;
 }
-.Links ul li {
+.Links ul li, .DarkLinks ul li {
   margin: 0 2rem;
 }
-.Links ul li .LinkTag {
+.Links ul li .LinkTag, .DarkLinks ul li .LinkTag {
   font-size: 18px;
   font-weight: bold;
   color: #4b4b4b;
   text-decoration: none;
+}
+
+.DarkLinks .Logo {
+  font-size: 45px;
+  color: #b2b2b2;
+}
+.DarkLinks ul li .LinkTag {
+  color: #b2b2b2;
 }
 
 /*# sourceMappingURL=Links.css.map */
