@@ -1,9 +1,9 @@
-import {ChangeStateValue,GlobalRef} from "../../Context/Context";
+import {GlobalRef} from "../../Context/Context";
 import RecentlyLocalStorage from "./RecentlyLocalStorage";
 import ScrollXRecently from "./ScrollXRecently";
 import RecentlyLoader from '../../Images/RecentlySpinner.gif'
-import './Style/LoginRecently.css'
 import WellcomeMessage from "./WellcomeMessage";
+import './Style/LoginRecently.css'
 
 export default function LoginRecently ()
 {

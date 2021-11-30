@@ -6,19 +6,16 @@
   height: 1rem;
   position: relative;
   color: #707070;
-
   @include margin-padding-Two-property(2rem , 0);
   @include flex(flex-start , center , row);
-
 
 .RecentlySpinner
   {
     width: 30px;
     margin-left: .5rem;
   }
-
-
 }
+
 .LoginRecently::-webkit-scrollbar
 {
   display: none;
@@ -29,7 +26,6 @@
   cursor: grabbing;
   transform: scale(1.1);
   transition: .2s;
-
 }
 
 .LoginRecently
@@ -39,7 +35,6 @@
   position: relative;
   cursor: grab;
   transition: .2s;
-
   overflow: {
     x : scroll;
     y: hidden;
@@ -48,14 +43,11 @@
   @include margin-padding-Four-property(1.5rem , 0 , 2rem , 0);
   @include flex(flex-start , center , row);
 
-
-
   .Card
   {
     width: 12rem;
     height : 15rem;
     box-sizing: border-box;
-
     @include margin-padding-Two-property(0 , .3rem);
     @include flex(flex-start , center, column);
 
@@ -73,7 +65,6 @@
     .Name
     {
       width: 100%;
-
       color: #4b4b4b;
       font: {
         weight: bold;
@@ -118,7 +109,6 @@
   cursor: auto;
   @extend .LoginRecently;
   @include flex(center , center , column);
-  @include margin-padding-Four-property(0 , 0 ,2rem, 0);
 
   .Card
   {

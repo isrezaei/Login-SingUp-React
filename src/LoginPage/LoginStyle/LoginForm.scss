@@ -1,0 +1,102 @@
+@import "../../_VariableStyle/VariableStyle";
+
+.LoginForm
+{
+  width: $LoginPanel-Width;
+  height: $LoginPanel-Height;
+  background-color: $LoginPanel-Color;
+  z-index: 1000;
+  box-sizing: border-box;
+  @include margin-padding-Two-property(2rem , 2rem , false);
+
+  .Title
+  {
+    @include margin-padding-Two-property(.5rem , 0);
+
+    font: {
+      size: $LoginPanel-FontSizeTitel;
+      weight: bold;
+    };
+  }
+
+  .Alert
+  {
+    @include margin-padding-Two-property(1rem , 0);
+    color: $LoginPanel-AlertColor;
+    font-weight: bold;
+  }
+
+  .Summary
+  {
+    @include margin-padding-Two-property(1rem , 0);
+    font:
+    {
+      size: $LoginPanel-Summary-FontSize;
+      weight: bold;
+    }
+    color: $LoginPanel-Summary-Color;
+    line-height: $LoginPanel-Summary-LineHight;
+  }
+
+
+  form
+  {
+    @include flex(center , center , column);
+    input
+    {
+      width: $LoginPanel-Input-Width;
+      height: $LoginPanel-Input-Hight;
+      background-color: $LoginPanel-Input-color;
+      box-sizing: $LoginPanel-Input-boxSizing;
+      outline: none;
+      border: none;
+
+      @include border-one-property(5px);
+      @include margin-padding-one-property(.5rem , false);
+      @include margin-padding-Two-property(.5rem , 0)
+    }
+
+    .WrongAlert
+    {
+      font-size: $LoginPanel-WrongAlert-FontSize;
+      color: $LoginPanel-WrongAlert-Color;
+    }
+
+    .LoginButton
+    {
+      width: $LoginPanel-Button-Width;
+      height: $LoginPanel-Button-Hight;
+      background-color: $LoginPanel-Button-color;
+      font-size: $LoginPanel-Button-fontSize;
+      color: $LoginPanel-Button-FontColor;
+      outline: none;
+      border: none;
+
+      @include border-one-property(5px)
+    }
+
+    .CreateButton
+    {
+      width: $LoginPanel-CreatButton-Width;
+      background-color: $LoginPanel-CreatButton-Color;
+      cursor: pointer;
+
+      @extend .LoginButton ;
+      @include margin-padding-Two-property( 0rem , 0)
+    }
+
+
+    .ForgotPassword
+    {
+      font-size: $LoginPanel-ForgotPassword-FontSize ;
+
+      @include margin-padding-Two-property(1rem , 0);
+    }
+  }
+}
+
+.DarkLoginForm
+{
+  @extend .LoginForm;
+  background-color: #181818;
+}

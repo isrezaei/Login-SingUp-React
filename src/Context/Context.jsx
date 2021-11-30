@@ -41,6 +41,7 @@ export default function AuthProvider({children})
     const [Month , SetMonth] = useState('January')
     const [Year , SetYear] = useState()
     const [Gender , SetGender] = useState()
+    const [DarkMood , SetDarkMood] = useState(false)
 
 
 
@@ -72,6 +73,7 @@ export default function AuthProvider({children})
                         Year ,
                         Gender,
                         UserName,
+                        DarkMood
                     }
                 }
             >
@@ -89,6 +91,7 @@ export default function AuthProvider({children})
                             SetGender,
                             SetUserName,
                             SetOldPassword,
+                            SetDarkMood
                         }
                     }
                 >

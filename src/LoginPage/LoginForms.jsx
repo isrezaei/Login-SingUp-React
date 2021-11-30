@@ -7,10 +7,12 @@ import LoginForgotPassword from "./LoginForgotPassword";
 import LoginBorder from "./LoginBorder";
 import LoginGoToSiginButton from "./LoginGoToSiginButton";
 import {useHistory} from "react-router-dom";
+import {StateValue} from "../Context/Context";
 
 export default function LoginForms ({UserName , OldPassword , SetUserName , SetOldPassword , EnterToPanel , Loading ,Error})
 {
     const {replace} = useHistory()
+    const {DarkMood} = StateValue()
 
     const GoToSigin = () => {
         return replace('/Sigin')
@@ -21,7 +23,7 @@ export default function LoginForms ({UserName , OldPassword , SetUserName , SetO
 
     return (
 
-        <div className='LoginPanel'>
+        <div className= {DarkMood ? 'DarkLoginForm' : 'LoginForm'}>
 
             <LoginTitle/>
 

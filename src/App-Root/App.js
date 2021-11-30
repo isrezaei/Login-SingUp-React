@@ -2,17 +2,18 @@ import {Router} from "../Routing/Router/Router";
 import {Links} from "../Routing/Links/Links";
 import {StateValue} from "../Context/Context";
 import MainPanel from "../MainPanel/MainPanel";
-import './Panel-Login-SignIn.css'
+import './ParentAllProject.css'
 
 
 export default function App() {
-    const {State} = StateValue()
+
+    const {State , DarkMood } = StateValue()
     const Local = localStorage.getItem('User-Email')
 
 
     const AppBody = (
 
-        <div className='Panel-Login-SignIn'>
+        <div className = {DarkMood ? 'DarkParentAllProject' : 'ParentAllProject'}>
             <Links/>
             <Router/>
         </div>

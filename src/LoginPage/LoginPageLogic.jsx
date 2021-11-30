@@ -6,30 +6,23 @@ import LoginServer from "./LoginServer";
 import LoginPageElement from "./LoginPageElements/LoginPageElement";
 import LoginRecently from "./LoginRecently/LoginRecently";
 import Footer from "../Footer/Footer";
-import './LoginStyle/LoginPage.css'
+import './LoginStyle/LoginHeader.css'
+import './LoginStyle/LoginForm.css'
+import './LoginStyle/ParentLoginPage.css'
 
 export default function LoginPageLogic () {
 
     const [Error, SetError] = useState()
     const [Loading, SetLoading] = useState(false)
-    const {UserName , OldPassword} = StateValue()
+    const {UserName , OldPassword , DarkMood} = StateValue()
     const {SetUserName , SetOldPassword , Dispatch } = ChangeStateValue()
     let AllRecentlyPassword = []
     let AllRecentlyNameFamily= []
 
-    const {
-        FirstName ,
-        LastName ,
-        NewPassword ,
-
-    } = StateValue()
 
     useEffect(()=>{
 
-        let NewUser ;
-
         localStorage.getItem('New-User') === null ? localStorage.setItem('New-User' , JSON.stringify([])) : JSON.parse(localStorage.getItem('New-User'))
-
 
     } , [Loading])
 
@@ -60,9 +53,9 @@ export default function LoginPageLogic () {
 
     return (
 
-        <div className={'ParentLoginPage'}>
+        <div className={DarkMood ? 'DarkParentLoginPage' : 'ParentLoginPage'}>
 
-            <div className={'LoginPage'}>
+            <div className={DarkMood ? 'DarkLoginHeader' : 'LoginHeader'}>
 
                 <div className={'FormsTypeWriteImage'}>
 
