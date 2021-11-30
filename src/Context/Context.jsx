@@ -1,6 +1,6 @@
 import {useContext, createContext, useReducer, useState } from "react";
 import {initState , Reducer} from "../StateLogin/StateLogin";
-import {SignInInputRef , SignInBirthdayRefs} from "./GlobalRefs";
+import {SignInInputRef , SignInBirthdayRefs , RecentlyRefs} from "./GlobalRefs";
 
 const UseState = createContext('')
 const UseChangeState = createContext('')
@@ -27,6 +27,7 @@ export default function AuthProvider({children})
 
     const {DayRef , MonthRef , YearRef} = SignInBirthdayRefs()
     const {InputName , InputLastName , InputPhoneEmail , InputNewPassword} = SignInInputRef()
+    const {RecentlyRef} = RecentlyRefs()
 
     const [State , Dispatch] = useReducer(Reducer , initState)
 
@@ -43,12 +44,14 @@ export default function AuthProvider({children})
 
 
 
+
     return (
         <UseGlobalRef.Provider value={
             {
                 DayRef ,
                 MonthRef ,
                 YearRef,
+                RecentlyRef,
                 InputName ,
                 InputLastName ,
                 InputPhoneEmail ,
@@ -85,7 +88,7 @@ export default function AuthProvider({children})
                             SetYear,
                             SetGender,
                             SetUserName,
-                            SetOldPassword
+                            SetOldPassword,
                         }
                     }
                 >

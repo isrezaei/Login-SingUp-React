@@ -19,3 +19,11 @@ export function SignInBirthdayRefs ()
 
     return {DayRef, MonthRef, YearRef}
 }
+
+
+export function RecentlyRefs()
+{
+    const RecentlyRef = useRef()
+
+    return {RecentlyRef}
+}

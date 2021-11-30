@@ -1,4 +1,4 @@
-@import "../../_VariableStyle/VariableStyle";
+@import "../../../_VariableStyle/VariableStyle";
 
 .RecentlyLoginText
 {
@@ -11,7 +11,7 @@
   @include flex(flex-start , center , row);
 
 
-  .RecentlySpinner
+.RecentlySpinner
   {
     width: 30px;
     margin-left: .5rem;
@@ -21,7 +21,7 @@
 }
 .LoginRecently::-webkit-scrollbar
 {
-display: none;
+  display: none;
 }
 
 #DragCursor

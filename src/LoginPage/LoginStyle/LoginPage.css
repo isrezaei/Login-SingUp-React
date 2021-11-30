@@ -19,7 +19,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  background: url("image_processing20210909-10272-1cgwkuz.gif") no-repeat center center;
+  background: url("LigitBackground.gif") no-repeat center center;
   background-size: cover;
 }
 .LoginPage:after {

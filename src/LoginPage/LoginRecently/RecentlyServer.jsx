@@ -5,13 +5,11 @@ export default function RecentlyServer (RecentlyNameFamily , SetLoading , Dispat
 {
     ServerRecently(RecentlyNameFamily)
         .then(Response => {
-
             if (Response)
             {
                 Dispatch({
                     Type : CaseLoadin.LoginSuccess
                 })
-
                 SetLoading(false)
             }
         })

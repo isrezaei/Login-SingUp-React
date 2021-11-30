@@ -7,15 +7,6 @@ export default function SiginButton ({SubmitInfo})
     const {FirstName , LastName , Day , Month , Year , Gender} = StateValue()
     const {EmailValidation , PasswordValidation , OldValidations , AccessToEnableSignIn} = Conditions()
 
-
-    console.log(FirstName)
-    console.log(LastName)
-    console.log(EmailValidation)
-    console.log(PasswordValidation)
-    console.log(OldValidations)
-    console.log(Day , Month)
-    console.log(Gender)
-
     useEffect(()=>{
 
       AccessToEnableSignIn ? SetBooleanForButton(false) : SetBooleanForButton(true)
