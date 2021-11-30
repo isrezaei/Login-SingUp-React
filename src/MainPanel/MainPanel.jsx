@@ -6,7 +6,16 @@ export default function MainPanel ()
 {
 
 
-    const {Dispatch} = ChangeStateValue()
+    const {
+        Dispatch,
+        SetFirstName,
+        SetLastName,
+        SetPhoneEmail,
+        SetNewPassword,
+        SetDay,
+        SetMonth,
+        SetYear,
+        SetGender,} = ChangeStateValue()
 
     const LogOut = () =>
     {
@@ -14,10 +23,16 @@ export default function MainPanel ()
             Type : CaseLoadin.LogOut
         })
 
-        localStorage.removeItem('User-Email')
+        SetFirstName(null)
+        SetLastName(null)
+        SetPhoneEmail(null)
+        SetNewPassword(null)
+        SetDay('1')
+        SetMonth('January')
+        SetYear(null)
+        SetGender(null)
 
     }
-
 
 
     return (

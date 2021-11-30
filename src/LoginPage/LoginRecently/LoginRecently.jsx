@@ -113,7 +113,7 @@ export default function LoginRecently ()
 
             <div ref={RecentlyRef} onMouseDown={MouseDown} onMouseUp={MouseUpAdnMouseLeave} onMouseMove={MouseMove} onMouseLeave={MouseUpAdnMouseLeave}
                  className={ Recently.LocalUser.length <= 1 ?  'LoginRecentlyForOnePerson' : 'LoginRecently' }
-                id={DragCursor && 'DragCursor'}>
+                id={Recently.LocalUser.length > 0 && DragCursor ? 'DragCursor' : null}>
 
                 {!RecentlyLength  ? ShowRecently :
                     <div className={'WellcomeMessage'}>

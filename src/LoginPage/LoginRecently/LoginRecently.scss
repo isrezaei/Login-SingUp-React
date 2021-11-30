@@ -45,7 +45,7 @@ display: none;
     y: hidden;
   };
 
-  @include margin-padding-Four-property(1.5rem , 0 , 0 , 0);
+  @include margin-padding-Four-property(1.5rem , 0 , 2rem , 0);
   @include flex(flex-start , center , row);
 
 
@@ -100,7 +100,7 @@ display: none;
       };
       cursor: pointer;
       transition: .3s;
-      @include margin-padding-Four-property( .5rem , 0 , 0 , 0);
+      @include margin-padding-Four-property( .5rem , 0 , 0rem , 0);
 
       &:hover
       {
@@ -113,14 +113,17 @@ display: none;
 
 .LoginRecentlyForOnePerson
 {
+  width: 45%;
   height: auto;
+  cursor: auto;
   @extend .LoginRecently;
-  @include flex(flex-start , center , column);
-  @include margin-padding-Four-property(0 , 0 ,1rem, 0);
+  @include flex(center , center , column);
+  @include margin-padding-Four-property(0 , 0 ,2rem, 0);
 
   .Card
   {
     width: 100%;
+    margin: auto;
     height : auto;
     background-color: transparent;
     box-shadow: none;
@@ -139,8 +142,7 @@ display: none;
 
   .RemoveRecently
   {
-
-    @include margin-padding-Four-property( 1rem!important , 0 , 0 , 0)
+    margin-top: .2rem!important;
   }
 }
 
