@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["ParentAllProject.scss","../_VariableStyle/VariableStyle.scss"],"names":[],"mappings":"AAGA;EAEE;EACA;EACA;EACA;;;AAGF;EAEE;EACA;EACA;EC6DE,QD5DmC;;;AAGvC;EAEE,kBCrBe","file":"ParentAllProject.css"}
+{"version":3,"sourceRoot":"","sources":["ParentAllProject.scss","../_VariableStyle/VariableStyle.scss"],"names":[],"mappings":"AAGA;EAEE;EACA;EACA;EACA;;;AAGF;EAEE;EACA;EACA;EC6DE,QD5DmC;;;AAGvC;EAEE;EACA,kBCtBe","file":"ParentAllProject.css"}
