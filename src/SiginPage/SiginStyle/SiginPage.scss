@@ -1,17 +1,28 @@
 @import "../../_VariableStyle/VariableStyle";
 
 
-.SiginPanel
+.SiginPage
 {
-  width: $Sigin-Width;
-  height: $Sigin-Height;
+  width: 90%;
+  height: 47rem;
+  background: #245dd0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+
+
+.SiginForms
+{
+  width: 35%;
+  height: 100%;
   background-color: $Sigin-Color;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.20);;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);;
   box-sizing: border-box;
 
-
-  @include border-one-property(10px);
-  @include margin-padding-Two-property(2rem , 2rem , false);
+  @include margin-padding-Two-property(5em , 5rem , false);
 
   .Title
   {
@@ -47,6 +58,7 @@
 
   form
   {
+
     @include flex(center , center , column);
 
     .NameInfo
