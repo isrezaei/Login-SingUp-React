@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {useHistory} from "react-router-dom";
 import {ChangeStateValue , StateValue} from "../Context/Context";
 import {Months , Days , Years} from "./SettingsForSignIn/BulidOptionsForBirthdayInputs";
@@ -10,8 +11,9 @@ import SiginSelectGender from "./SingInItems/2-Middle/Radio/SiginSelectGender";
 import SiginSummary from "./SingInItems/3-Footer/SiginSummary";
 import SiginButton from "./SingInItems/3-Footer/SiginButton";
 import LoadingSpinner from "../Spinner/LoadingSpinner";
+import SiginSlider from "./SiginSlider";
 import './SiginStyle/SiginPage.css'
-import {useEffect, useLayoutEffect, useState} from "react";
+
 
 
 export default function SiginPageLogic()
@@ -97,6 +99,9 @@ export default function SiginPageLogic()
 
                 </form>
             </div>
+
+
+            <SiginSlider/>
 
         </div>
 
