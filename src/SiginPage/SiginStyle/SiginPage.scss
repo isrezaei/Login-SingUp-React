@@ -5,12 +5,11 @@
 {
   width: 90%;
   height: 47rem;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
-
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
   @include flex(center , flex-start , row)
 
 }
@@ -22,21 +21,17 @@
   width: 35%;
   height: 100%;
   background-color: $Sigin-Color;
-  box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);;
   box-sizing: border-box;
-
   @include margin-padding-Two-property(5em , 5rem , false);
 
   .Title
   {
     @include margin-padding-Two-property(.5rem , 0);
-
     font: {
       size: 30px;
       weight: bold;
     };
   }
-
   .Alert
   {
     @include margin-padding-Two-property(1rem , 0);
@@ -61,14 +56,11 @@
 
   form
   {
-
     @include flex(center , center , column);
-
     .NameInfo
     {
       width: 100%;
       @include flex(space-between , center , row);
-
       input
       {
         width: 49%;
@@ -78,10 +70,8 @@
     .BrithdayInfo
     {
       width: 100%;
-
       .Birthday
       {
-
         font-size: 13px;
         font-weight: bold;
         color: #b7b7b7;
@@ -100,33 +90,26 @@
           box-sizing: border-box;
           outline: none;
 
-
           @include margin-padding-one-property(5px , false);
           @include border-one-property(5px);
 
           option
           {
             font-size: 18px;
-
           }
-
         }
       }
-
     }
-
 
     .GenderInfo
     {
       width: 100%;
-
       .Gender
       {
         font-size: 13px;
         font-weight: bold;
         color: #b7b7b7;
         @include margin-padding-Two-property( .5rem , 0)
-
       }
 
       .RadioInput
@@ -134,18 +117,15 @@
         width: 100%;
         @include flex(space-between, center , row);
 
-
         section
         {
           width: 30%;
           height: 2rem;
-
           border: 1px solid #b7b7b7;
 
           @include flex();
           @include flex(space-around, center , row);
           @include border-one-property(5px);
-
           input[type = radio]
           {
             width: 15px;

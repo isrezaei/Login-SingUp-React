@@ -5,11 +5,11 @@
   height: 100% !important;
 
   --slider-transition-duration: 525ms;
-  --organic-arrow-thickness: 11px;
+  --organic-arrow-thickness: 5px;
   --organic-arrow-border-radius: 20px;
-  --organic-arrow-height: 28px;
+  --organic-arrow-height: 20px;
   --organic-arrow-color: #26456f;
-  --control-button-width: 10%;
+  --control-button-width: 6%;
   --control-button-height: 25%;
   --control-button-background: transparent;
   --control-bullet-color: #2d5182;
@@ -17,3 +17,90 @@
   --loader-bar-color: transparent;
   --loader-bar-height: 6px;
 }
+
+.Slide1
+{
+  width: 100%;
+  height: 100%;
+  @include flex();
+  .RightItems
+  {
+
+    flex: 3;
+    height: 100%;
+    background-color: #f67ab2;
+
+    @include flex(center , center , row);
+
+    img
+    {
+      width: 380px;
+    }
+  }
+
+  .LeftItems
+  {
+    flex: 2;
+    height: 100%;
+    background-color: #fd56a2;
+    box-sizing: border-box;
+
+    @include margin-padding-one-property(2rem , false);
+    @include flex(center , flex-start , column);
+
+    h2
+    {
+      color: #dcdcdc;
+    }
+    p
+    {
+      margin-top: .5rem;
+      color: #dcdcdc;
+    }
+    button
+    {
+      width: 8rem;
+      height: 2rem;
+      outline: none;
+      border: none;
+      color: #2a2a2a;
+      @include border-one-property(0rem);
+      @include margin-padding-Two-property(2rem , 0)
+    }
+  }
+}
+
+.Slide2
+{
+  @extend .Slide1;
+
+  .RightItems
+  {
+    background-color: #81b44b;
+
+
+  }
+
+  .LeftItems
+  {
+    background-color: #6b9b37;
+  }
+}
+
+.Slide3
+{
+  @extend .Slide1;
+
+  .RightItems
+  {
+    background-color: #55b0ef;
+
+
+  }
+
+  .LeftItems
+  {
+    background-color: #0e98d9;
+  }
+}
+
