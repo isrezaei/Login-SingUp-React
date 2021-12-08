@@ -1,0 +1,40 @@
+@import "../../_VariableStyle/VariableStyle";
+
+.TypewriterANDPeopleImage
+{
+  width: 67%;
+  @include flex(space-between , center ,row);
+
+
+
+
+  .Typewrite
+  {
+    z-index: 1000;
+    width: 30rem;
+    color: #484848;
+
+    font: {
+      size: 45px;
+      weight: bold;
+    };
+
+    @include margin-padding-Four-property(0 , 0 , 5rem , 0);
+
+  }
+
+  .PeopleImage
+  {
+    z-index: 1000;
+    width: 500px;
+    position: relative;
+
+  }
+
+  .DarkTypewrite
+  {
+    @extend .Typewrite;
+    color: #cccaca;
+  }
+
+}

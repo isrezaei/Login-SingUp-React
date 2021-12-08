@@ -1,0 +1,102 @@
+.LoginForm, .DarkLoginForm {
+  width: 27rem;
+  height: 40rem;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 2rem 2rem;
+}
+.LoginForm .Title, .DarkLoginForm .Title {
+  margin: 0.5rem 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.LoginForm .Alert, .DarkLoginForm .Alert {
+  margin: 1rem 0;
+  color: rgba(91, 91, 91, 0.55);
+  font-weight: bold;
+}
+.LoginForm .Summary, .DarkLoginForm .Summary {
+  margin: 1rem 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #939393;
+  line-height: 1.2rem;
+}
+.LoginForm form, .DarkLoginForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoginForm form input, .DarkLoginForm form input {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #eceff1;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.LoginForm form .WrongAlert, .DarkLoginForm form .WrongAlert {
+  font-size: 13px;
+  color: #ff7676;
+}
+.LoginForm form .LoginButton, .DarkLoginForm form .LoginButton, .LoginForm form .CreateButton, .DarkLoginForm form .CreateButton {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #03a9f4;
+  font-size: 17px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.LoginForm form .CreateButton, .DarkLoginForm form .CreateButton {
+  width: 90%;
+  background-color: #79a940;
+  cursor: pointer;
+  margin: 0rem 0;
+}
+.LoginForm form .ForgotPassword, .DarkLoginForm form .ForgotPassword {
+  font-size: 13px;
+  margin: 1rem 0;
+}
+
+.DarkLoginForm {
+  background-color: #262525;
+}
+.DarkLoginForm .Title {
+  margin: 0.5rem 0;
+  color: #eceff1;
+  font-size: 30px;
+  font-weight: bold;
+}
+.DarkLoginForm .Alert {
+  margin: 1rem 0;
+  color: #b6b6b6;
+  font-weight: normal;
+}
+.DarkLoginForm .Summary {
+  margin: 1rem 0;
+  font-size: 13px;
+  font-weight: normal;
+  color: #eceff1;
+  line-height: 1.2rem;
+}
+.DarkLoginForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.DarkLoginForm form input {
+  background-color: #0e0e0e;
+}
+.DarkLoginForm form .ForgotPassword {
+  color: #eceff1;
+}
+
+/*# sourceMappingURL=LoginForm.css.map */

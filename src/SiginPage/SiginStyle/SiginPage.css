@@ -1,0 +1,143 @@
+.SiginPage {
+  width: 90%;
+  height: 47rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.SiginForms {
+  width: 35%;
+  height: 100%;
+  background-color: #ffff;
+  box-sizing: border-box;
+  padding: 5em 5rem;
+}
+.SiginForms .Title {
+  margin: 0.5rem 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.SiginForms .Alert {
+  margin: 1rem 0;
+  color: rgba(91, 91, 91, 0.55);
+  font-weight: bold;
+}
+.SiginForms input[type=text] {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #eceff1;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.SiginForms form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.SiginForms form .NameInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.SiginForms form .NameInfo input {
+  width: 49%;
+}
+.SiginForms form .BrithdayInfo {
+  width: 100%;
+}
+.SiginForms form .BrithdayInfo .Birthday {
+  font-size: 13px;
+  font-weight: bold;
+  color: #b7b7b7;
+  margin: 0.5rem 0;
+}
+.SiginForms form .BrithdayInfo .Options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.SiginForms form .BrithdayInfo .Options select {
+  width: 30%;
+  height: 2rem;
+  border: 1px solid #b7b7b7;
+  box-sizing: border-box;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.SiginForms form .BrithdayInfo .Options select option {
+  font-size: 18px;
+}
+.SiginForms form .GenderInfo {
+  width: 100%;
+}
+.SiginForms form .GenderInfo .Gender {
+  font-size: 13px;
+  font-weight: bold;
+  color: #b7b7b7;
+  margin: 0.5rem 0;
+}
+.SiginForms form .GenderInfo .RadioInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.SiginForms form .GenderInfo .RadioInput section {
+  width: 30%;
+  height: 2rem;
+  border: 1px solid #b7b7b7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+.SiginForms form .GenderInfo .RadioInput section input[type=radio] {
+  width: 15px;
+  height: 15px;
+}
+.SiginForms form .Summary {
+  margin: 1rem 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #939393;
+  line-height: 1.2rem;
+}
+.SiginForms form .SiginButton {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #79a940;
+  font-size: 17px;
+  color: white;
+  outline: none;
+  border: none;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+.SiginForms form .ForgotPassword {
+  margin: 1rem 0;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=SiginPage.css.map */

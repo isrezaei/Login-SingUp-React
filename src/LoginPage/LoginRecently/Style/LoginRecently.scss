@@ -1,0 +1,165 @@
+@import "../../../_VariableStyle/VariableStyle";
+
+.RecentlyLoginText
+{
+  width: 38.5%;
+  height: 1rem;
+  position: relative;
+  color: #707070;
+  @include margin-padding-Two-property(2rem , 0);
+  @include flex(flex-start , center , row);
+
+.RecentlySpinner
+  {
+    width: 30px;
+    margin-left: .5rem;
+  }
+}
+
+.LoginRecently::-webkit-scrollbar
+{
+  display: none;
+}
+
+#DragCursor
+{
+  cursor: grabbing;
+  transform: scale(1.1);
+  transition: .2s;
+}
+
+.LoginRecently
+{
+  width: 41.5%;
+  height: 15rem;
+  position: relative;
+  cursor: grab;
+  transition: .2s;
+  overflow: {
+    x : scroll;
+    y: hidden;
+  };
+
+  @include margin-padding-Four-property(1.5rem , 0 , 2rem , 0);
+  @include flex(flex-start , center , row);
+
+  .Card
+  {
+    width: 12rem;
+    height : 15rem;
+    box-sizing: border-box;
+
+    @include margin-padding-Four-property(0 , 1rem , 0 , 0);
+    @include flex(flex-start , center, column);
+
+
+    .Avatar
+    {
+      width: 180px;
+      height: 180px;
+      background-color: #98e8de;
+      border: none;
+      outline: none;
+      @include border-one-property(100%)
+    }
+
+    .Name
+    {
+      width: 100%;
+      color: #4b4b4b;
+      font: {
+        weight: bold;
+      };
+
+      cursor: pointer;
+      text-align: center;
+      transition: .3s;
+      @include margin-padding-Four-property( .5rem , 0 , 0 , 0);
+
+      &:hover
+      {
+        transition: .3s;
+        color: #245dd0;
+      }
+    }
+
+    .RemoveRecently
+    {
+      color: #707070;
+      font: {
+        size: 13px;
+        weight: bold;
+      };
+      cursor: pointer;
+      transition: .3s;
+      @include margin-padding-Four-property( .5rem , 0 , 0rem , 0);
+
+      &:hover
+      {
+        transition: .3s;
+        color: #ff3737;
+      }
+    }
+  }
+}
+
+.LoginRecentlyForOnePerson
+{
+  width: 45%;
+  height: auto;
+  cursor: auto;
+  @extend .LoginRecently;
+  @include margin-padding-Four-property(1.5rem , 0 , 0rem , 0);
+  @include flex(center , center , column);
+
+  .Card
+  {
+    width: 100%;
+    margin: auto;
+    height : auto;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .Name
+  {
+    font-size: 23px;
+  }
+
+  .Avatar
+  {
+    width: 200px!important;
+    height: 200px !important;
+  }
+
+  .RemoveRecently
+  {
+    margin-top: .2rem!important;
+  }
+}
+
+
+
+.WellcomeMessage
+{
+  width: 80%;
+  height: 18rem;
+  box-sizing: border-box;
+  @include border-one-property(10px);
+  @include flex(flex-start , center , column);
+
+  .UserLogo
+  {
+    width: 200px;
+    height: 200px;
+    @include border-one-property(100px)
+  }
+
+  .WellcomeText
+  {
+    color: #707070;
+    @include margin-padding-Four-property(0rem , 0 ,0 ,0)
+  }
+}
+

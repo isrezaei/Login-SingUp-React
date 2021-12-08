@@ -1,0 +1,134 @@
+.RecentlyLoginText {
+  width: 38.5%;
+  height: 1rem;
+  position: relative;
+  color: #707070;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.RecentlyLoginText .RecentlySpinner {
+  width: 30px;
+  margin-left: 0.5rem;
+}
+
+.LoginRecently::-webkit-scrollbar, .LoginRecentlyForOnePerson::-webkit-scrollbar {
+  display: none;
+}
+
+#DragCursor {
+  cursor: grabbing;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.LoginRecently, .LoginRecentlyForOnePerson {
+  width: 41.5%;
+  height: 15rem;
+  position: relative;
+  cursor: grab;
+  transition: 0.2s;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.LoginRecently .Card, .LoginRecentlyForOnePerson .Card {
+  width: 12rem;
+  height: 15rem;
+  box-sizing: border-box;
+  margin: 0 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.LoginRecently .Card .Avatar, .LoginRecentlyForOnePerson .Card .Avatar {
+  width: 180px;
+  height: 180px;
+  background-color: #98e8de;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+}
+.LoginRecently .Card .Name, .LoginRecentlyForOnePerson .Card .Name {
+  width: 100%;
+  color: #4b4b4b;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  margin: 0.5rem 0 0 0;
+}
+.LoginRecently .Card .Name:hover, .LoginRecentlyForOnePerson .Card .Name:hover {
+  transition: 0.3s;
+  color: #245dd0;
+}
+.LoginRecently .Card .RemoveRecently, .LoginRecentlyForOnePerson .Card .RemoveRecently {
+  color: #707070;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0.5rem 0 0rem 0;
+}
+.LoginRecently .Card .RemoveRecently:hover, .LoginRecentlyForOnePerson .Card .RemoveRecently:hover {
+  transition: 0.3s;
+  color: #ff3737;
+}
+
+.LoginRecentlyForOnePerson {
+  width: 45%;
+  height: auto;
+  cursor: auto;
+  margin: 1.5rem 0 0rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoginRecentlyForOnePerson .Card {
+  width: 100%;
+  margin: auto;
+  height: auto;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  box-shadow: none;
+}
+.LoginRecentlyForOnePerson .Name {
+  font-size: 23px;
+}
+.LoginRecentlyForOnePerson .Avatar {
+  width: 200px !important;
+  height: 200px !important;
+}
+.LoginRecentlyForOnePerson .RemoveRecently {
+  margin-top: 0.2rem !important;
+}
+
+.WellcomeMessage {
+  width: 80%;
+  height: 18rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.WellcomeMessage .UserLogo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.WellcomeMessage .WellcomeText {
+  color: #707070;
+  margin: 0rem 0 0 0;
+}
+
+/*# sourceMappingURL=LoginRecently.css.map */

@@ -1,0 +1,119 @@
+$DarkMoodColor : #0e0e0e;
+
+$AppBody-Width : 100% ;
+$AppBody-Height : 31rem;
+$AppBody-Color : #245dd0;
+
+
+$Panel-Login-SignIn-Width : 80% ;
+$Panel-Login-SignIn-Height : 20rem ;
+;
+
+
+
+$Header-Routing-FontSize : 15px;
+$Header-Sentence-FontSize : 16px;
+$Header-Logo-FontSize : 45px;
+
+$Links-Width : 100%;
+$Links-Height : 5.5rem ;
+
+
+$LoginPanel-Width : 27rem;
+$LoginPanel-Height : 40rem;
+$LoginPanel-Color : #ffffff;
+$LoginPanel-BoxShdow :0px 0px 2px 0px rgba(0,0,0,0.50);
+$LoginPanel-FontSizeTitel : 30px ;
+$LoginPanel-AlertColor : rgba(91, 91, 91, 0.55);
+$LoginPanel-Summary-FontSize : 13px ;
+$LoginPanel-Summary-Color : #939393;
+$LoginPanel-Summary-LineHight : 1.2rem;
+$LoginPanel-Input-Width : 100%;
+$LoginPanel-Input-Hight : 2.5rem;
+$LoginPanel-Input-color :  #eceff1;
+$LoginPanel-Input-boxSizing : border-box ;
+$LoginPanel-WrongAlert-FontSize : 13px ;
+$LoginPanel-WrongAlert-Color : #ff7676;
+$LoginPanel-Button-Width : 100% ;
+$LoginPanel-Button-Hight : 2.5rem;
+$LoginPanel-Button-color : #03a9f4;
+$LoginPanel-Button-FontColor : white;
+$LoginPanel-Button-fontSize : 17px;
+$LoginPanel-CreatButton-Width : 90% ;
+$LoginPanel-CreatButton-Color :  #79a940;
+$LoginPanel-ForgotPassword-FontSize : 13px;
+
+$Sigin-Width : 27rem;
+$Sigin-Height : 40rem;
+$Sigin-Color : #ffff;
+$Sigin-Input-Width : 100%;
+$Sigin-Input-Hight : 2.5rem;
+$Sigin-Input-color :  #eceff1;
+$Sigin-Button-Width : 100% ;
+$Sigin-Button-Hight : 2.5rem;
+$Sigin-Button-color : #03a9f4;
+$Sigin-Button-fontSize : 17px;
+
+
+
+
+
+$Footer-Logo-Type : '18px';
+$Footer-Routing-Link : '13px';
+
+
+//Mixin For Margin and Padding
+@mixin flex($justify-content : center , $align-items : center , $flex-direction : row)
+{
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin margin-padding-one-property($T-R-B-L , $marginORpadding : true)
+{
+  @if($marginORpadding)
+  {
+    margin: $T-R-B-L;
+  }
+  @else
+  {
+    padding: $T-R-B-L;
+  }
+}
+@mixin margin-padding-Two-property($TB , $LR , $marginORpadding : true)
+{
+  @if($marginORpadding)
+  {
+    margin: $TB $LR;
+  }
+  @else
+  {
+    padding: $TB $LR;
+  }
+}
+@mixin margin-padding-Four-property($T , $R , $B , $L , $marginORpadding : true)
+{
+  @if($marginORpadding)
+  {
+    margin: $T $R $B $L;
+  }
+  @else
+  {
+    padding: $T $R $B $L;
+  }
+}
+
+//Mixin For Border-Radius
+@mixin border-one-property($T-R-B-L)
+{
+  border-radius: $T-R-B-L;
+}
+@mixin border-Two-property($TB , $LR)
+{
+  border-radius: $TB , $LR;
+}
+@mixin border-Four-property($T , $R , $B , $L)
+{
+  border-radius: $T $R $B $L ;
+}

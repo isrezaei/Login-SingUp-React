@@ -1,0 +1,74 @@
+@import "../../_VariableStyle/VariableStyle";
+
+
+.Links
+{
+  width: 85%;
+  height: 7rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+
+  @include margin-padding-one-property(auto);
+  @include flex();
+
+
+  .LogoDiv
+  {
+    width: 5%;
+  }
+
+  .Logo
+  {
+    font-size: $Header-Logo-FontSize ;
+    color: #414141;
+  }
+
+
+  ul
+  {
+    width: 90%;
+    display: flex;
+    list-style: none;
+    li
+    {
+      @include margin-padding-Two-property(0 , 2rem);
+      .LinkTag
+      {
+
+        font: {
+          size: 18px;
+          weight: bold;
+        };
+        color: #4b4b4b;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.DarkLinks
+{
+  @extend .Links;
+
+  .Logo
+{
+  font-size: $Header-Logo-FontSize ;
+  color: #b2b2b2;
+}
+
+  ul
+  {
+
+    li
+    {
+      .LinkTag
+      {
+        color: #b2b2b2;
+      }
+    }
+  }
+
+}

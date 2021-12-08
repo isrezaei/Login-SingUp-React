@@ -1,0 +1,42 @@
+.Footer, .DarkFooter {
+  width: 100%;
+  border-top: 1px solid #cbcaca;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.Footer .Brand, .DarkFooter .Brand {
+  font-weight: bold;
+  flex: 1;
+}
+.Footer .Topics, .DarkFooter .Topics {
+  flex: 7;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Footer .Topics li, .DarkFooter .Topics li {
+  margin: 0 1rem;
+}
+.Footer .DownloadServes, .DarkFooter .DownloadServes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Footer .DownloadServes img, .DarkFooter .DownloadServes img {
+  width: 300px;
+}
+
+.DarkFooter {
+  border-top: 1px solid #2a2a2a;
+  color: #b2b2b2;
+}
+
+/*# sourceMappingURL=Footer.css.map */
