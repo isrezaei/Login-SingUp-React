@@ -12,6 +12,8 @@ export default function LoginRecently ()
     const {MouseDown , MouseMove , MouseUpAdnMouseLeave , DragCursor} = ScrollXRecently()
     const RecentlyLength = Recently.LocalUser.length === 0
 
+    const X = 'LoginRecentlyForOnePerson'
+    const Y = 'DragCursor'
 
     return (
         <>
@@ -23,12 +25,14 @@ export default function LoginRecently ()
                 onMouseUp={MouseUpAdnMouseLeave}
                 onMouseMove={MouseMove}
                 onMouseLeave={MouseUpAdnMouseLeave}
-                className={ Recently.LocalUser.length <= 1 ?  'LoginRecentlyForOnePerson' : 'LoginRecently' }
-                id={DragCursor && 'DragCursor'}>
+                // id={DragCursor && 'DragCursor'}
+                className={ Recently.LocalUser.length <= 1 ? 'LoginRecentlyForOnePerson' : 'LoginRecently'}
+               >
 
                 {
                     !RecentlyLength ? ShowRecently : <WellcomeMessage/>
                 }
+
             </div>
 
         </>

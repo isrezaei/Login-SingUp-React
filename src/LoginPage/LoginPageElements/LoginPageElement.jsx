@@ -12,7 +12,7 @@ export default function LoginPageElement ()
 
     return (
         <div className={'TypewriterANDPeopleImage'}>
-            <p className={DarkMood ? 'DarkTypewrite' : 'Typewrite'}> <TypeWriter/> </p>
+            <div className={DarkMood ? 'DarkTypewrite' : 'Typewrite'}> <TypeWriter/> </div>
             <img draggable={false} className={'PeopleImage'} src={DarkMood ? IMGDarkPeopleHeader :  IMGPeopleHeader} alt={'IMGPeopleHeader'}/>
         </div>
     )
