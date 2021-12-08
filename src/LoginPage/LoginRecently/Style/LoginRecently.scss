@@ -6,7 +6,7 @@
   height: 1rem;
   position: relative;
   color: #707070;
-  @include margin-padding-Two-property(2rem , 0);
+  bottom: 3rem;
   @include flex(flex-start , center , row);
 
 .RecentlySpinner
@@ -39,8 +39,7 @@
     x : scroll;
     y: hidden;
   };
-
-  @include margin-padding-Four-property(1.5rem , 0 , 2rem , 0);
+  bottom: 1rem;
   @include flex(flex-start , center , row);
 
   .Card
@@ -106,18 +105,17 @@
 .LoginRecentlyForOnePerson
 {
   width: 45%;
-  height: auto;
+  height: 15rem;
   cursor: auto;
+  bottom: 1.5rem;
   @extend .LoginRecently;
-  @include margin-padding-Four-property(1.5rem , 0 , 0rem , 0);
   @include flex(center , center , column);
 
   .Card
   {
     width: 100%;
     margin: auto;
-    height : auto;
-    margin-bottom: 1.5rem;
+    height : 15rem;
     background-color: transparent;
     box-shadow: none;
   }
@@ -129,8 +127,8 @@
 
   .Avatar
   {
-    width: 200px!important;
-    height: 200px !important;
+    width: 190px!important;
+    height: 190px !important;
   }
 
   .RemoveRecently

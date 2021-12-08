@@ -3,7 +3,7 @@
   height: 1rem;
   position: relative;
   color: #707070;
-  margin: 2rem 0;
+  bottom: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -32,7 +32,7 @@
   transition: 0.2s;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin: 1.5rem 0 2rem 0;
+  bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -84,9 +84,9 @@
 
 .LoginRecentlyForOnePerson {
   width: 45%;
-  height: auto;
+  height: 15rem;
   cursor: auto;
-  margin: 1.5rem 0 0rem 0;
+  bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,8 +95,7 @@
 .LoginRecentlyForOnePerson .Card {
   width: 100%;
   margin: auto;
-  height: auto;
-  margin-bottom: 1.5rem;
+  height: 15rem;
   background-color: transparent;
   box-shadow: none;
 }
@@ -104,8 +103,8 @@
   font-size: 23px;
 }
 .LoginRecentlyForOnePerson .Avatar {
-  width: 200px !important;
-  height: 200px !important;
+  width: 190px !important;
+  height: 190px !important;
 }
 .LoginRecentlyForOnePerson .RemoveRecently {
   margin-top: 0.2rem !important;
