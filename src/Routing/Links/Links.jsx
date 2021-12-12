@@ -1,10 +1,13 @@
 import {Link} from "react-router-dom";
-import {BsFacebook} from 'react-icons/bs'
+import {BsFacebook , BsMoonStarsFill} from 'react-icons/bs'
+import {FaSun} from 'react-icons/fa'
 import {ChangeStateValue , StateValue} from "../../Context/Context";
+
 import './Links.css'
 
 export const Links = () =>
 {
+
 
     const {DarkMood} = StateValue()
     const {SetDarkMood} = ChangeStateValue()
@@ -35,7 +38,11 @@ export const Links = () =>
                     <Link className='LinkTag' to='/Login'>Login</Link>
                 </li>
 
-                {DarkMood ? <button onClick={()=> SetDarkMood(false)}> Light Mood </button> : <button onClick={()=>SetDarkMood(true)}> DarkMood </button> }
+
+                {DarkMood ? <FaSun onClick={()=> SetDarkMood(!DarkMood)} className={'LightLogo'}/> :  <BsMoonStarsFill onClick={()=> SetDarkMood(!DarkMood)} className={'DarkLogo'}/>}
+
+
+
             </ul>
         </div>
     )

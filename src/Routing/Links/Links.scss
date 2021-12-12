@@ -26,12 +26,39 @@
     color: #414141;
   }
 
+  .DarkLogo
+  {
+    font-size: 25px;
+    color: #5860f5;
+    cursor: pointer;
+    animation: LogoAnimations .3s;
+  }
+
+  .LightLogo
+  {
+    font-size: 28px;
+    color: #eecd59;
+    cursor: pointer;
+    animation: LogoAnimations .3s;
+  }
+
+  @keyframes LogoAnimations {
+    0%{
+      transform: scale(0);
+    }
+    100%
+    {
+      transform: scale(1);
+    }
+  }
+
 
   ul
   {
     width: 90%;
     display: flex;
     list-style: none;
+    @include flex(flex-start , center , row);
     li
     {
       @include margin-padding-Two-property(0 , 2rem);

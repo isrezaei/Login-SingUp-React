@@ -1,4 +1,5 @@
-import Apps from '../Images/Apps.png'
+import Apps from '../Images/app-store-1.svg'
+import Google from '../Images/google-play-4.svg'
 import './Footer.css'
 import {StateValue} from "../Context/Context";
 
@@ -25,7 +26,9 @@ export default function Footer ()
 
 
             <div className={'DownloadServes'}>
-                <img src={Apps} alt={''}/>
+
+                <img src={Apps} className={'App-Store'} alt={''}/>
+                <img src={Google} className={'Google-Store'} alt={''}/>
             </div>
 
         </footer>

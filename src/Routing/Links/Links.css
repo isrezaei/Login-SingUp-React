@@ -18,10 +18,34 @@
   font-size: 45px;
   color: #414141;
 }
+.Links .DarkLogo, .DarkLinks .DarkLogo {
+  font-size: 25px;
+  color: #5860f5;
+  cursor: pointer;
+  animation: LogoAnimations 0.3s;
+}
+.Links .LightLogo, .DarkLinks .LightLogo {
+  font-size: 28px;
+  color: #eecd59;
+  cursor: pointer;
+  animation: LogoAnimations 0.3s;
+}
+@keyframes LogoAnimations {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .Links ul, .DarkLinks ul {
   width: 90%;
   display: flex;
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 .Links ul li, .DarkLinks ul li {
   margin: 0 2rem;

@@ -40,6 +40,7 @@
     y: hidden;
   };
   bottom: 1rem;
+
   @include flex(flex-start , center , row);
 
   .Card
@@ -142,16 +143,17 @@
 .WellcomeMessage
 {
   width: 80%;
-  height: 18rem;
+  height: 20rem;
   box-sizing: border-box;
   @include border-one-property(10px);
   @include flex(flex-start , center , column);
 
+
   .UserLogo
   {
     width: 200px;
-    height: 200px;
-    @include border-one-property(100px)
+
+    margin-bottom: 1rem;
   }
 
   .WellcomeText

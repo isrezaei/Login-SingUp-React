@@ -3,6 +3,7 @@
 .Footer
 {
   width: 100%;
+  height: 5rem;
   border-top: 1px solid #cbcaca;
   position: relative;
   box-sizing: border-box;
@@ -33,9 +34,17 @@
   {
     @include flex();
 
-    img
+    .App-Store
     {
-      width: 300px;
+      margin: 0 1rem;
+      width: 45px;
+
+    }
+    .Google-Store
+    {
+      @extend .App-Store;
+      width: 190px;
+      border-radius: 0;
     }
   }
 }
