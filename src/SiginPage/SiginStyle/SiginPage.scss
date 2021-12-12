@@ -48,7 +48,6 @@
     outline: none;
     border: none;
 
-    @include border-one-property(5px);
     @include margin-padding-one-property(.5rem , false);
     @include margin-padding-Two-property(.5rem , 0)
   }
@@ -56,7 +55,7 @@
 
   form
   {
-    @include flex(center , center , column);
+    @include flex(center , flex-start , column);
     .NameInfo
     {
       width: 100%;
@@ -64,6 +63,15 @@
       input
       {
         width: 49%;
+      }
+    }
+
+    .CorrectInfo
+    {
+      font-size: small;
+      color: #4b4b4b;
+      b{
+        color: #de3232;
       }
     }
 
@@ -81,17 +89,18 @@
       .Options
       {
         @include flex(space-between , center , row);
+        @include margin-padding-Two-property(.5rem , 0);
 
         select
         {
           width: 30%;
           height: 2rem;
-          border: 1px solid #b7b7b7;
+          border: 1px solid rgba(75, 75, 75, 0.45);
           box-sizing: border-box;
           outline: none;
-
+          font-size: 15px;
           @include margin-padding-one-property(5px , false);
-          @include border-one-property(5px);
+
 
           option
           {
@@ -121,11 +130,11 @@
         {
           width: 30%;
           height: 2rem;
-          border: 1px solid #b7b7b7;
-
-          @include flex();
-          @include flex(space-around, center , row);
-          @include border-one-property(5px);
+          border: 1px solid rgba(75, 75, 75, 0.45);
+          font-size: 15px;
+          box-sizing: border-box;
+          @include margin-padding-one-property(.5rem , false);
+          @include flex(space-between, center , row);
           input[type = radio]
           {
             width: 15px;
@@ -148,7 +157,6 @@
     }
 
 
-
     .SiginButton
     {
       width: $LoginPanel-Button-Width;
@@ -163,10 +171,8 @@
       border: none;
 
       @include margin-padding-Two-property(.5rem , 0);
-      @include border-one-property(5px)
+
     }
-
-
 
     .ForgotPassword
     {
@@ -176,6 +182,78 @@
         size: 13px;
       };
     }
+  }
+}
 
+.Dark_SiginForms {
+  @extend .SiginForms;
+  background-color: #262525;
+  .Title {
+    color: #eceff1;
+  }
+  .Alert {
+    color: #b7b7b7;
+    font-weight: lighter;
+  }
+  input[type = text] {
+    background-color:  #0e0e0e;
+    color: #eceff1;
+  }
+  form {
+    .NameInfo {
+      input {
+        background-color:  #0e0e0e;
+        color: #eceff1;
+      }
+    }
+
+    .Dark_CorrectInfo
+    {
+      @extend .CorrectInfo;
+      color: #b7b7b7;
+      b{
+        color: #f44336;
+        font-weight: lighter;
+      }
+    }
+
+
+    .Options {
+      select {
+        background-color:  #0e0e0e;
+        color: #eceff1;
+
+
+
+        option {
+          color: #eceff1;
+        }
+      }
+    }
+  }
+}
+
+.Dark_GenderInfo
+{
+
+  @extend .GenderInfo;
+
+  .Gender
+  {
+  }
+
+  .RadioInput
+  {
+
+    section
+    {
+      background-color: #0e0e0e;
+      color: #eceff1;
+      border: transparent!important;
+      input[type = radio]
+      {
+
+      }
+    }
   }
 }

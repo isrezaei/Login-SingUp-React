@@ -1,7 +1,12 @@
+import {StateValue} from "../../../../Context/Context";
+
 export default function SiginSelectGender ({SetGender , Gender})
 {
+
+    const {DarkMood} = StateValue()
+
     return (
-        <div className='GenderInfo'>
+        <div className={DarkMood ? 'Dark_GenderInfo' : 'GenderInfo'}>
 
             <div className='Gender'>
                 <p>Gender</p>

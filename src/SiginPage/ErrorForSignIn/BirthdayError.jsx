@@ -6,9 +6,9 @@ export default function BirthdayError ({DayRef , MonthRef , YearRef , BooleanOpt
 
         if (BooleanOptionYears)
         {
-            DayRef.style.border = '2px solid #ffa4a2'
-            MonthRef.style.border = '2px solid #ffa4a2'
-            YearRef.style.border = '2px solid #ffa4a2'
+            DayRef.style.border = '1px solid #f44336'
+            MonthRef.style.border = '1px solid #f44336'
+            YearRef.style.border = '1px solid #f44336'
         }
         else
         {

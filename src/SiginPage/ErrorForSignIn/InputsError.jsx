@@ -12,13 +12,13 @@ export default function InputsError ({InputName , InputLastName , InputPhoneEmai
 
     useEffect(()=>
     {
-        FirstName === ''  ?  InputName.style.border = '2px solid #ffa4a2' :  InputName.style.border = ''
+        FirstName === ''  ?  InputName.style.border = '1px solid #f44336' :  InputName.style.border = ''
 
-        LastName === '' ? InputLastName.style.border = '2px solid #ffa4a2' : InputLastName.style.border = ''
+        LastName === '' ? InputLastName.style.border = '1px solid #f44336' : InputLastName.style.border = ''
 
-        BooleanBlurEmailPhone ?   InputPhoneEmail.style.border = '2px solid #ffa4a2' : InputPhoneEmail.style.border = ''
+        BooleanBlurEmailPhone ?   InputPhoneEmail.style.border = '1px solid #f44336' : InputPhoneEmail.style.border = ''
 
-        BooleanBlurPassword ? InputNewPassword.style.border = '2px solid #ffa4a2' :  InputNewPassword.style.border = ''
+        BooleanBlurPassword ? InputNewPassword.style.border = '1px solid #f44336' :  InputNewPassword.style.border = ''
 
     } , [FirstName , LastName , BooleanBlurEmailPhone , BooleanBlurPassword ])
 

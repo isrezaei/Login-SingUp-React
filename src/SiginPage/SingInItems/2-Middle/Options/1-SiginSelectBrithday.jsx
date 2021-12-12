@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {GlobalRef} from "../../../../Context/Context";
+import {StateValue} from "../../../../Context/Context";
 import BirthdayError from "../../../ErrorForSignIn/BirthdayError";
 import DayOptions from "./2-DayOptions";
 import MonthOptions from "./3-MonthOptions";
@@ -10,7 +11,7 @@ export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months 
 {
     const [AllInputRefs , SetAllInputRefs] = useState('')
     const [BooleanOptionYears , SetBooleanOptionYears] = useState(false)
-
+    const {DarkMood} = StateValue()
     const {DayRef , MonthRef , YearRef} = GlobalRef()
     const {OldValidations} = Conditions()
 
@@ -55,7 +56,7 @@ export default function SiginSelectBirthday ({SetDay , Days , SetMonth , Months 
 
             </div>
 
-            {BooleanOptionYears && <p>You do not have the minimum age to register</p>}
+            {BooleanOptionYears && <p className={DarkMood ? 'Dark_CorrectInfo' : 'CorrectInfo'}>You do not have the <b>minimum age</b> to register</p>}
 
             {
                 AllInputRefs &&

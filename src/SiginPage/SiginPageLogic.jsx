@@ -25,7 +25,8 @@ export default function SiginPageLogic()
         LastName ,
         PhoneEmail,
         NewPassword ,
-        Gender
+        Gender,
+        DarkMood
     } = StateValue()
 
     const {
@@ -65,7 +66,7 @@ export default function SiginPageLogic()
 
         <div className={'SiginPage'}>
 
-            <div className='SiginForms'>
+            <div className={DarkMood ? 'Dark_SiginForms' : 'SiginForms'}>
                 <SiginTitle/>
                 <form>
                     <SiginInputs

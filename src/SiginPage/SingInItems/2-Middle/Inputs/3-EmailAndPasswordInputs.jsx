@@ -1,3 +1,5 @@
+import {StateValue} from "../../../../Context/Context";
+
 export default function EmailAndPasswordInputs(
     {
         InputPhoneEmail ,
@@ -10,6 +12,10 @@ export default function EmailAndPasswordInputs(
         BooleanBlurPassword
     })
 {
+
+    const {DarkMood} = StateValue()
+
+
     return (
         <>
             <input ref={InputPhoneEmail} type='text' placeholder='Mobile number or email'
@@ -18,7 +24,7 @@ export default function EmailAndPasswordInputs(
                    onClick={(e)=> SetPhoneEmail(e.target.value)}
                    onChange={(e)=> SetPhoneEmail(e.target.value)}/>
 
-            {BooleanBlurEmailPhone && <p>You're need a Right Informations</p> }
+            {BooleanBlurEmailPhone && <p className={DarkMood ? 'Dark_CorrectInfo' : 'CorrectInfo'}>Please enter your <b>email</b> or <b>number</b> correctly</p> }
 
             <input ref={InputNewPassword} type='text' placeholder='New Password'
                    onFocus={()=> SetNewPassword('.')}
@@ -26,7 +32,7 @@ export default function EmailAndPasswordInputs(
                    onClick={(e)=> SetNewPassword(e.target.value)}
                    onChange={(e)=> SetNewPassword(e.target.value)}/>
 
-            {BooleanBlurPassword && <p>You Need true Password</p>}
+            {BooleanBlurPassword && <p className={DarkMood ? 'Dark_CorrectInfo' : 'CorrectInfo'}>Passwords contain <b>lowercase</b> letters and <b>numbers</b> </p>}
         </>
     )
 }
