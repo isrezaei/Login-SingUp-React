@@ -13,6 +13,7 @@ import SiginButton from "./SingInItems/3-Footer/SiginButton";
 import LoadingSpinner from "../Spinner/LoadingSpinner";
 import SiginSlider from "./SiginSlider";
 import './SiginStyle/SiginPage.css'
+import Footer from "../Footer/Footer";
 
 
 
@@ -64,45 +65,50 @@ export default function SiginPageLogic()
 
     return (
 
-        <div className={'SiginPage'}>
+        <div className={'FlexSignPage'}>
 
-            <div className={DarkMood ? 'Dark_SiginForms' : 'SiginForms'}>
-                <SiginTitle/>
-                <form>
-                    <SiginInputs
-                        SetFirstName = {SetFirstName}
-                        SetLastName = {SetLastName}
-                        SetPhoneEmail = {SetPhoneEmail}
-                        SetNewPassword = {SetNewPassword}
-                    />
 
-                    {Loading &&  <LoadingSpinner/>}
+            <div className={'SiginPage'}>
+                <div className={DarkMood ? 'Dark_SiginForms' : 'SiginForms'}>
+                    <SiginTitle/>
+                    <form>
+                        <SiginInputs
+                            SetFirstName = {SetFirstName}
+                            SetLastName = {SetLastName}
+                            SetPhoneEmail = {SetPhoneEmail}
+                            SetNewPassword = {SetNewPassword}
+                        />
 
-                    <SiginSelectBirthday
-                        SetDay={SetDay}
-                        Days={Days}
-                        SetMonth={SetMonth}
-                        Months={Months}
-                        SetYear={SetYear}
-                        Years={Years}
-                    />
+                        {Loading &&  <LoadingSpinner/>}
 
-                    <SiginSelectGender
-                        SetGender={SetGender}
-                        Gender={Gender}
-                    />
+                        <SiginSelectBirthday
+                            SetDay={SetDay}
+                            Days={Days}
+                            SetMonth={SetMonth}
+                            Months={Months}
+                            SetYear={SetYear}
+                            Years={Years}
+                        />
 
-                    <SiginSummary/>
+                        <SiginSelectGender
+                            SetGender={SetGender}
+                            Gender={Gender}
+                        />
 
-                    <SiginButton
-                        SubmitInfo={SubmitInfo}
-                    />
+                        <SiginSummary/>
 
-                </form>
+                        <SiginButton
+                            SubmitInfo={SubmitInfo}
+                        />
+                    </form>
+                </div>
+                <SiginSlider/>
             </div>
 
+            <div style={{width : '80%'}}>
+                <Footer/>
+            </div>
 
-            <SiginSlider/>
 
         </div>
 
