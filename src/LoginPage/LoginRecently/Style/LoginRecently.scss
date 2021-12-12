@@ -3,10 +3,12 @@
 .RecentlyLoginText
 {
   width: 38.5%;
-  height: 1rem;
+  height: 1vw;
   position: relative;
+  left: 5vw;
   color: #707070;
-  bottom: 2rem;
+  font-size: 1vw;
+
   @include flex(flex-start , center , row);
 
 .RecentlySpinner
@@ -39,7 +41,7 @@
     x : scroll;
     y: hidden;
   };
-  bottom: 1rem;
+
 
   @include flex(flex-start , center , row);
 
@@ -56,7 +58,7 @@
     .Avatar
     {
       width: 180px;
-      height: 180px;
+
       background-color: #98e8de;
       border: none;
       outline: none;
@@ -74,7 +76,7 @@
       cursor: pointer;
       text-align: center;
       transition: .3s;
-      @include margin-padding-Four-property( .5rem , 0 , 0 , 0);
+      @include margin-padding-Four-property( .5vw , 0 , 0 , 0);
 
       &:hover
       {
@@ -87,12 +89,12 @@
     {
       color: #707070;
       font: {
-        size: 13px;
+        size: .8vw;
         weight: bold;
       };
       cursor: pointer;
       transition: .3s;
-      @include margin-padding-Four-property( .5rem , 0 , 0rem , 0);
+      @include margin-padding-Four-property( .5vw , 0 , 0 , 0);
 
       &:hover
       {
@@ -106,35 +108,34 @@
 .LoginRecentlyForOnePerson
 {
   width: 45%;
-  height: 15rem;
+  height: 100%;
   cursor: auto;
-  bottom: 1.5rem;
+
   @extend .LoginRecently;
   @include flex(center , center , column);
 
   .Card
   {
     width: 100%;
-    margin: auto;
-    height : 15rem;
+    height : 100%;
     background-color: transparent;
     box-shadow: none;
   }
 
   .Name
   {
-    font-size: 23px;
+    font-size: 1.2vw;
   }
 
   .Avatar
   {
-    width: 185px!important;
-    height: 185px !important;
+    width: 26% !important;
+    height: 79% !important;
   }
 
   .RemoveRecently
   {
-    margin-top: .2rem!important;
+    margin-top: .2vw!important;
   }
 }
 
@@ -143,7 +144,7 @@
 .WellcomeMessage
 {
   width: 80%;
-  height: 20rem;
+  height: auto;
   box-sizing: border-box;
   @include border-one-property(10px);
   @include flex(flex-start , center , column);
@@ -151,7 +152,7 @@
 
   .UserLogo
   {
-    width: 200px;
+    width: 30%;
 
     margin-bottom: 1rem;
   }
@@ -159,7 +160,8 @@
   .WellcomeText
   {
     color: #707070;
-    @include margin-padding-Four-property(0rem , 0 ,0 ,0)
+    font-size: .8vmax;
+    @include margin-padding-Four-property(0 , 0 ,0 ,0)
   }
 }
 

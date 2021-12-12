@@ -1,9 +1,10 @@
 .RecentlyLoginText {
   width: 38.5%;
-  height: 1rem;
+  height: 1vw;
   position: relative;
+  left: 5vw;
   color: #707070;
-  bottom: 2rem;
+  font-size: 1vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -32,7 +33,6 @@
   transition: 0.2s;
   overflow-x: scroll;
   overflow-y: hidden;
-  bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -50,7 +50,6 @@
 }
 .LoginRecently .Card .Avatar, .LoginRecentlyForOnePerson .Card .Avatar {
   width: 180px;
-  height: 180px;
   background-color: #98e8de;
   border: none;
   outline: none;
@@ -63,7 +62,7 @@
   cursor: pointer;
   text-align: center;
   transition: 0.3s;
-  margin: 0.5rem 0 0 0;
+  margin: 0.5vw 0 0 0;
 }
 .LoginRecently .Card .Name:hover, .LoginRecentlyForOnePerson .Card .Name:hover {
   transition: 0.3s;
@@ -71,11 +70,11 @@
 }
 .LoginRecently .Card .RemoveRecently, .LoginRecentlyForOnePerson .Card .RemoveRecently {
   color: #707070;
-  font-size: 13px;
+  font-size: 0.8vw;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  margin: 0.5rem 0 0rem 0;
+  margin: 0.5vw 0 0 0;
 }
 .LoginRecently .Card .RemoveRecently:hover, .LoginRecentlyForOnePerson .Card .RemoveRecently:hover {
   transition: 0.3s;
@@ -84,9 +83,8 @@
 
 .LoginRecentlyForOnePerson {
   width: 45%;
-  height: 15rem;
+  height: 100%;
   cursor: auto;
-  bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,25 +92,24 @@
 }
 .LoginRecentlyForOnePerson .Card {
   width: 100%;
-  margin: auto;
-  height: 15rem;
+  height: 100%;
   background-color: transparent;
   box-shadow: none;
 }
 .LoginRecentlyForOnePerson .Name {
-  font-size: 23px;
+  font-size: 1.2vw;
 }
 .LoginRecentlyForOnePerson .Avatar {
-  width: 185px !important;
-  height: 185px !important;
+  width: 26% !important;
+  height: 79% !important;
 }
 .LoginRecentlyForOnePerson .RemoveRecently {
-  margin-top: 0.2rem !important;
+  margin-top: 0.2vw !important;
 }
 
 .WellcomeMessage {
   width: 80%;
-  height: 20rem;
+  height: auto;
   box-sizing: border-box;
   border-radius: 10px;
   display: flex;
@@ -121,12 +118,13 @@
   align-items: center;
 }
 .WellcomeMessage .UserLogo {
-  width: 200px;
+  width: 30%;
   margin-bottom: 1rem;
 }
 .WellcomeMessage .WellcomeText {
   color: #707070;
-  margin: 0rem 0 0 0;
+  font-size: 0.8vmax;
+  margin: 0 0 0 0;
 }
 
 /*# sourceMappingURL=LoginRecently.css.map */

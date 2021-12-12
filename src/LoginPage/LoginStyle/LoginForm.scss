@@ -2,40 +2,41 @@
 
 .LoginForm
 {
-  width: $LoginPanel-Width;
-  height: $LoginPanel-Height;
+  width: 30%;
+  height: 33vw;
   background-color: $LoginPanel-Color;
   z-index: 1000;
   box-sizing: border-box;
-  @include margin-padding-Two-property(2rem , 2rem , false);
+  @include margin-padding-Two-property(1.5vw , 1.5vw , false);
 
   .Title
   {
-    @include margin-padding-Two-property(.5rem , 0);
+    @include margin-padding-Two-property(.5vw , 0);
 
     font: {
-      size: $LoginPanel-FontSizeTitel;
+      size: 1.5vw;
       weight: bold;
     };
   }
 
   .Alert
   {
-    @include margin-padding-Two-property(1rem , 0);
+    @include margin-padding-Two-property(1vw , 0);
+    font-size: .8vw;
     color: $LoginPanel-AlertColor;
     font-weight: bold;
   }
 
   .Summary
   {
-    @include margin-padding-Two-property(1rem , 0);
+    @include margin-padding-Two-property(.7vw , 0);
     font:
     {
-      size: $LoginPanel-Summary-FontSize;
+      size: .7vw;
       weight: bold;
     }
     color: $LoginPanel-Summary-Color;
-    line-height: $LoginPanel-Summary-LineHight;
+    line-height: 1vw;
   }
 
 
@@ -45,34 +46,35 @@
     input
     {
       width: $LoginPanel-Input-Width;
-      height: $LoginPanel-Input-Hight;
+      height: 2.3vw;
+      font-size: .7vw;
       background-color: $LoginPanel-Input-color;
       box-sizing: $LoginPanel-Input-boxSizing;
       outline: none;
       border: none;
 
-      @include border-one-property(5px);
-      @include margin-padding-one-property(.5rem , false);
-      @include margin-padding-Two-property(.5rem , 0)
+
+      @include margin-padding-one-property(.5vw , false);
+      @include margin-padding-Two-property(.5vw , 0)
     }
 
     .WrongAlert
     {
-      font-size: $LoginPanel-WrongAlert-FontSize;
+      font-size: .7vw;
+    ;
       color: $LoginPanel-WrongAlert-Color;
     }
 
     .LoginButton
     {
       width: $LoginPanel-Button-Width;
-      height: $LoginPanel-Button-Hight;
+      height: 2.2vw;
       background-color: $LoginPanel-Button-color;
-      font-size: $LoginPanel-Button-fontSize;
+      font-size: .9vw;
       color: $LoginPanel-Button-FontColor;
       outline: none;
       border: none;
 
-      @include border-one-property(5px)
     }
 
     .CreateButton
@@ -80,17 +82,15 @@
       width: $LoginPanel-CreatButton-Width;
       background-color: $LoginPanel-CreatButton-Color;
       cursor: pointer;
-
       @extend .LoginButton ;
-      @include margin-padding-Two-property( 0rem , 0)
     }
 
 
     .ForgotPassword
     {
-      font-size: $LoginPanel-ForgotPassword-FontSize ;
+      font-size: .7vw ;
 
-      @include margin-padding-Two-property(1rem , 0);
+      @include margin-padding-Two-property(1vw , 0);
     }
   }
 }

@@ -1,29 +1,31 @@
 .Footer, .DarkFooter {
   width: 100%;
-  height: 5rem;
+  height: 4.5vw;
   border-top: 1px solid #cbcaca;
   position: relative;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 0.5vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 .Footer .Brand, .DarkFooter .Brand {
+  font-size: 0.9vw;
   font-weight: bold;
   flex: 1;
 }
 .Footer .Topics, .DarkFooter .Topics {
   flex: 7;
   list-style: none;
+  font-size: 0.8vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 .Footer .Topics li, .DarkFooter .Topics li {
-  margin: 0 1rem;
+  margin: 0 0.8vw;
 }
 .Footer .DownloadServes, .DarkFooter .DownloadServes {
   display: flex;
@@ -32,11 +34,11 @@
   align-items: center;
 }
 .Footer .DownloadServes .App-Store, .DarkFooter .DownloadServes .App-Store, .Footer .DownloadServes .Google-Store, .DarkFooter .DownloadServes .Google-Store {
-  margin: 0 1rem;
-  width: 45px;
+  margin: 0 0.8vw;
+  width: 2.5vw;
 }
 .Footer .DownloadServes .Google-Store, .DarkFooter .DownloadServes .Google-Store {
-  width: 190px;
+  width: 10.5vw;
   border-radius: 0;
 }
 

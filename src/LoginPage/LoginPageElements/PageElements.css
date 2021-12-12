@@ -7,15 +7,15 @@
 }
 .TypewriterANDPeopleImage .Typewrite, .TypewriterANDPeopleImage .DarkTypewrite {
   z-index: 1000;
-  width: 30rem;
+  width: 30vw;
   color: #484848;
-  font-size: 45px;
+  font-size: 2.5vw;
   font-weight: bold;
-  margin: 0 0 5rem 0;
+  margin: 0 0 5vw 0;
 }
 .TypewriterANDPeopleImage .PeopleImage {
   z-index: 1000;
-  width: 500px;
+  width: 50%;
   position: relative;
 }
 .TypewriterANDPeopleImage .DarkTypewrite {

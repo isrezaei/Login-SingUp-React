@@ -62,9 +62,6 @@ export default function LoginPageLogic () {
 
 
             <div className={DarkMood ? 'DarkLoginHeader' : 'LoginHeader'}>
-
-
-
                 <div className={'FormsTypeWriteImage'}>
 
                     <LoginPageElement/>
@@ -82,8 +79,13 @@ export default function LoginPageLogic () {
             </div>
 
 
-            <div className={'RecentlyFooter'}>
+            <div className={'ParentLoginRecently'}>
                 <LoginRecently/>
+            </div>
+
+
+
+            <div className={'LoginFooter'}>
                 <Footer/>
             </div>
 

@@ -9,12 +9,26 @@
 
   @include flex(space-between , center , column);
 
-  .RecentlyFooter
+
+
+  .ParentLoginRecently
+  {
+    width: 100%;
+    height: 30%;
+    @include flex(center , flex-start , column)
+  }
+
+
+
+  .LoginFooter
   {
     width: 80%;
-    height: 22rem;
+    flex: 0;
     @include flex(space-between , flex-start, column)
   }
+
+
+
 }
 
 .DarkParentLoginPage

@@ -11,22 +11,23 @@
   .Typewrite
   {
     z-index: 1000;
-    width: 30rem;
+    width: 30vw;
     color: #484848;
 
     font: {
-      size: 45px;
+      size: 2.5vw;
       weight: bold;
     };
 
-    @include margin-padding-Four-property(0 , 0 , 5rem , 0);
+    @include margin-padding-Four-property(0 , 0 , 5vw , 0);
 
   }
 
   .PeopleImage
   {
     z-index: 1000;
-    width: 500px;
+    width: 50%;
+
     position: relative;
 
   }

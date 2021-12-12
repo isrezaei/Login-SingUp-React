@@ -3,17 +3,18 @@
 .Footer
 {
   width: 100%;
-  height: 5rem;
+  height: 4.5vw;
   border-top: 1px solid #cbcaca;
   position: relative;
   box-sizing: border-box;
 
-  @include margin-padding-one-property(.5rem , false);
-  //@include margin-padding-Four-property(2.5rem , auto , 0 , auto);
+  @include margin-padding-one-property(.5vw , false);
+
   @include flex(space-around , center ,row);
 
   .Brand
   {
+    font-size: .9vw;
     font-weight: bold;
     flex: 1;
   }
@@ -22,10 +23,11 @@
   {
     flex: 7;
     list-style: none;
+    font-size: .8vw;
     @include flex(flex-start , center , row);
     li
     {
-      @include margin-padding-Two-property(0 , 1rem);
+      @include margin-padding-Two-property(0 , .8vw);
     }
   }
 
@@ -36,14 +38,14 @@
 
     .App-Store
     {
-      margin: 0 1rem;
-      width: 45px;
+      margin: 0 .8vw;
+      width: 2.5vw;
 
     }
     .Google-Store
     {
       @extend .App-Store;
-      width: 190px;
+      width: 10.5vw;
       border-radius: 0;
     }
   }
