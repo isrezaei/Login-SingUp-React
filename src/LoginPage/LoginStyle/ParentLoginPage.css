@@ -10,6 +10,11 @@
 }
 .ParentLoginPage .RecentlyFooter, .DarkParentLoginPage .RecentlyFooter {
   width: 80%;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .DarkParentLoginPage {

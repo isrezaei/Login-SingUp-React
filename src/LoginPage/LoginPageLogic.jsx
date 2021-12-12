@@ -9,6 +9,7 @@ import Footer from "../Footer/Footer";
 import './LoginStyle/LoginHeader.css'
 import './LoginStyle/LoginForm.css'
 import './LoginStyle/ParentLoginPage.css'
+import {Links} from "../Routing/Links/Links";
 
 export default function LoginPageLogic () {
 
@@ -55,7 +56,14 @@ export default function LoginPageLogic () {
 
         <div className={DarkMood ? 'DarkParentLoginPage' : 'ParentLoginPage'}>
 
+            <div style={{position : 'absolute' , zIndex : '5000' , width : '90%'}}>
+                <Links/>
+            </div>
+
+
             <div className={DarkMood ? 'DarkLoginHeader' : 'LoginHeader'}>
+
+
 
                 <div className={'FormsTypeWriteImage'}>
 

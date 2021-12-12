@@ -3,7 +3,7 @@
   height: 1rem;
   position: relative;
   color: #707070;
-  bottom: 3rem;
+  bottom: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -103,8 +103,8 @@
   font-size: 23px;
 }
 .LoginRecentlyForOnePerson .Avatar {
-  width: 190px !important;
-  height: 190px !important;
+  width: 185px !important;
+  height: 185px !important;
 }
 .LoginRecentlyForOnePerson .RemoveRecently {
   margin-top: 0.2rem !important;

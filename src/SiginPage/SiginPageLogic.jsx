@@ -14,6 +14,7 @@ import LoadingSpinner from "../Spinner/LoadingSpinner";
 import SiginSlider from "./SiginSlider";
 import './SiginStyle/SiginPage.css'
 import Footer from "../Footer/Footer";
+import {Links} from "../Routing/Links/Links";
 
 
 
@@ -66,6 +67,10 @@ export default function SiginPageLogic()
     return (
 
         <div className={'FlexSignPage'}>
+
+            <div style={{width : '90%'}}>
+                <Links/>
+            </div>
 
 
             <div className={'SiginPage'}>

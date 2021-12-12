@@ -6,6 +6,7 @@
   height: 34rem;
   background : url("LightLoginIMG.gif") no-repeat center center;
   background-size: cover;
+
   @include flex(center , flex-start ,row);
 
   &:after

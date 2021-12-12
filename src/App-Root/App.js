@@ -13,7 +13,7 @@ export default function App() {
     const AppBody = (
 
         <div className = {DarkMood ? 'DarkParentAllProject' : 'ParentAllProject'}>
-            <Links/>
+
             <Router/>
         </div>
 

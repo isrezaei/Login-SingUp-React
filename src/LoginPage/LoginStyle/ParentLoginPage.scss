@@ -12,6 +12,8 @@
   .RecentlyFooter
   {
     width: 80%;
+    height: 22rem;
+    @include flex(space-between , flex-start, column)
   }
 }
 

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["ParentLoginPage.scss","../../_VariableStyle/VariableStyle.scss"],"names":[],"mappings":"AAEA;EAEE;EACA;EACA;EACA;EC4DA;EACA,gBD3DuC;EC4DvC,iBD5Dc;EC6Dd,aD7D8B;;AAE9B;EAEE;;;AAIJ;EAGE,kBCpBe","file":"ParentLoginPage.css"}
+{"version":3,"sourceRoot":"","sources":["ParentLoginPage.scss","../../_VariableStyle/VariableStyle.scss"],"names":[],"mappings":"AAEA;EAEE;EACA;EACA;EACA;EC4DA;EACA,gBD3DuC;EC4DvC,iBD5Dc;EC6Dd,aD7D8B;;AAE9B;EAEE;EACA;ECqDF;EACA,gBDrD4C;ECsD5C,iBDtDgB;ECuDhB,aDvDgC;;;AAIlC;EAGE,kBCtBe","file":"ParentLoginPage.css"}
