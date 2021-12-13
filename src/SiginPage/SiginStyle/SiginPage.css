@@ -9,7 +9,7 @@
 
 .SiginPage {
   width: 90%;
-  height: 47rem;
+  height: 39vw;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
@@ -22,27 +22,29 @@
   height: 100%;
   background-color: #ffff;
   box-sizing: border-box;
-  padding: 5em 5rem;
+  padding: 3vw 4vw;
 }
 .SiginForms .Title, .Dark_SiginForms .Title {
-  margin: 0.5rem 0;
-  font-size: 30px;
+  margin: 0.4vw 0;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 .SiginForms .Alert, .Dark_SiginForms .Alert {
-  margin: 1rem 0;
+  margin: 0.9vw 0;
   color: rgba(91, 91, 91, 0.55);
   font-weight: bold;
+  font-size: 0.9vw;
 }
 .SiginForms input[type=text], .Dark_SiginForms input[type=text] {
   width: 100%;
-  height: 2.5rem;
+  height: 2.2vw;
   background-color: #eceff1;
+  font-size: 0.7vw;
   box-sizing: border-box;
   outline: none;
   border: none;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
+  padding: 0.4vw;
+  margin: 0.3vw 0;
 }
 .SiginForms form, .Dark_SiginForms form {
   display: flex;
@@ -61,7 +63,7 @@
   width: 49%;
 }
 .SiginForms form .CorrectInfo, .Dark_SiginForms form .CorrectInfo, .Dark_SiginForms form .Dark_CorrectInfo {
-  font-size: small;
+  font-size: 0.69vw;
   color: #4b4b4b;
 }
 .SiginForms form .CorrectInfo b, .Dark_SiginForms form .CorrectInfo b, .Dark_SiginForms form .Dark_CorrectInfo b {
@@ -71,38 +73,38 @@
   width: 100%;
 }
 .SiginForms form .BrithdayInfo .Birthday, .Dark_SiginForms form .BrithdayInfo .Birthday {
-  font-size: 13px;
+  font-size: 0.7vw;
   font-weight: bold;
   color: #b7b7b7;
-  margin: 0.5rem 0;
+  margin: 0.5vw 0;
 }
 .SiginForms form .BrithdayInfo .Options, .Dark_SiginForms form .BrithdayInfo .Options {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.5vw 0;
 }
 .SiginForms form .BrithdayInfo .Options select, .Dark_SiginForms form .BrithdayInfo .Options select {
   width: 30%;
-  height: 2rem;
-  border: 1px solid rgba(75, 75, 75, 0.45);
+  height: 1.6vw;
+  border: 0.1vw solid rgba(75, 75, 75, 0.45);
   box-sizing: border-box;
   outline: none;
-  font-size: 15px;
+  font-size: 0.8vw;
   padding: 5px;
 }
 .SiginForms form .BrithdayInfo .Options select option, .Dark_SiginForms form .BrithdayInfo .Options select option {
-  font-size: 18px;
+  font-size: 1vw;
 }
 .SiginForms form .GenderInfo, .SiginForms form .Dark_GenderInfo, .Dark_SiginForms form .GenderInfo, .Dark_SiginForms form .Dark_GenderInfo {
   width: 100%;
 }
 .SiginForms form .GenderInfo .Gender, .SiginForms form .Dark_GenderInfo .Gender, .Dark_SiginForms form .GenderInfo .Gender, .Dark_SiginForms form .Dark_GenderInfo .Gender {
-  font-size: 13px;
+  font-size: 0.7vw;
   font-weight: bold;
   color: #b7b7b7;
-  margin: 0.5rem 0;
+  margin: 0.5vw 0;
 }
 .SiginForms form .GenderInfo .RadioInput, .SiginForms form .Dark_GenderInfo .RadioInput, .Dark_SiginForms form .GenderInfo .RadioInput, .Dark_SiginForms form .Dark_GenderInfo .RadioInput {
   width: 100%;
@@ -113,36 +115,36 @@
 }
 .SiginForms form .GenderInfo .RadioInput section, .SiginForms form .Dark_GenderInfo .RadioInput section, .Dark_SiginForms form .GenderInfo .RadioInput section, .Dark_SiginForms form .Dark_GenderInfo .RadioInput section {
   width: 30%;
-  height: 2rem;
-  border: 1px solid rgba(75, 75, 75, 0.45);
-  font-size: 15px;
+  height: 1.6vw;
+  border: 0.1vw solid rgba(75, 75, 75, 0.45);
+  font-size: 0.8vw;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 0.5vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .SiginForms form .GenderInfo .RadioInput section input[type=radio], .SiginForms form .Dark_GenderInfo .RadioInput section input[type=radio], .Dark_SiginForms form .GenderInfo .RadioInput section input[type=radio], .Dark_SiginForms form .Dark_GenderInfo .RadioInput section input[type=radio] {
-  width: 15px;
-  height: 15px;
+  width: 0.7vw;
+  height: 0.7vw;
 }
 .SiginForms form .Summary, .Dark_SiginForms form .Summary {
-  margin: 1rem 0;
-  font-size: 13px;
+  margin: 0.8vw 0;
+  font-size: 0.7vw;
   font-weight: bold;
   color: #939393;
-  line-height: 1.2rem;
+  line-height: 1.1vw;
 }
 .SiginForms form .SiginButton, .Dark_SiginForms form .SiginButton {
   width: 100%;
-  height: 2.5rem;
+  height: 2.2vw;
   background-color: #79a940;
-  font-size: 17px;
+  font-size: 0.9vw;
   color: white;
   outline: none;
   border: none;
-  margin: 0.5rem 0;
+  margin: 0.4vw 0;
 }
 .SiginForms form .ForgotPassword, .Dark_SiginForms form .ForgotPassword {
   margin: 1rem 0;

@@ -12,7 +12,7 @@
 .SiginPage
 {
   width: 90%;
-  height: 47rem;
+  height: 39vw;
   box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
 
   @include flex(center , flex-start , row);
@@ -26,34 +26,36 @@
   height: 100%;
   background-color: $Sigin-Color;
   box-sizing: border-box;
-  @include margin-padding-Two-property(5em , 5rem , false);
+  @include margin-padding-Two-property(3vw , 4vw , false);
 
   .Title
   {
-    @include margin-padding-Two-property(.5rem , 0);
+    @include margin-padding-Two-property(.4vw , 0);
     font: {
-      size: 30px;
+      size: 1.5vw;
       weight: bold;
     };
   }
   .Alert
   {
-    @include margin-padding-Two-property(1rem , 0);
+    @include margin-padding-Two-property(.9vw , 0);
     color: rgba(91, 91, 91, 0.55);
     font-weight: bold;
+    font-size: .9vw;
   }
 
   input[type = text]
   {
-    width: $Sigin-Input-Width;
-    height: $Sigin-Input-Hight;
+    width: 100%;
+    height: 2.2vw;
     background-color: $Sigin-Input-color;
+    font-size: .7vw;
     box-sizing: border-box;
     outline: none;
     border: none;
 
-    @include margin-padding-one-property(.5rem , false);
-    @include margin-padding-Two-property(.5rem , 0)
+    @include margin-padding-one-property(.4vw , false);
+    @include margin-padding-Two-property(.3vw , 0)
   }
 
 
@@ -72,7 +74,7 @@
 
     .CorrectInfo
     {
-      font-size: small;
+      font-size: .69vw;
       color: #4b4b4b;
       b{
         color: #de3232;
@@ -84,31 +86,31 @@
       width: 100%;
       .Birthday
       {
-        font-size: 13px;
+        font-size: .7vw;
         font-weight: bold;
         color: #b7b7b7;
-        @include margin-padding-Two-property( .5rem , 0)
+        @include margin-padding-Two-property( .5vw , 0)
       }
 
       .Options
       {
         @include flex(space-between , center , row);
-        @include margin-padding-Two-property(.5rem , 0);
+        @include margin-padding-Two-property(.5vw , 0);
 
         select
         {
           width: 30%;
-          height: 2rem;
-          border: 1px solid rgba(75, 75, 75, 0.45);
+          height: 1.6vw;
+          border: .1vw solid rgba(75, 75, 75, 0.45);
           box-sizing: border-box;
           outline: none;
-          font-size: 15px;
+          font-size: .8vw;
           @include margin-padding-one-property(5px , false);
 
 
           option
           {
-            font-size: 18px;
+            font-size: 1vw;
           }
         }
       }
@@ -119,10 +121,10 @@
       width: 100%;
       .Gender
       {
-        font-size: 13px;
+        font-size: .7vw;
         font-weight: bold;
         color: #b7b7b7;
-        @include margin-padding-Two-property( .5rem , 0)
+        @include margin-padding-Two-property( .5vw , 0)
       }
 
       .RadioInput
@@ -133,16 +135,16 @@
         section
         {
           width: 30%;
-          height: 2rem;
-          border: 1px solid rgba(75, 75, 75, 0.45);
-          font-size: 15px;
+          height: 1.6vw;
+          border: .1vw solid rgba(75, 75, 75, 0.45);
+          font-size: .8vw;
           box-sizing: border-box;
-          @include margin-padding-one-property(.5rem , false);
+          @include margin-padding-one-property(.5vw , false);
           @include flex(space-between, center , row);
           input[type = radio]
           {
-            width: 15px;
-            height: 15px;
+            width: .7vw;
+            height: .7vw;
           }
         }
       }
@@ -150,31 +152,31 @@
 
     .Summary
     {
-      @include margin-padding-Two-property(1rem , 0);;
+      @include margin-padding-Two-property(.8vw , 0);;
       font:
       {
-        size: 13px;
+        size: .7vw;
         weight: bold;
       };
       color: #939393;
-      line-height: 1.2rem;
+      line-height: 1.1vw;
     }
 
 
     .SiginButton
     {
-      width: $LoginPanel-Button-Width;
-      height: $LoginPanel-Button-Hight;
+      width: 100%;
+      height: 2.2vw;
       background-color: #79a940;
 
       font: {
-        size: $LoginPanel-Button-fontSize;
+        size: .9vw;
       };
       color: white;
       outline: none;
       border: none;
 
-      @include margin-padding-Two-property(.5rem , 0);
+      @include margin-padding-Two-property(.4vw , 0);
 
     }
 

@@ -56,7 +56,7 @@
 
 
 
-    @include margin-padding-Four-property(0 , 1rem , 0 , 0);
+    @include margin-padding-Four-property(0 , .9vw , 0 , 0);
     @include flex(center , center, column);
 
 
@@ -76,6 +76,7 @@
       width: 100%;
       color: #4b4b4b;
       font: {
+        size: .8vw;
         weight: bold;
       };
 
@@ -95,12 +96,12 @@
     {
       color: #707070;
       font: {
-        size: .8vw;
+        size: .7vw;
         weight: bold;
       };
       cursor: pointer;
       transition: .3s;
-      @include margin-padding-Four-property( .5vw , 0 , 0 , 0);
+      @include margin-padding-Four-property( .2vw , 0 , 0 , 0);
 
       &:hover
       {
@@ -160,7 +161,6 @@
   .UserLogo
   {
     width: 53%;
-
     margin-bottom: 1rem;
   }
 
