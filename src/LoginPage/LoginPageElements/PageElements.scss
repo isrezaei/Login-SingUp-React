@@ -6,14 +6,11 @@
   @include flex(space-between , center ,row);
 
 
-
-
   .Typewrite
   {
     z-index: 1000;
     width: 30vw;
     color: #484848;
-
     font: {
       size: 2.5vw;
       weight: bold;
@@ -27,7 +24,6 @@
   {
     z-index: 1000;
     width: 50%;
-
     position: relative;
 
   }

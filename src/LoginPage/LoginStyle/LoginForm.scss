@@ -2,7 +2,7 @@
 
 .LoginForm
 {
-  width: 30%;
+  width: 28%;
   height: 33vw;
   background-color: $LoginPanel-Color;
   z-index: 1000;
@@ -103,33 +103,22 @@
 
   .Title
   {
-    @include margin-padding-Two-property(.5rem , 0);
     color: #eceff1;
-
-    font: {
-      size: $LoginPanel-FontSizeTitel;
-      weight: bold;
-    };
   }
 
   .Alert
   {
-    @include margin-padding-Two-property(1rem , 0);
     color: #b6b6b6;;
     font-weight: normal;
-
   }
 
   .Summary
   {
-    @include margin-padding-Two-property(1rem , 0);
     font:
     {
-      size: $LoginPanel-Summary-FontSize;
       weight: normal;
     }
     color: #eceff1;
-    line-height: $LoginPanel-Summary-LineHight;
   }
 
   form {

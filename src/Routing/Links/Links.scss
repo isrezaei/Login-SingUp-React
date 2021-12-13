@@ -4,10 +4,10 @@
 .Links
 {
   width: 100%;
-  height: 3rem;
+  height: 2.8vw;
   z-index: 1000;
   box-sizing: border-box;
-  @include margin-padding-Four-property(2.5rem , 0 , 0  , 0 , false);
+  @include margin-padding-Four-property(2.5vw , 0 , 0  , 0 , false);
   @include flex();
 
 
@@ -18,13 +18,13 @@
 
   .Logo
   {
-    font-size: $Header-Logo-FontSize ;
+    font-size: 2.5vw ;
     color: #414141;
   }
 
   .DarkLogo
   {
-    font-size: 25px;
+    font-size: 1.3vw;
     color: #5860f5;
     cursor: pointer;
     animation: LogoAnimations .3s;
@@ -32,7 +32,7 @@
 
   .LightLogo
   {
-    font-size: 28px;
+    font-size: 1.5vw;
     color: #eecd59;
     cursor: pointer;
     animation: LogoAnimations .3s;
@@ -57,12 +57,12 @@
     @include flex(flex-start , center , row);
     li
     {
-      @include margin-padding-Two-property(0 , 2rem);
+      @include margin-padding-Two-property(0 , 1.8vw);
       .LinkTag
       {
 
         font: {
-          size: 18px;
+          size: 1vw;
           weight: bold;
         };
         color: #4b4b4b;
@@ -78,13 +78,10 @@
 
   .Logo
 {
-  font-size: $Header-Logo-FontSize ;
   color: #b2b2b2;
 }
-
   ul
   {
-
     li
     {
       .LinkTag

@@ -50,7 +50,7 @@
     width: 12rem;
     height : 15rem;
     box-sizing: border-box;
-
+    margin: auto;
     @include margin-padding-Four-property(0 , 1rem , 0 , 0);
     @include flex(flex-start , center, column);
 
@@ -120,6 +120,7 @@
     height : 100%;
     background-color: transparent;
     box-shadow: none;
+    margin: auto;
   }
 
   .Name
@@ -129,8 +130,8 @@
 
   .Avatar
   {
-    width: 26% !important;
-    height: 79% !important;
+    width: 11vw !important;
+    height: 11vw !important;
   }
 
   .RemoveRecently
