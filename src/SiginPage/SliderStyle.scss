@@ -5,9 +5,9 @@
   height: 100% !important;
 
   --slider-transition-duration: 525ms;
-  --organic-arrow-thickness: 5px;
-  --organic-arrow-border-radius: 20px;
-  --organic-arrow-height: 20px;
+  --organic-arrow-thickness: 0.260vw;
+  --organic-arrow-border-radius: 1.042vw;
+  --organic-arrow-height: 1.042vw;
   --organic-arrow-color: #26456f;
   --control-button-width: 6%;
   --control-button-height: 25%;
@@ -15,7 +15,7 @@
   --control-bullet-color: #2d5182;
   --control-bullet-active-color: #26456f;
   --loader-bar-color: transparent;
-  --loader-bar-height: 6px;
+  --loader-bar-height: 0.313vw;
 }
 
 .Slide1
@@ -34,7 +34,7 @@
 
     img
     {
-      width: 380px;
+      width: 19.792vw;
     }
   }
 
@@ -45,27 +45,30 @@
     background-color: #fd56a2;
     box-sizing: border-box;
 
-    @include margin-padding-one-property(2rem , false);
+    @include margin-padding-one-property(1.7vw , false);
     @include flex(center , flex-start , column);
 
     h2
     {
+      font-size: 1.3vw;
       color: #dcdcdc;
     }
     p
     {
-      margin-top: .5rem;
+      font-size: .9vw;
+      margin-top: .5vw;
       color: #dcdcdc;
     }
     button
     {
-      width: 8rem;
-      height: 2rem;
+      width: 7vw;
+      height: 1.7vw;
       outline: none;
       border: none;
+      font-size: .7vw;
       color: #2a2a2a;
-      @include border-one-property(0rem);
-      @include margin-padding-Two-property(2rem , 0)
+      @include border-one-property(0);
+      @include margin-padding-Two-property(1.7vw , 0)
     }
   }
 }

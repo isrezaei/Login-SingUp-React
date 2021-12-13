@@ -2,9 +2,9 @@
   width: 65%;
   height: 100% !important;
   --slider-transition-duration: 525ms;
-  --organic-arrow-thickness: 5px;
-  --organic-arrow-border-radius: 20px;
-  --organic-arrow-height: 20px;
+  --organic-arrow-thickness: 0.260vw;
+  --organic-arrow-border-radius: 1.042vw;
+  --organic-arrow-height: 1.042vw;
   --organic-arrow-color: #26456f;
   --control-button-width: 6%;
   --control-button-height: 25%;
@@ -12,7 +12,7 @@
   --control-bullet-color: #2d5182;
   --control-bullet-active-color: #26456f;
   --loader-bar-color: transparent;
-  --loader-bar-height: 6px;
+  --loader-bar-height: 0.313vw;
 }
 
 .Slide1, .Slide3, .Slide2 {
@@ -33,34 +33,37 @@
   align-items: center;
 }
 .Slide1 .RightItems img, .Slide3 .RightItems img, .Slide2 .RightItems img {
-  width: 380px;
+  width: 19.792vw;
 }
 .Slide1 .LeftItems, .Slide3 .LeftItems, .Slide2 .LeftItems {
   flex: 2;
   height: 100%;
   background-color: #fd56a2;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1.7vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 .Slide1 .LeftItems h2, .Slide3 .LeftItems h2, .Slide2 .LeftItems h2 {
+  font-size: 1.3vw;
   color: #dcdcdc;
 }
 .Slide1 .LeftItems p, .Slide3 .LeftItems p, .Slide2 .LeftItems p {
-  margin-top: 0.5rem;
+  font-size: 0.9vw;
+  margin-top: 0.5vw;
   color: #dcdcdc;
 }
 .Slide1 .LeftItems button, .Slide3 .LeftItems button, .Slide2 .LeftItems button {
-  width: 8rem;
-  height: 2rem;
+  width: 7vw;
+  height: 1.7vw;
   outline: none;
   border: none;
+  font-size: 0.7vw;
   color: #2a2a2a;
-  border-radius: 0rem;
-  margin: 2rem 0;
+  border-radius: 0;
+  margin: 1.7vw 0;
 }
 
 .Slide2 .RightItems {

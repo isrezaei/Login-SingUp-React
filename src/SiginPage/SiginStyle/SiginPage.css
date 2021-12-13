@@ -10,7 +10,7 @@
 .SiginPage {
   width: 90%;
   height: 39vw;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.781vw 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +22,7 @@
   height: 100%;
   background-color: #ffff;
   box-sizing: border-box;
-  padding: 3vw 4vw;
+  padding: 3.4vw 4vw;
 }
 .SiginForms .Title, .Dark_SiginForms .Title {
   margin: 0.4vw 0;
@@ -44,7 +44,7 @@
   outline: none;
   border: none;
   padding: 0.4vw;
-  margin: 0.3vw 0;
+  margin: 0.4vw 0;
 }
 .SiginForms form, .Dark_SiginForms form {
   display: flex;
@@ -92,7 +92,7 @@
   box-sizing: border-box;
   outline: none;
   font-size: 0.8vw;
-  padding: 5px;
+  padding: 0.26vw;
 }
 .SiginForms form .BrithdayInfo .Options select option, .Dark_SiginForms form .BrithdayInfo .Options select option {
   font-size: 1vw;

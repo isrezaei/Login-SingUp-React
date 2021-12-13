@@ -13,11 +13,10 @@
 {
   width: 90%;
   height: 39vw;
-  box-shadow: 0 0 15px 0 rgba(0,0,0,0.20);
+  box-shadow: 0 0 0.781vw 0 rgba(0,0,0,0.20);
 
   @include flex(center , flex-start , row);
 }
-
 
 
 .SiginForms
@@ -26,7 +25,7 @@
   height: 100%;
   background-color: $Sigin-Color;
   box-sizing: border-box;
-  @include margin-padding-Two-property(3vw , 4vw , false);
+  @include margin-padding-Two-property(3.4vw , 4vw , false);
 
   .Title
   {
@@ -55,7 +54,7 @@
     border: none;
 
     @include margin-padding-one-property(.4vw , false);
-    @include margin-padding-Two-property(.3vw , 0)
+    @include margin-padding-Two-property(.4vw , 0)
   }
 
 
@@ -105,7 +104,7 @@
           box-sizing: border-box;
           outline: none;
           font-size: .8vw;
-          @include margin-padding-one-property(5px , false);
+          @include margin-padding-one-property(0.260vw , false);
 
 
           option
