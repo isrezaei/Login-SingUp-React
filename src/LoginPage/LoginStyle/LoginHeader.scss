@@ -30,7 +30,7 @@
   {
     width: 80%;
     @include flex(space-between , center , row);
-    @include margin-padding-Four-property(3vw , 0 , 0 ,0 ,false)
+    @include margin-padding-Four-property(2vw , 0 , 0 ,0 ,false)
   }
 }
 
