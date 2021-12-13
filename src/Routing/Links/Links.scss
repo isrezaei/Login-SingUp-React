@@ -7,7 +7,7 @@
   height: 2.8vw;
   z-index: 1000;
   box-sizing: border-box;
-  @include margin-padding-Four-property(2.5vw , 0 , 0  , 0 , false);
+  @include margin-padding-Four-property(1.5vw , 0 , 0  , 0 , false);
   @include flex();
 
 
