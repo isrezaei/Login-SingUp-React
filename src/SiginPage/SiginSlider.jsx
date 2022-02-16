@@ -1,3 +1,4 @@
+import React from "react";
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import AnimationStyles from 'react-awesome-slider/src/styled/fall-animation';
@@ -7,7 +8,7 @@ import IconSlide2 from './Slide2_ICON.png'
 import IconsSlid3 from './Slide3_ICON.png'
 import './SliderStyle.css'
 
-export default function SiginSlider ()
+export default React.memo(function SiginSlider ()
 {
     const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -22,17 +23,17 @@ export default function SiginSlider ()
             className='aws-btn'
         >
 
-                <div className='Slide1'>
-                    <div className='RightItems'>
-                        <img alt={'communication anywhere'} src={IconSlide1}/>
-                    </div>
-                    <div className='LeftItems'>
-
-                            <h2>communication anywhere </h2>
-                            <p>You can share your favorite content anywhere in the world</p>
-                            <button>GET STARTED</button>
-                    </div>
+            <div className='Slide1'>
+                <div className='RightItems'>
+                    <img alt={'communication anywhere'} src={IconSlide1}/>
                 </div>
+                <div className='LeftItems'>
+
+                    <h2>communication anywhere </h2>
+                    <p>You can share your favorite content anywhere in the world</p>
+                    <button>GET STARTED</button>
+                </div>
+            </div>
 
 
             <div className='Slide2'>
@@ -66,7 +67,7 @@ export default function SiginSlider ()
 
     return (
 
-            slider
+        slider
 
     )
-}
+})

@@ -1,10 +1,11 @@
-import ServerSigin from "../../ServesApi/ServerSigin";
+import SignUpServer from "../../ServesApi/SignUpServer";
 import {CaseLoadin} from "../../StateLogin/StateLogin";
 
 export default function SiginServer (FirstName , LastName , PhoneEmail , NewPassword , Dispatch , replace)
 {
     return (
-        ServerSigin(FirstName , LastName , PhoneEmail , NewPassword)
+        SignUpServer(FirstName , LastName , PhoneEmail , NewPassword)
+
             .then(Response => {
                 if (Response.FirstName)
                 {

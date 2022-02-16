@@ -1,7 +1,9 @@
-export default function MonthOptions ({MonthRef , SetMonth , Months})
+import {Months} from "../../../SettingsForSignIn/BulidOptionsForBirthdayInputs";
+
+export default function MonthOptions ({HandelSignUpData})
 {
     return (
-        <select ref={MonthRef}  onChange={(e)=> SetMonth( e.target.value)}>
+        <select name={'Months'} onChange={HandelSignUpData}>
             {
                 Months.map((value, index) => {
                         return <option key={index}>{value}</option>

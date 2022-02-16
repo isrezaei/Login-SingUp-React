@@ -1,7 +1,9 @@
-export default function YearsOptions ({Years , YearRef , SetYear , HandelForbiddenAge})
+import {Years} from "../../../SettingsForSignIn/BulidOptionsForBirthdayInputs";
+
+export default function YearsOptions ({HandelSignUpData})
 {
     return (
-        <select ref={YearRef} onClick={HandelForbiddenAge} onChange={(e)=> SetYear(e.target.value)}>
+        <select name='Years' onChange={HandelSignUpData}>
             {
                 Years().map((value, index) => {
                         return <option  key={index}>{value}</option>

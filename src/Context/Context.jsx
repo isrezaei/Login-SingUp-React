@@ -26,7 +26,9 @@ export default function AuthProvider({children})
 
 
     const {DayRef , MonthRef , YearRef} = SignInBirthdayRefs()
+
     const {InputName , InputLastName , InputPhoneEmail , InputNewPassword} = SignInInputRef()
+
     const {RecentlyRef} = RecentlyRefs()
 
     const [State , Dispatch] = useReducer(Reducer , initState)
@@ -59,6 +61,7 @@ export default function AuthProvider({children})
                 InputNewPassword,
             }
         }>
+
             <UseState.Provider
                 value={
                     {
@@ -75,8 +78,8 @@ export default function AuthProvider({children})
                         UserName,
                         DarkMood
                     }
-                }
-            >
+                }>
+
                 <UseChangeState.Provider
                     value={
                         {
@@ -98,7 +101,11 @@ export default function AuthProvider({children})
                     {children}
 
                 </UseChangeState.Provider>
+
+
             </UseState.Provider>
+
+
         </UseGlobalRef.Provider>
 
     )

@@ -1,15 +1,23 @@
-export default function NameAndLastNameInput ({InputName , InputLastName , SetLastName , SetFirstName})
+import '../../../../##SignUp/SignUpErrorStyle/SignUpErrorStyle.css'
+
+export default function NameAndLastNameInput ({SetLastName , SetFirstName , FirstName , LastName})
 {
+
+    const Style = FirstName === '' ? 'ErrorInput' : 'NormalInput'
+
+    console.log(Style)
+
+
     return (
         <div className='NameInfo'>
 
-            <input  ref={InputName} type="text" placeholder='First name'
-                    onFocus={()=> SetFirstName('.')}
-                    onBlur={(e)=> SetFirstName(e.target.value)}
-                    onChange={(e)=> SetFirstName(e.target.value)}/>
+            <input
+                type="text" placeholder='First name'
+                onBlur={(e)=> SetFirstName(e.target.value)}
+                onChange={(e)=> SetFirstName(e.target.value)}/>
 
-            <input ref={InputLastName} type="text" placeholder='Last name'
-                   onFocus={()=> SetLastName('.')}
+            <input type="text" placeholder='Last name'
+                   onFocus={()=> SetLastName(null)}
                    onBlur={(e)=> SetLastName(e.target.value)}
                    onChange={(e)=> SetLastName(e.target.value)} />
         </div>

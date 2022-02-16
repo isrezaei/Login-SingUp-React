@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App-Root/App';
-import AuthProvider from "./Context/Context";
+import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
+import {Store} from "./App-Root/Store";
 import './Reset.css'
 
 ReactDOM.render(
     <BrowserRouter>
-        <AuthProvider>
+        <Provider store={Store}>
             <App />
-        </AuthProvider>
+        </Provider>
     </BrowserRouter>,
   document.getElementById('root')
 );

@@ -13,11 +13,10 @@ export default function App() {
     const AppBody = (
 
         <div className = {DarkMood ? 'DarkParentAllProject' : 'ParentAllProject'}>
-
             <Router/>
         </div>
 
     )
 
-    return State.login || Local? <MainPanel/> : AppBody
+    return  AppBody
 }

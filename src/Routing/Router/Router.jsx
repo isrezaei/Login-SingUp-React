@@ -3,17 +3,17 @@ import Home from "../../PublicPage/Home";
 import About from "../../PublicPage/About";
 import Support from "../../PublicPage/Support";
 import LoginPageLogic from "../../LoginPage/LoginPageLogic";
-import SiginPageLogic from "../../SiginPage/SiginPageLogic";
+import SignUpPage from "../../SiginPage/SignUpPage";
 
 export const Router = () =>
 {
     return (
         <Switch>
             <Route exact path='/' component={Home}/>
-            <Route path='/About' component={About}/>
-            <Route path='/Support' component={Support}/>
-            <Route path='/Login' component={LoginPageLogic}/>
-            <Route path='/Sigin' component={SiginPageLogic}/>
+            {/*<Route path='/About' component={About}/>*/}
+            {/*<Route path='/Support' component={Support}/>*/}
+            {/*<Route path='/Login' component={LoginPageLogic}/>*/}
+            <Route path='/Sigin' component={SignUpPage}/>
         </Switch>
     )
 }

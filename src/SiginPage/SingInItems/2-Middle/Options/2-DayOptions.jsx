@@ -1,7 +1,10 @@
-export default function DayOptions ({DayRef , SetDay , Days})
+import {Days} from "../../../SettingsForSignIn/BulidOptionsForBirthdayInputs";
+
+
+export default function DayOptions ({HandelSignUpData})
 {
     return (
-        <select ref={DayRef} onChange={(e)=> SetDay(e.target.value)}>
+        <select name={'Days'} onChange={HandelSignUpData}>
             {
                 Days().map((value , index)=> {
                         return <option key={index} >{value}</option>
