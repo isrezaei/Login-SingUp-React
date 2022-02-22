@@ -7,7 +7,7 @@ export default function SignUpValidation (SignUpData) {
         Days,
         Months,
         Years,
-        Genders
+        Gender
     } = SignUpData
 
 
@@ -19,13 +19,13 @@ export default function SignUpValidation (SignUpData) {
 
     //first name valid
     if (!FirstName) {
-        DataErros.FirstName = false
+        DataErros.FirstName = true
     } else {
         delete DataErros.FirstName
     }
     //last name valid
     if (!LastName) {
-        DataErros.LastName = false
+        DataErros.LastName = true
     }
     else {
         delete DataErros.LastName
@@ -33,7 +33,7 @@ export default function SignUpValidation (SignUpData) {
     //email valid
     if (!Email)
     {
-        DataErros.Email = 'you must entered password'
+        DataErros.Email = 'you must entered Email'
     }
     else if (!/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(Email))
     {
@@ -48,7 +48,7 @@ export default function SignUpValidation (SignUpData) {
     {
         DataErros.Password = 'you must entered 6 characters'
     }
-    else if (/(?=.*[0-9])+(?=.*[a-z])/.test(Password))
+    else if (!/(?=.*[0-9])+(?=.*[a-z])/.test(Password))
     {
         DataErros.Password = 'please enter your correct password'
     }
@@ -56,10 +56,8 @@ export default function SignUpValidation (SignUpData) {
     {
         delete DataErros.Password
     }
-
-    console.log(ForibedYears.includes(parseInt(Years)))
-
-    if (!ForibedYears.includes(parseInt(Years)))
+    //Years Valid
+    if (ForibedYears.includes(parseInt(Years)))
     {
         DataErros.Years = 'Age Errors'
     }
@@ -67,6 +65,18 @@ export default function SignUpValidation (SignUpData) {
     {
         delete DataErros.Years
     }
+
+    if (!Gender)
+    {
+        DataErros.Gender = 'choice your gender'
+    }
+    else
+    {
+        delete DataErros.Gender
+    }
+
+
+
 
 
     return DataErros

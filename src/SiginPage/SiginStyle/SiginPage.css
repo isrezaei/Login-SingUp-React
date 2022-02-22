@@ -46,46 +46,46 @@
   padding: 0.4vw;
   margin: 0.4vw 0;
 }
-.SiginForms form, .Dark_SiginForms form {
+.SiginForms .Form, .Dark_SiginForms .Form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.SiginForms form .NameInfo, .Dark_SiginForms form .NameInfo {
+.SiginForms .Form .NameInfo, .Dark_SiginForms .Form .NameInfo {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.SiginForms form .NameInfo input, .Dark_SiginForms form .NameInfo input {
+.SiginForms .Form .NameInfo input, .Dark_SiginForms .Form .NameInfo input {
   width: 49%;
 }
-.SiginForms form .CorrectInfo, .Dark_SiginForms form .CorrectInfo, .Dark_SiginForms form .Dark_CorrectInfo {
+.SiginForms .Form .CorrectInfo, .SiginForms .Form .Dark_SiginForms form .Dark_CorrectInfo, .Dark_SiginForms .Form .CorrectInfo, .Dark_SiginForms .Form form .Dark_CorrectInfo, .Dark_SiginForms form .Form .Dark_CorrectInfo {
   font-size: 0.69vw;
   color: #4b4b4b;
 }
-.SiginForms form .CorrectInfo b, .Dark_SiginForms form .CorrectInfo b, .Dark_SiginForms form .Dark_CorrectInfo b {
+.SiginForms .Form .CorrectInfo b, .SiginForms .Form .Dark_SiginForms form .Dark_CorrectInfo b, .Dark_SiginForms .Form .CorrectInfo b, .Dark_SiginForms .Form form .Dark_CorrectInfo b, .Dark_SiginForms form .Form .Dark_CorrectInfo b {
   color: #de3232;
 }
-.SiginForms form .BrithdayInfo, .Dark_SiginForms form .BrithdayInfo {
+.SiginForms .Form .BrithdayInfo, .Dark_SiginForms .Form .BrithdayInfo {
   width: 100%;
 }
-.SiginForms form .BrithdayInfo .Birthday, .Dark_SiginForms form .BrithdayInfo .Birthday {
+.SiginForms .Form .BrithdayInfo .Birthday, .Dark_SiginForms .Form .BrithdayInfo .Birthday {
   font-size: 0.7vw;
   font-weight: bold;
   color: #b7b7b7;
   margin: 0.5vw 0;
 }
-.SiginForms form .BrithdayInfo .Options, .Dark_SiginForms form .BrithdayInfo .Options {
+.SiginForms .Form .BrithdayInfo .Options, .Dark_SiginForms .Form .BrithdayInfo .Options {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0.5vw 0;
 }
-.SiginForms form .BrithdayInfo .Options select, .Dark_SiginForms form .BrithdayInfo .Options select {
+.SiginForms .Form .BrithdayInfo .Options select, .Dark_SiginForms .Form .BrithdayInfo .Options select {
   width: 30%;
   height: 1.6vw;
   border: 0.1vw solid rgba(75, 75, 75, 0.45);
@@ -94,26 +94,26 @@
   font-size: 0.8vw;
   padding: 0.26vw;
 }
-.SiginForms form .BrithdayInfo .Options select option, .Dark_SiginForms form .BrithdayInfo .Options select option {
+.SiginForms .Form .BrithdayInfo .Options select option, .Dark_SiginForms .Form .BrithdayInfo .Options select option {
   font-size: 1vw;
 }
-.SiginForms form .GenderInfo, .SiginForms form .Dark_GenderInfo, .Dark_SiginForms form .GenderInfo, .Dark_SiginForms form .Dark_GenderInfo {
+.SiginForms .Form .GenderInfo, .SiginForms .Form .Dark_GenderInfo, .Dark_SiginForms .Form .GenderInfo, .Dark_SiginForms .Form .Dark_GenderInfo {
   width: 100%;
 }
-.SiginForms form .GenderInfo .Gender, .SiginForms form .Dark_GenderInfo .Gender, .Dark_SiginForms form .GenderInfo .Gender, .Dark_SiginForms form .Dark_GenderInfo .Gender {
+.SiginForms .Form .GenderInfo .Gender, .SiginForms .Form .Dark_GenderInfo .Gender, .Dark_SiginForms .Form .GenderInfo .Gender, .Dark_SiginForms .Form .Dark_GenderInfo .Gender {
   font-size: 0.7vw;
   font-weight: bold;
   color: #b7b7b7;
   margin: 0.5vw 0;
 }
-.SiginForms form .GenderInfo .RadioInput, .SiginForms form .Dark_GenderInfo .RadioInput, .Dark_SiginForms form .GenderInfo .RadioInput, .Dark_SiginForms form .Dark_GenderInfo .RadioInput {
+.SiginForms .Form .GenderInfo .RadioInput, .SiginForms .Form .Dark_GenderInfo .RadioInput, .Dark_SiginForms .Form .GenderInfo .RadioInput, .Dark_SiginForms .Form .Dark_GenderInfo .RadioInput {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.SiginForms form .GenderInfo .RadioInput section, .SiginForms form .Dark_GenderInfo .RadioInput section, .Dark_SiginForms form .GenderInfo .RadioInput section, .Dark_SiginForms form .Dark_GenderInfo .RadioInput section {
+.SiginForms .Form .GenderInfo .RadioInput section, .SiginForms .Form .Dark_GenderInfo .RadioInput section, .Dark_SiginForms .Form .GenderInfo .RadioInput section, .Dark_SiginForms .Form .Dark_GenderInfo .RadioInput section {
   width: 30%;
   height: 1.6vw;
   border: 0.1vw solid rgba(75, 75, 75, 0.45);
@@ -125,18 +125,18 @@
   justify-content: space-between;
   align-items: center;
 }
-.SiginForms form .GenderInfo .RadioInput section input[type=radio], .SiginForms form .Dark_GenderInfo .RadioInput section input[type=radio], .Dark_SiginForms form .GenderInfo .RadioInput section input[type=radio], .Dark_SiginForms form .Dark_GenderInfo .RadioInput section input[type=radio] {
+.SiginForms .Form .GenderInfo .RadioInput section input[type=radio], .SiginForms .Form .Dark_GenderInfo .RadioInput section input[type=radio], .Dark_SiginForms .Form .GenderInfo .RadioInput section input[type=radio], .Dark_SiginForms .Form .Dark_GenderInfo .RadioInput section input[type=radio] {
   width: 0.7vw;
   height: 0.7vw;
 }
-.SiginForms form .Summary, .Dark_SiginForms form .Summary {
+.SiginForms .Form .Summary, .Dark_SiginForms .Form .Summary {
   margin: 0.8vw 0;
   font-size: 0.7vw;
   font-weight: bold;
   color: #939393;
   line-height: 1.1vw;
 }
-.SiginForms form .SiginButton, .Dark_SiginForms form .SiginButton {
+.SiginForms .Form .SiginButton, .Dark_SiginForms .Form .SiginButton {
   width: 100%;
   height: 2.2vw;
   background-color: #79a940;
@@ -146,7 +146,7 @@
   border: none;
   margin: 0.4vw 0;
 }
-.SiginForms form .ForgotPassword, .Dark_SiginForms form .ForgotPassword {
+.SiginForms .Form .ForgotPassword, .Dark_SiginForms .Form .ForgotPassword {
   margin: 1rem 0;
   font-size: 13px;
 }

@@ -1,6 +1,8 @@
 import {Days} from "../../../SettingsForSignIn/BulidOptionsForBirthdayInputs";
 
 
+
+
 export default function DayOptions ({HandelSignUpData})
 {
     return (
