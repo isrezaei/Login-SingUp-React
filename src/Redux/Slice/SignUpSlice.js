@@ -1,5 +1,5 @@
 import {createSlice , createAsyncThunk , createEntityAdapter} from "@reduxjs/toolkit";
-import SignUpServer from "../ServesApi/SignUpServer";
+import SignUpServer from "../../ServesApi/SignUpServer";
 
 
 export const SendSignUpData = createAsyncThunk('SendSignUpData' , (prams)=> {

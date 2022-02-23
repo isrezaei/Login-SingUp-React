@@ -1,21 +1,10 @@
 import React from "react";
 
 export default function SignUpValidation (SignUpData) {
-    const {
-        FirstName,
-        LastName,
-        Email,
-        Password,
-        Days,
-        Months,
-        Years,
-        Gender
-    } = SignUpData
 
-
+    const {FirstName, LastName, Email, Password, Years, Gender} = SignUpData
     const ForibedYears = []
     for (let C = 2013 ; C <= 2022 ; C++){ForibedYears.push(C)}
-
 
     const DataErros = {}
 

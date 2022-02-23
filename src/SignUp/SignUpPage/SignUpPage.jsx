@@ -1,20 +1,16 @@
 import {useState} from "react";
 import {useHistory} from "react-router-dom";
 import {useEffect} from "react";
-import SignUpValidation from "./SignUpValidation";
-import SignUpHeader from "./SignUpHeader";
-import SignUpFooter from "./SignUpFooter";
-
-import SignUpSlider from "./SignUpSlider/SignUpSlider";
-import './Main.css'
-import Footer from "../Footer/Footer";
-import {Links} from "../Routing/Links/Links";
 import {useDispatch} from "react-redux";
-import {SendSignUpData} from "./SignUpSlice";
-import SignUpInputs from "./SignUpInputs";
-import SignUpBirthday from "./SignUpBirthday";
-import SignUpGender from "./SignUpGender";
-
+import {SendSignUpData} from "../../Redux/Slice/SignUpSlice";
+import SignUpValidation from "../SignUpValidation/SignUpValidation";
+import SignUpHeader from "../SignUpHeader/SignUpHeader";
+import SignUpSlider from "../SignUpSlider/SignUpSlider";
+import SignUpFooter from "../SignUpFooter/SignUpFooter";
+import SignUpInputs from "../SignUpInput/SignUpInputs";
+import SignUpBirthday from "../SignUpBirthday/SignUpBirthday";
+import SignUpGender from "../SignUpGender/SignUpGender";
+import './SignUpPage.css'
 
 
 
