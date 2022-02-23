@@ -10,6 +10,7 @@
 .ErrorText {
   font-size: 12px;
   color: #4b4b4b;
+  margin: 0.2vw 0;
 }
 .ErrorText b {
   color: #de3232;
