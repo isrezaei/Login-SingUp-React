@@ -3,7 +3,7 @@ import Home from "../../PublicPage/Home";
 import About from "../../PublicPage/About";
 import Support from "../../PublicPage/Support";
 import LoginPageLogic from "../../LoginPage/LoginPageLogic";
-import SignUpPage from "../../SiginPage/SignUpPage";
+import SignUpPage from "../../##SignUp/SignUpPage";
 
 export const Router = () =>
 {

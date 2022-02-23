@@ -1,0 +1,41 @@
+.GenderInfo, .Dark_GenderInfo {
+  width: 100%;
+  height: 5vw;
+}
+.GenderInfo .Gender, .Dark_GenderInfo .Gender {
+  font-size: 0.7vw;
+  font-weight: bold;
+  color: #b7b7b7;
+  margin: 0.5vw 0;
+}
+.GenderInfo .RadioInput, .Dark_GenderInfo .RadioInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.GenderInfo .RadioInput section, .Dark_GenderInfo .RadioInput section {
+  width: 30%;
+  height: 1.6vw;
+  border: 0.1vw solid rgba(75, 75, 75, 0.45);
+  font-size: 0.8vw;
+  box-sizing: border-box;
+  padding: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.GenderInfo .RadioInput section input[type=radio], .Dark_GenderInfo .RadioInput section input[type=radio] {
+  width: 0.7vw;
+  height: 0.7vw;
+}
+
+.Dark_GenderInfo .RadioInput section {
+  background-color: #0e0e0e;
+  color: #eceff1;
+  border: transparent !important;
+}
+
+/*# sourceMappingURL=Gender.css.map */

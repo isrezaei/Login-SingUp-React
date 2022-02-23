@@ -1,0 +1,62 @@
+@import "../_VariableStyle/VariableStyle";
+
+.GenderInfo
+{
+  width: 100%;
+  height: 5vw;
+
+  .Gender
+  {
+    font-size: .7vw;
+    font-weight: bold;
+    color: #b7b7b7;
+    @include margin-padding-Two-property( .5vw , 0)
+  }
+
+  .RadioInput
+  {
+    width: 100%;
+    @include flex(space-between, center , row);
+
+    section
+    {
+      width: 30%;
+      height: 1.6vw;
+      border: .1vw solid rgba(75, 75, 75, 0.45);
+      font-size: .8vw;
+      box-sizing: border-box;
+      @include margin-padding-one-property(.5vw , false);
+      @include flex(space-between, center , row);
+      input[type = radio]
+      {
+        width: .7vw;
+        height: .7vw;
+      }
+    }
+  }
+}
+
+.Dark_GenderInfo
+{
+
+  @extend .GenderInfo;
+
+  .Gender
+  {
+  }
+
+  .RadioInput
+  {
+
+    section
+    {
+      background-color: #0e0e0e;
+      color: #eceff1;
+      border: transparent!important;
+      input[type = radio]
+      {
+
+      }
+    }
+  }
+}

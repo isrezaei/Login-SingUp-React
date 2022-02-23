@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function SignUpValidation (SignUpData) {
     const {
         FirstName,
@@ -19,13 +21,13 @@ export default function SignUpValidation (SignUpData) {
 
     //first name valid
     if (!FirstName) {
-        DataErros.FirstName = true
+        DataErros.FirstName = <>Please enter your <b>first name </b></>
     } else {
         delete DataErros.FirstName
     }
     //last name valid
     if (!LastName) {
-        DataErros.LastName = true
+        DataErros.LastName = <>Please enter your <b>last name</b></>
     }
     else {
         delete DataErros.LastName
@@ -33,11 +35,11 @@ export default function SignUpValidation (SignUpData) {
     //email valid
     if (!Email)
     {
-        DataErros.Email = 'you must entered Email'
+        DataErros.Email = <>Please enter your <b>email</b></>
     }
     else if (!/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(Email))
     {
-        DataErros.Email = 'please enter your correct Email'
+        DataErros.Email = <>Please enter your <b>correct email</b></>
     }
     else
     {
@@ -46,11 +48,11 @@ export default function SignUpValidation (SignUpData) {
     //password valid
     if (!Password)
     {
-        DataErros.Password = 'you must entered 6 characters'
+        DataErros.Password = <>Please enter your <b>password</b></>
     }
     else if (!/(?=.*[0-9])+(?=.*[a-z])/.test(Password))
     {
-        DataErros.Password = 'please enter your correct password'
+        DataErros.Password = <>Password contain <b>lowercase</b> letters and <b>number</b></>
     }
     else
     {
@@ -59,7 +61,7 @@ export default function SignUpValidation (SignUpData) {
     //Years Valid
     if (ForibedYears.includes(parseInt(Years)))
     {
-        DataErros.Years = 'Age Errors'
+        DataErros.Years = <>You don't have <b>minimum age</b> to register</>
     }
     else
     {
@@ -68,7 +70,7 @@ export default function SignUpValidation (SignUpData) {
 
     if (!Gender)
     {
-        DataErros.Gender = 'choice your gender'
+        DataErros.Gender = <>choice your <b>gender</b></>
     }
     else
     {

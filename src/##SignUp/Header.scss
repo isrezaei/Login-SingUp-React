@@ -1,0 +1,16 @@
+@import "../_VariableStyle/VariableStyle";
+
+.Title
+{
+  font: {
+    size: 1.5vw;
+    weight: bold;
+  };
+}
+.Text
+{
+  @include margin-padding-Two-property(.5vw , 0);
+  color: rgba(91, 91, 91, 0.55);
+  font-weight: bold;
+  font-size: .9vw;
+}

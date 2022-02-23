@@ -1,10 +1,12 @@
 
-import {Days, Months, Years} from "../SiginPage/SettingsForSignIn/BulidOptionsForBirthdayInputs";
+import {Days, Months, Years} from "./SignUpBirthdayOptions";
+import './Birthday.scss'
 
-export default function SignUpSelects ({GetSignUpInfo , WrongValidate , CheckOnBlur , GetOnBlurBoolean})
+export default function SignUpBirthday ({GetSignUpInfo , WrongValidate , CheckOnBlur , GetOnBlurBoolean})
 {
     return(
-        <div className='BrithdayInfo'>
+        <div className='BirthdayInfo'>
+
             <div className='Birthday'>
                 <p>Birthday</p>
             </div>
@@ -29,7 +31,9 @@ export default function SignUpSelects ({GetSignUpInfo , WrongValidate , CheckOnB
                     }
                 </select>
 
-                <select name='Years'
+                <select
+                    className={(CheckOnBlur.Years && WrongValidate.Years) ? 'RedBorder' : ''}
+                    name='Years'
                         onChange={GetSignUpInfo}
                          onClick={GetOnBlurBoolean}>
                     {
@@ -39,11 +43,10 @@ export default function SignUpSelects ({GetSignUpInfo , WrongValidate , CheckOnB
                         )
                     }
                 </select>
-
-                {CheckOnBlur.Years && WrongValidate.Years && <span>{WrongValidate.Years}</span>}
-
-
             </div>
+
+            {CheckOnBlur.Years && WrongValidate.Years && <span className='ErrorText'>{WrongValidate.Years}</span>}
+
         </div>
     )
 }

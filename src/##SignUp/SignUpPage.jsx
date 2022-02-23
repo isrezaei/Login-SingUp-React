@@ -1,19 +1,20 @@
 import {useState} from "react";
 import {useHistory} from "react-router-dom";
 import {useEffect} from "react";
-import SignUpValidation from "../##SignUp/SignUpValidation";
-import SiginTitle from "./SingInItems/1-Header/SiginTitle";
-import SiginSummary from "./SingInItems/3-Footer/SiginSummary";
-import SignUpButton from "./SingInItems/3-Footer/SignUpButton";
-import SiginSlider from "./SiginSlider";
-import './SiginStyle/SiginPage.css'
+import SignUpValidation from "./SignUpValidation";
+import SignUpHeader from "./SignUpHeader";
+import SignUpFooter from "./SignUpFooter";
+
+import SiginSlider from "./SignUpSlider/SignUpSlider";
+import './Main.css'
 import Footer from "../Footer/Footer";
 import {Links} from "../Routing/Links/Links";
 import {useDispatch} from "react-redux";
-import {SendSignUpData} from "../##SignUp/SignUpSlice";
-import SignUpInputs from "../##SignUp/SignUpInputs";
-import SignUpSelects from "../##SignUp/SignUpSelects";
-import SignUpGender from "../##SignUp/SignUpGender";
+import {SendSignUpData} from "./SignUpSlice";
+import SignUpInputs from "./SignUpInputs";
+import SignUpBirthday from "./SignUpBirthday";
+import SignUpGender from "./SignUpGender";
+
 
 
 
@@ -37,7 +38,7 @@ export default function SignUpPage()
     const [WrongValidate , SetWrongValidate] = useState({})
 
 
-    const [CheckOnBlur , SetCheckOnBlur] = useState(false)
+    const [CheckOnBlur , SetCheckOnBlur] = useState({})
 
 
     const GetSignUpInfo = event =>
@@ -50,6 +51,7 @@ export default function SignUpPage()
         SetCheckOnBlur({...CheckOnBlur , [event.target.name] : true})
     }
 
+    console.log(CheckOnBlur)
 
     const SubmitInfo = () =>
     {
@@ -82,19 +84,23 @@ export default function SignUpPage()
 
     return (
 
-        <div className={'FlexSignPage'}>
+        <div className={'SignUpMain'}>
 
             <div style={{width : '90%'}}>
                 <Links/>
             </div>
 
 
-            <div className={'SiginPage'}>
-                <div className={'SiginForms'}>
+            <div className={'SignUpPage'}>
 
-                    <SiginTitle/>
 
-                    <div className='Form'>
+
+
+                <div className={'SignUpForm'}>
+
+                    <SignUpHeader/>
+
+                    <div className='FormInfo'>
 
                         <SignUpInputs
                             CheckOnBlur={CheckOnBlur}
@@ -103,7 +109,7 @@ export default function SignUpPage()
                             GetSignUpInfo={GetSignUpInfo} />
 
 
-                        <SignUpSelects
+                        <SignUpBirthday
                             CheckOnBlur={CheckOnBlur}
                             GetOnBlurBoolean={GetOnBlurBoolean}
                             WrongValidate={WrongValidate}
@@ -115,9 +121,8 @@ export default function SignUpPage()
                             WrongValidate={WrongValidate}
                             GetSignUpInfo={GetSignUpInfo}/>
 
-                        <SiginSummary/>
+                        <SignUpFooter SubmitInfo={SubmitInfo}/>
 
-                        <SignUpButton SubmitInfo={SubmitInfo}/>
                     </div>
 
 
