@@ -1,17 +1,4 @@
-.SignUpForm, .Dark_SignUpForm {
-  width: 35%;
-  height: 100%;
-  background-color: #ffff;
-  box-sizing: border-box;
-  padding: 1.9vw 3vw;
-}
-.SignUpForm .FormInfo, .Dark_SignUpForm .FormInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.SignUpForm .FormInfo .PersonalInfo, .Dark_SignUpForm .FormInfo .PersonalInfo {
+.ParentSection {
   width: 100%;
   height: 14vw;
   display: flex;
@@ -19,7 +6,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-.SignUpForm .FormInfo .PersonalInfo section, .Dark_SignUpForm .FormInfo .PersonalInfo section {
+.ParentSection section {
   width: 100%;
   height: 4vw;
   display: flex;
@@ -27,7 +14,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.SignUpForm .FormInfo .PersonalInfo section input, .Dark_SignUpForm .FormInfo .PersonalInfo section input {
+.ParentSection section input {
   width: 100%;
   height: 2.2vw;
   background-color: #eceff1;
@@ -36,32 +23,6 @@
   outline: none;
   border: 1px solid transparent;
   padding: 0.4vw;
-}
-
-.Dark_SignUpForm {
-  background-color: #262525;
-}
-.Dark_SignUpForm .Title {
-  color: #eceff1;
-}
-.Dark_SignUpForm .Alert {
-  color: #b7b7b7;
-  font-weight: lighter;
-}
-.Dark_SignUpForm input[type=text] {
-  background-color: #0e0e0e;
-  color: #eceff1;
-}
-.Dark_SignUpForm form .NameInfo input {
-  background-color: #0e0e0e;
-  color: #eceff1;
-}
-.Dark_SignUpForm form .Options select {
-  background-color: #0e0e0e;
-  color: #eceff1;
-}
-.Dark_SignUpForm form .Options select option {
-  color: #eceff1;
 }
 
 /*# sourceMappingURL=Inputs.css.map */

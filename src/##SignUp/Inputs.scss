@@ -1,26 +1,10 @@
 @import "../_VariableStyle/VariableStyle";
 
-.SignUpForm
-{
-  width: 35%;
-  height: 100%;
-  background-color: $Sigin-Color;
-  box-sizing: border-box;
-  @include margin-padding-Two-property(1.9vw , 3vw , false);
-
-
-  .FormInfo
-  {
-    @include flex(center , center , column);
-
-
-    .PersonalInfo
+    .ParentSection
     {
       width: 100%;
       height: 14vw;
-
       @include flex(space-between , flex-start , column);
-
 
       section
       {
@@ -37,50 +21,10 @@
           box-sizing: border-box;
           outline: none;
           border: 1px solid transparent;
-
           @include margin-padding-one-property(.4vw , false);
-
         }
       }
     }
-  }
-}
-
-.Dark_SignUpForm {
-  @extend .SignUpForm;
-  background-color: #262525;
-  .Title {
-    color: #eceff1;
-  }
-  .Alert {
-    color: #b7b7b7;
-    font-weight: lighter;
-  }
-  input[type = text] {
-    background-color:  #0e0e0e;
-    color: #eceff1;
-  }
-  form {
-    .NameInfo {
-      input {
-        background-color:  #0e0e0e;
-        color: #eceff1;
-      }
-    }
 
 
 
-    .Options {
-      select {
-        background-color:  #0e0e0e;
-        color: #eceff1;
-
-
-
-        option {
-          color: #eceff1;
-        }
-      }
-    }
-  }
-}

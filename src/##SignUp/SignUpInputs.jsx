@@ -4,7 +4,7 @@ import './Inputs.scss'
 export default function SignUpInputs({GetSignUpInfo , WrongValidate , GetOnBlurBoolean , CheckOnBlur})
 {
     return (
-        <div className='PersonalInfo'>
+        <div className='ParentSection'>
 
             <section>
 

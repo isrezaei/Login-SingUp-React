@@ -5,7 +5,7 @@ import SignUpValidation from "./SignUpValidation";
 import SignUpHeader from "./SignUpHeader";
 import SignUpFooter from "./SignUpFooter";
 
-import SiginSlider from "./SignUpSlider/SignUpSlider";
+import SignUpSlider from "./SignUpSlider/SignUpSlider";
 import './Main.css'
 import Footer from "../Footer/Footer";
 import {Links} from "../Routing/Links/Links";
@@ -83,62 +83,35 @@ export default function SignUpPage()
 
 
     return (
+        <div className={'SignUpPage'}>
 
-        <div className={'SignUpMain'}>
+            <div className='SignUpForm'>
 
-            <div style={{width : '90%'}}>
-                <Links/>
-            </div>
+                <SignUpHeader/>
 
+                <SignUpInputs
+                    CheckOnBlur={CheckOnBlur}
+                    GetOnBlurBoolean={GetOnBlurBoolean}
+                    WrongValidate={WrongValidate}
+                    GetSignUpInfo={GetSignUpInfo} />
 
-            <div className={'SignUpPage'}>
+                <SignUpBirthday
+                    CheckOnBlur={CheckOnBlur}
+                    GetOnBlurBoolean={GetOnBlurBoolean}
+                    WrongValidate={WrongValidate}
+                    GetSignUpInfo={GetSignUpInfo}/>
 
+                <SignUpGender
+                    CheckOnBlur={CheckOnBlur}
+                    GetOnBlurBoolean={GetOnBlurBoolean}
+                    WrongValidate={WrongValidate}
+                    GetSignUpInfo={GetSignUpInfo}/>
 
-
-
-                <div className={'SignUpForm'}>
-
-                    <SignUpHeader/>
-
-                    <div className='FormInfo'>
-
-                        <SignUpInputs
-                            CheckOnBlur={CheckOnBlur}
-                            GetOnBlurBoolean={GetOnBlurBoolean}
-                            WrongValidate={WrongValidate}
-                            GetSignUpInfo={GetSignUpInfo} />
-
-
-                        <SignUpBirthday
-                            CheckOnBlur={CheckOnBlur}
-                            GetOnBlurBoolean={GetOnBlurBoolean}
-                            WrongValidate={WrongValidate}
-                            GetSignUpInfo={GetSignUpInfo}/>
-
-                        <SignUpGender
-                            CheckOnBlur={CheckOnBlur}
-                            GetOnBlurBoolean={GetOnBlurBoolean}
-                            WrongValidate={WrongValidate}
-                            GetSignUpInfo={GetSignUpInfo}/>
-
-                        <SignUpFooter SubmitInfo={SubmitInfo}/>
-
-                    </div>
-
-
-                </div>
-
-
-                <SiginSlider/>
+                <SignUpFooter SubmitInfo={SubmitInfo}/>
 
             </div>
 
-
-            <div style={{width : '80%'}}>
-                <Footer/>
-            </div>
-
-
+            <SignUpSlider/>
         </div>
 
     )

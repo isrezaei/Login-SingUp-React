@@ -1,39 +1,38 @@
 @import "../_VariableStyle/VariableStyle";
 
-$text-under-item : #4b4b4b;
-$bold-error-word : #de3232;
-
-
-.SignUpMain
+.SignUpPage
 {
-  width: 100%;
-  height: 100vh;
-  @include flex(space-between , center , column)
+  max-width: 90%;
+  height: 39vw;
+  position: relative;
+  top : 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  box-shadow: 0 0 0.781vw 0 rgba(0,0,0,0.20);
+  @include flex(center , flex-start , row);
+  .SignUpForm
+  {
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    @include margin-padding-Two-property(1.9vw, 3vw, false);
+    @include flex(center, flex-start, column);
+  }
 }
-
 .ErrorText
 {
   font-size: 12px;
-  color: $text-under-item;
+  color: #4b4b4b;
   margin: .2vw 0;
-  b
-  {
-    color: $bold-error-word;
-  }
+  b {color: #de3232;}
 }
-
 .RedBorder
 {
   border: 1px solid #de3232 !important;
 }
 
 
-.SignUpPage
-{
-  width: 90%;
-  height: 39vw;
-  box-shadow: 0 0 0.781vw 0 rgba(0,0,0,0.20);
-  @include flex(center , flex-start , row);
-}
+
 
 
