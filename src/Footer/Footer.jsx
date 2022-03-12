@@ -9,28 +9,31 @@ export default function Footer ()
     const {DarkMood} = StateValue()
 
     return (
-        <footer className={DarkMood ? 'DarkFooter' : 'Footer'}>
+        <div className='MainFooter'>
+            <footer className={DarkMood ? 'DarkFooter' : 'Footer'}>
 
-            <div className={'Brand'}>
-                Facebook 2022
-            </div>
-
-
-            <ul className={'Topics'}>
-                <li>Privacy</li>
-                <li>Coookies</li>
-                <li>Ad Choices</li>
-                <li>Terms</li>
-                <li>Help</li>
-            </ul>
+                <div className={'Brand'}>
+                    Facebook 2022
+                </div>
 
 
-            <div className={'DownloadServes'}>
+                <ul className={'Topics'}>
+                    <li>Privacy</li>
+                    <li>Coookies</li>
+                    <li>Ad Choices</li>
+                    <li>Terms</li>
+                    <li>Help</li>
+                </ul>
 
-                <img src={Apps} className={'App-Store'} alt={''}/>
-                <img src={Google} className={'Google-Store'} alt={''}/>
-            </div>
 
-        </footer>
+                <div className={'DownloadServes'}>
+
+                    <img src={Apps} className={'App-Store'} alt={''}/>
+                    <img src={Google} className={'Google-Store'} alt={''}/>
+                </div>
+
+            </footer>
+
+        </div>
     )
 }

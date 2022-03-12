@@ -1,10 +1,7 @@
 .SignUpPage {
   max-width: 90%;
   height: 39vw;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0.5vw auto 0 auto;
   box-shadow: 0 0 0.781vw 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;

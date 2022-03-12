@@ -66,10 +66,5 @@ export default function SignUpValidation (SignUpData) {
         delete DataErros.Gender
     }
 
-
-
-
-
     return DataErros
-
 }
